@@ -8,18 +8,19 @@ permalink:        pretty
 # Setup
 title:            aliqin
 tagline:          'alibaba telecom'
-description:      'alibaba telecom'
-url:              http://hyde.getpoole.com
+description:      'f2e team of alibaba telecom'
+url:              http://aliqin.github.io
 baseurl:          /
+logo:             '/public/images/logo.png'
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'aliqin'
+  url:            https://github.com/aliqin
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          0.0.1
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/aliqin
