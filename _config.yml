@@ -8,9 +8,10 @@ permalink:        pretty
 # Setup
 title:            aliqin
 tagline:          'alibaba telecom'
-description:      'alibaba telecom'
-url:              http://hyde.getpoole.com
+description:      'f2e team of alibaba telecom'
+url:              http://aliqin.github.io
 baseurl:          /
+logo:             '/public/images/logo.png'
 
 author:
   name:           'aliqin'
@@ -22,4 +23,4 @@ paginate:         5
 version:          0.0.1
 
 github:
-  repo:           https://github.com/aliqin/aliqin.github.io
+  repo:           https://github.com/aliqin
