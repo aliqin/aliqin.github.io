@@ -4,5 +4,5 @@ title: About
 ---
 
 #### F2E Team of Alibaba Telecom
-* Hangzhou.China
+* Hangzhou. China.
 * [github](http://github.com/aliqin)
