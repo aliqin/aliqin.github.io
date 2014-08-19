@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 最佳的web远程调试方案？
+title: 最佳的web远程调试方案
 ---
 
 ## 什么是web远程调试？
@@ -18,8 +18,7 @@ title: 最佳的web远程调试方案？
 * web page和dev tools之前通过usb/network同步调试数据
 * web tools之前会有一个proxy server用于双向同步数据
 
-## 现有的web远程调试方案汇总
-下表汇总了目前常用的web远程调试方案
+## 比较流行的web远程调试方案
 |   |   Supported target Paltform   |   Supported Features    |
 |   ------  |   ------  |   ------  |
 |   Weinre  |   Ios4+, android2.1+, firefox, IE10+    |   Elements, resources, network, timeline, console   |
@@ -33,3 +32,31 @@ title: 最佳的web远程调试方案？
 |   WebKit Remote Debugging protocol    |   webkit(pc)    |   almost all features    |
 |   Chrome v8 debugger protocol    |   V8 javascript engine    |   Breakpoint   |
 
+## 最佳的web远程调试方案
+* 特定浏览器
+ - 直接使用官方支持的远程调试
+  + ios safari[^safari]
+  + android UC browser(dev version)[^UC]
+  + android QQ browser(dev version)
+  + android Chrome[^chrome]
+  + Opera mobile[^Opera]
+* 其他浏览器
+ - weinre[^weinre]
+  + html,css调试，修改后所见即所得
+  + console.log输出
+  + 简化的timeline面板支持
+  + 简化的resources面板支持
+  + `待改进` 暂存注入调试js之前的log，调试js注入后输出全部log
+  + `待改进` 调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket
+ - Aardwolf[^Aardwolf]
+  + js断点
+  + js运行调用堆栈
+  + `待改进` 调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类
+
+## 参考资料
+[1]: https://developer.apple.com/safari/tools/
+[2]: http://www.uc.cn/business/developer/
+[3]: https://developer.chrome.com/devtools/docs/debugger-protocol
+[4]: http://www.opera.com/dragonfly/documentation/remote/
+[5]: http://people.apache.org/~pmuellr/weinre/
+[6]: http://lexandera.com/aardwolf/
