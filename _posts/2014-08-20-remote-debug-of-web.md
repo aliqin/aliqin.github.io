@@ -3,9 +3,6 @@ layout: post
 title: 最佳的web远程调试方案？
 ---
 
-最佳web远程调试方案
-======
-
 ## 什么是web远程调试？
 通过dev tools如chrome dev tools, firebug of firefox进行前端js/css/html调试已经是前端工程师的必备技能。
 随着移动互联网的发展，这一必备技能也随之迁移到移动端。
