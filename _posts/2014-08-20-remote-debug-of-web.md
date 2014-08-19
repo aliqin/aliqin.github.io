@@ -16,7 +16,7 @@ title: 最佳的web远程调试方案
 受限于移动端设备屏幕尺寸较小，web远程调试相对桌面浏览器调试有一些显著的特点：
 * web page和dev tools必须分离使用才更方便
 * web page和dev tools之前通过usb/network同步调试数据
-* web tools之前会有一个proxy server用于双向同步数据
+* web page和dev tools之前会有一个proxy server用于双向同步数据
 
 ## 流行的web远程调试方案
 |   |   Supported target Paltform   |   Supported Features    |
