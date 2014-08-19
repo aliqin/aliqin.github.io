@@ -36,7 +36,7 @@ title: 最佳的web远程调试方案
 
 ### 特定浏览器
 * 直接使用官方支持的远程调试
- - ios safari[safari][1]
+ - ios safari[safari][]
  - android UC browser(dev version)[UC][2]
  - android QQ browser(dev version)
  - android Chrome[chrome][3]
@@ -62,7 +62,7 @@ title: 最佳的web远程调试方案
  - 调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类
 
 ## 参考资料
-[1]: safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
+[safari]: safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
 [2]: android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
 [3]: android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
 [4]: Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
