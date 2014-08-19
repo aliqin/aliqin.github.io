@@ -33,30 +33,38 @@ title: 最佳的web远程调试方案
 |   Chrome v8 debugger protocol    |   V8 javascript engine    |   Breakpoint   |
 
 ## 最佳的web远程调试方案
-* 特定浏览器
- - 直接使用官方支持的远程调试
-  + ios safari[^safari]
-  + android UC browser(dev version)[^UC]
-  + android QQ browser(dev version)
-  + android Chrome[^chrome]
-  + Opera mobile[^Opera]
-* 其他浏览器
- - weinre[^weinre]
-  + html,css调试，修改后所见即所得
-  + console.log输出
-  + 简化的timeline面板支持
-  + 简化的resources面板支持
-  + `待改进` 暂存注入调试js之前的log，调试js注入后输出全部log
-  + `待改进` 调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket
- - Aardwolf[^Aardwolf]
-  + js断点
-  + js运行调用堆栈
-  + `待改进` 调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类
+
+### 特定浏览器
+* 直接使用官方支持的远程调试
+ - ios safari[^safari]
+ - android UC browser(dev version)[^UC]
+ - android QQ browser(dev version)
+ - android Chrome[^chrome]
+ - Opera mobile[^Opera]
+
+### 其他浏览器
+
+#### weinre[^weinre]
+* 特点
+ - html,css调试，修改后所见即所得
+ - console.log输出
+ - 简化的timeline面板支持
+ - 简化的resources面板支持
+* 待改进增强
+ - 暂存注入调试js之前的log，调试js注入后输出全部log
+ - 调试过程中比较容易断线，调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高
+
+#### Aardwolf[^Aardwolf]
+* 特点
+ - js断点
+ - js运行调用堆栈
+* 待改进
+ - 调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类
 
 ## 参考资料
-[1]: https://developer.apple.com/safari/tools/
-[2]: http://www.uc.cn/business/developer/
-[3]: https://developer.chrome.com/devtools/docs/debugger-protocol
-[4]: http://www.opera.com/dragonfly/documentation/remote/
-[5]: http://people.apache.org/~pmuellr/weinre/
-[6]: http://lexandera.com/aardwolf/
+[^safari]: safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
+[^UC]: android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
+[^chrome]: android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
+[^Opera]: Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
+[^weinre]: web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/](http://people.apache.org/~pmuellr/weinre/)
+[^Aardwolf]: Aardwolf远程调试[http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
