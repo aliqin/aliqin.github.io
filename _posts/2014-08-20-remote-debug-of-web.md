@@ -18,7 +18,7 @@ title: 最佳的web远程调试方案
 * web page和dev tools之前通过usb/network同步调试数据
 * web tools之前会有一个proxy server用于双向同步数据
 
-## 比较流行的web远程调试方案
+## 流行的web远程调试方案
 |   |   Supported target Paltform   |   Supported Features    |
 |   ------  |   ------  |   ------  |
 |   Weinre  |   Ios4+, android2.1+, firefox, IE10+    |   Elements, resources, network, timeline, console   |
@@ -36,15 +36,15 @@ title: 最佳的web远程调试方案
 
 ### 特定浏览器
 * 直接使用官方支持的远程调试
- - ios safari[^safari]
- - android UC browser(dev version)[^UC]
+ - ios safari[safari][1]
+ - android UC browser(dev version)[UC][2]
  - android QQ browser(dev version)
- - android Chrome[^chrome]
- - Opera mobile[^Opera]
+ - android Chrome[chrome][3]
+ - Opera mobile[Opera][4]
 
 ### 其他浏览器
 
-#### weinre[^weinre]
+#### weinre[weinre][5]
 * 特点
  - html,css调试，修改后所见即所得
  - console.log输出
@@ -54,7 +54,7 @@ title: 最佳的web远程调试方案
  - 暂存注入调试js之前的log，调试js注入后输出全部log
  - 调试过程中比较容易断线，调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高
 
-#### Aardwolf[^Aardwolf]
+#### Aardwolf[Aardwolf][6]
 * 特点
  - js断点
  - js运行调用堆栈
@@ -62,9 +62,9 @@ title: 最佳的web远程调试方案
  - 调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类
 
 ## 参考资料
-[^safari]: safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
-[^UC]: android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
-[^chrome]: android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
-[^Opera]: Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
-[^weinre]: web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/](http://people.apache.org/~pmuellr/weinre/)
-[^Aardwolf]: Aardwolf远程调试[http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
+[1]: safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
+[2]: android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
+[3]: android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
+[4]: Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
+[5]: web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/](http://people.apache.org/~pmuellr/weinre/)
+[6]: Aardwolf远程调试[http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
