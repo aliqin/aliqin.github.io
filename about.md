@@ -7,7 +7,7 @@ title: About
 
 > 寻求志同道合的小伙伴加入，简历 **[传送门](mailto:xianqian.rxq@alibaba-inc.com)**
 
-* 西溪园区 ● 杭州 ● 中国
+* 西溪园区.杭州
 * [github](http://github.com/aliqin)
 
 #### 研究方向
