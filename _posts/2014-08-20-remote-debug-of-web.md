@@ -56,7 +56,7 @@ title: web远程调试方案推荐
  - 简化的resources面板支持
 * 待改进增强
  - 暂存注入调试js之前的log，调试js注入后输出全部log
- - 调试过程中比较容易断线，调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高
+ - 调试过程中比较容易断线，调试断线后自动重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高
 
 #### [Aardwolf](http://lexandera.com/aardwolf/)
 * 特点
