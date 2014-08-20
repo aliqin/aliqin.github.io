@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Google web开发最佳实践(三)
+published: false
 ---
 
 
-{% highlight ruby %}
+<!-- {% highlight ruby %}
 def show
   @widget = Widget(params[:id])
   respond_to do |format|
@@ -38,7 +39,7 @@ end
         if() {
 
         } else {
-            
+
         }
     }
-{% endhighlight %}
+{% endhighlight %} -->
