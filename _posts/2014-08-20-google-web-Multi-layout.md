@@ -20,10 +20,10 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
 ---
 ***TL;DR***
 
-   用meta视口标签来控制浏览器视口的宽度和缩放程度。
-   添加width=device-width来适应不同的宽度。
-   添加initial-scale=1，不允许网页缩放。
-   如果用户不能缩放页面的话，要确保你的页面还是可用的。
+* 用meta视口标签来控制浏览器视口的宽度和缩放程度。
+* 添加width=device-width来适应不同的宽度。
+* 添加initial-scale=1，不允许网页缩放。
+* 如果用户不能缩放页面的话，要确保你的页面还是可用的。
 
 ---
 
@@ -32,8 +32,7 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 用meta视口的width=device-width来控制页面以适应密度无关像素的屏幕的宽度，这样页面就在回流的时候可以适应不同的屏幕尺寸，无论是在小屏幕的移动端或者是大屏幕的桌面端都可以适应。
-
-![](http://gtms04.alicdn.com/tps/i4/TB1PQ76FVXXXXXaXXXXcmddOXXX-400-711.png)![](http://gtms01.alicdn.com/tps/i1/TB1Acg3FVXXXXbIXXXXcmddOXXX-400-711.png)
+<img src="http://gtms04.alicdn.com/tps/i4/TB1PQ76FVXXXXXaXXXXcmddOXXX-400-711.png" alt="4" width="50%"><img src="http://gtms01.alicdn.com/tps/i1/TB1Acg3FVXXXXbIXXXXcmddOXXX-400-711.png" alt="4" width="50%">
 当横屏的时候，有些浏览器会保持页面的宽度不变然后放大屏幕，而不是用回流重新加载出页面。添加initial-scale=1属性，使得无论手持设备的方向是怎么样的，CSS的像素和密度无关像素都是1:1的关系，另外还能让页面占满整个横屏宽度。
 *注意：用逗号来分隔这些属性，以保证老式浏览器的兼容性。*
 
@@ -512,11 +511,11 @@ Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放
 **按钮在左边还是右边**
 如果在菜单上你想要添加滑动，那么菜单最好是要放在左边或者右边。
 页面的左上角应该算是UI设计中最重要的一个位置，但如果是单手持机，这也是最难触碰到的位置。而将菜单放在右上角会突出这个图标，显示它的重要性，但是单手持机的时候，这个位置又容易被误碰。
-![](http://gtms02.alicdn.com/tps/i2/TB1D.kYFVXXXXaXXFXXWgIpNFXX-608-360.png)![](http://gtms01.alicdn.com/tps/i1/TB1mRM3FVXXXXaxXpXXWgIpNFXX-608-360.png)
+<img src="http://gtms02.alicdn.com/tps/i2/TB1D.kYFVXXXXaXXFXXWgIpNFXX-608-360.png" alt="" width="50%"><img src="http://gtms01.alicdn.com/tps/i1/TB1mRM3FVXXXXaxXpXXWgIpNFXX-608-360.png" alt="" width="50%">
 
 **设计指南**
 应用栏是一个你需要将一系列主要内容放在上面的东西，用户可以通过它估计到一些与站点有关的信息，在应用栏上你可以玩各种有趣的花样：更改栏目、按钮的样式，还有交互上也能表现新意。
-![](http://gtms02.alicdn.com/tps/i2/TB1.U.TFVXXXXchXFXXWgIpNFXX-608-360.png)![](http://gtms02.alicdn.com/tps/i2/TB12w3YFVXXXXXKXFXXWgIpNFXX-608-360.png)
+<img src="http://gtms02.alicdn.com/tps/i2/TB1.U.TFVXXXXchXFXXWgIpNFXX-608-360.png" alt="" width="50%"><img src="http://gtms02.alicdn.com/tps/i2/TB12w3YFVXXXXXKXFXXWgIpNFXX-608-360.png" alt="" width="50%">
 
 
 ##3.2 Tab Bar
@@ -537,8 +536,7 @@ Tab Bar可以快速在网站中不同区域内容之间进行切换。不过，�
 将tab的总数限制在5个以下，不然每个图标和其点击区域会变得太小，使用户在点击tab时太过费力。
 将你的tab放置在主体内容的上方或下方，这种做法是在用户最佳体验和最佳设计中取得的一种平衡。
 使用tab的一个好处是，它提供用户一种一致的导航方式，使用户可以快速知道他们浏览到了哪儿。
-![](http://gtms02.alicdn.com/tps/i2/TB19ZEWFVXXXXcDXFXXm63eUXXX-699-420.png)
-![](http://gtms03.alicdn.com/tps/i3/TB1gbE5FVXXXXc8XXXXC9UuNFXX-608-420.png)
+<img src="http://gtms02.alicdn.com/tps/i2/TB19ZEWFVXXXXcDXFXXm63eUXXX-699-420.png" alt="" width="50%"><img src="http://gtms03.alicdn.com/tps/i3/TB1gbE5FVXXXXc8XXXXC9UuNFXX-608-420.png" alt="" width="50%">
 
 
 ##3.3 Navigation Drawer
