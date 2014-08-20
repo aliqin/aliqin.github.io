@@ -53,7 +53,7 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
 
 ---
 当你使用meta视口标签开发一个移动站点的时候，常常不小心就创建出不兼容部分视口的页面。举例来说，如果一个图片的宽度超过视口的宽度，就会出现横向滚动条。你需要调整内容来适应视口的宽度，以便用户不需要横向滚动。不同的设备CSS的像素点在屏幕维度和宽度是不一样的（例如手机和平板之间，甚至不同的手机屏幕都不一样），不能用特定的视口宽度来渲染内容。 对页面上的元素设置较大的绝对宽度（下面的例子所示），会导致在屏幕小的设备上,层超出视口的宽度（例子：320px分辨率的设备屏幕，例如iPhone）。所以你需要考虑使用相对的宽度值，比如百分比（例如：width: 100%;）。相似地，在使用数值较大的绝对对的定位时也要小心，小屏幕上可能会出现元素溢出到视口外面的情况。
-![](http://gtms01.alicdn.com/tps/i1/TB1RM7SFVXXXXbgXVXXyx8dOXXX-400-710.png)![](http://gtms02.alicdn.com/tps/i2/TB10HgUFVXXXXcKXFXXcmddOXXX-400-711.png)
+<img src="http://gtms01.alicdn.com/tps/i1/TB1RM7SFVXXXXbgXVXXyx8dOXXX-400-710.png" alt="" width="50%"><img src="http://gtms02.alicdn.com/tps/i2/TB10HgUFVXXXXcKXFXXcmddOXXX-400-711.png" alt="" width="50%">
 
 ##1.3 CSS媒体查询实现响应式
 媒体查询是一种可以应用在CSS样式上的简易过滤器，它可以根据设备的渲染特性（包括显示类型、宽度、高度、转向甚至是分辨率）来显示不同的样式。
