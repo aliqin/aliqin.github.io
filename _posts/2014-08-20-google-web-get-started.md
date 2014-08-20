@@ -389,7 +389,11 @@ title: Google Web开发最佳实践（一）
       padding: 20px 5%;
     }
 
-<video controls="" poster="images/floatingform.png" style="width: 100%"><source src="videos/floatingform.mov" type="video/mov"><source src="videos/floatingform.webm" type="video/webm"><p>Sorry your browser doesn't support video. <a href="videos/floatingform.mov">Download the video</a>.</p></video>
+<video controls="" poster="https://developers.google.com/web/fundamentals/documentation/introduction-to-media/images/floatingform.png" style="width: 100%">
+  <source src="https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.mov" type="video/mov">
+  <source src="https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.webm" type="video/webm">
+  <p>Sorry your browser doesn't support video. <a href="https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.mov">Download the video</a>.</p>
+</video>
 
 **使视频元素浮动**
 在窄视口中，将视频设计为占屏幕的整个宽度，放置在重要功能列表后面。在宽视口中，当视屏位于功能列表后面时，视频变得太大，看起来不合适。
