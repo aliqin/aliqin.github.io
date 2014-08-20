@@ -4,11 +4,10 @@ title: web远程调试方案推荐
 ---
 
 ## 什么是web远程调试？
-通过dev tools如chrome dev tools, firebug of firefox进行前端js/css/html调试已经是前端工程师的必备技能。
-随着移动互联网的发展，这一必备技能也随之迁移到移动端。
-虽然移动网站的数量已经跟上了移动互联网的浪潮，但是移动端浏览器调试工具的发展却落下了。
-远程调试最佳的解决方案是浏览器自身支持，假如android browser直接开启webkit远程调试端口，基本可以解决目前移动web开发中的绝大部分调试问题。
-庆幸的是曾经看到新闻，android browser将会替换默认为chrome，到时真是皆大欢喜！
+
+![remote_debug_banner](http://img2.tbcdn.cn/L1/461/1/c13240faf3a4b929d6df74f5b274e9249ae70397)
+
+通过dev tools如chrome dev tools, firebug of firefox进行前端js/css/html调试已经是前端工程师的必备技能。随着移动互联网的发展，这一必备技能也随之迁移到移动端。虽然移动网站的数量已经跟上了移动互联网的浪潮，但是移动端浏览器调试工具的发展却落下了。远程调试最佳的解决方案是浏览器自身支持，假如android browser直接开启webkit远程调试端口，基本可以解决目前移动web开发中的绝大部分调试问题。庆幸的是曾经看到新闻，android browser将会替换默认为chrome，到时真是皆大欢喜！
 
 移动端浏览器dev tools的落后，也促使了第三方调试工具的发展，如比较著名的weinre。
 
@@ -42,7 +41,7 @@ title: web远程调试方案推荐
 * 直接使用官方支持的远程调试
  - [ios safari](https://developer.apple.com/safari/tools/)
  - [android UC browser(dev version)](http://www.uc.cn/business/developer/)
- - [android Chrome](https://developer.chrome.com/devtools/docs/debugger-protocol)
+ - [android Chrome](https://developer.chrome.com/devtools/docs/remote-debugging)
  - [android Firefox](https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)
  - [Opera mobile](http://www.opera.com/dragonfly/documentation/remote/)
 
@@ -68,7 +67,7 @@ title: web远程调试方案推荐
 ## 参考资料
 1. safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
 2. android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
-3. android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
+3. android chrome远程调试 [https://developer.chrome.com/devtools/docs/remote-debugging](https://developer.chrome.com/devtools/docs/remote-debugging)
 4. android Firefox远程调试 [https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)
 5. Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
 6. web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html](http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)
