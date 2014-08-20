@@ -1,3 +1,8 @@
+---
+layout: post
+title: Google Web开发最佳实践（一）
+---
+
 本文翻译自 [Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
 
 #Get Started-你的首个多屏网站
