@@ -58,7 +58,7 @@ title: web远程调试方案推荐
  - 暂存注入调试js之前的log，调试js注入后输出全部log
  - 调试过程中比较容易断线，调试断线后自重重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高
 
-#### [Aardwolf](http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
+#### [Aardwolf](http://lexandera.com/aardwolf/)
 * 特点
  - js断点
  - js运行调用堆栈
@@ -74,7 +74,7 @@ title: web远程调试方案推荐
 6. web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html](http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)
 7. Aardwolf远程调试 [http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
 8. android adb log [http://developer.android.com/guide/webapps/debugging.html](http://developer.android.com/guide/webapps/debugging.html)
-9. Android webview debug [http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean))
+9. Android webview debug [http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled)
 10. WebKit Remote Debugging protocol [https://www.webkit.org/blog/1620/webkit-remote-debugging/](https://www.webkit.org/blog/1620/webkit-remote-debugging/
 11. Chrome v8 debugger protocol [https://code.google.com/p/v8/wiki/DebuggerProtocol](https://code.google.com/p/v8/wiki/DebuggerProtocol)
 
