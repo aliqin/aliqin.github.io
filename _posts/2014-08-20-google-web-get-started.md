@@ -3,6 +3,7 @@ layout: post
 title: Google Web开发最佳实践（一）
 ---
 
+
 本文翻译自 [Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
 
 #Get Started-你的首个多屏网站
@@ -30,6 +31,7 @@ title: Google Web开发最佳实践（一）
 * 首先确定我们需要的内容
 * 勾画出信息架构（IA）的窄、宽视口
 * 创建内容页面的骨架图，无须样式化
+
 - - -
 
 我们还分别从窄视口和宽视口出发，列出了粗略的信息架构和布局。
@@ -269,6 +271,7 @@ title: Google Web开发最佳实践（一）
 ![](http://gtms03.alicdn.com/tps/i3/TB1K5IPFVXXXXayXFXXtJRI0FXX-848-911.png)
 这个时候你会发现，网页看起来已经相当完美了，右边是已经设计完的效果。内容是任何网站最重要的方面。我们需要确保拥有良好的信息架构和坚实的信息密度。这篇指南提供了优秀的创建网站基础。我们将在下一篇指南中为内容设计样式。
 
+<!-- todo: 此处与翻译不一致，查阅 -->
 ##2 让网站响应式
 
 ###2.1 添加一个视口
@@ -483,7 +486,6 @@ title: Google Web开发最佳实践（一）
 * 移动优先，形成基本的经验
 * 一旦拥有移动经验，增加显示器的宽度，直到网页看起来不合适，并在此设置临界点
 * 不断迭代
-
 
 
 
