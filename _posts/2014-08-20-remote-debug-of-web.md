@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 最佳的web远程调试方案
+title: web远程调试方案推荐
 ---
 
 ## 什么是web远程调试？
@@ -14,6 +14,7 @@ title: 最佳的web远程调试方案
 
 ## web远程调试特点
 受限于移动端设备屏幕尺寸较小，web远程调试相对桌面浏览器调试有一些显著的特点：
+
 * web page和dev tools必须分离使用才更方便
 * web page和dev tools之前通过usb/network同步调试数据
 * web page和dev tools之前会有一个proxy server用于双向同步数据
@@ -26,27 +27,28 @@ title: 最佳的web远程调试方案
 |   Jsconsole   |   Ios4.2+, android2.2.2+, webos   |   Console |
 |   DragonFly    |   Opera mobile    |   opera dragon panel |
 |   Iphone app (JSConsole app or Bugaboo)    |   Ios    |   Console |
-|   Android adb log   |   android2.1+    |   Console |
+|   [Android adb log](http://developer.android.com/guide/webapps/debugging.html)   |   android2.1+    |   Console |
 |   Iphone Safari    |   Ios    |   almost all features |
+|   Firefox (android)    |   android    |   almost all features   |
 |   UCweb browser dev (android)    |   Ucweb android only    |   almost all features   |
 |   QQ browser dev (android)    |   QQBrowser android only    |   almost all features   |
-|   Android webview debug    |   android4.4+ webview    |   almost all features    |
-|   WebKit Remote Debugging protocol    |   webkit(pc)    |   almost all features    |
-|   Chrome v8 debugger protocol    |   V8 javascript engine    |   Breakpoint   |
+|   [Android webview debug](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean))    |   android4.4+ webview    |   almost all features    |
+|   [WebKit Remote Debugging protocol](https://www.webkit.org/blog/1620/webkit-remote-debugging/)    |   webkit(pc)    |   almost all features    |
+|   [Chrome v8 debugger protocol](https://code.google.com/p/v8/wiki/DebuggerProtocol)    |   V8 javascript engine    |   almost all features   |
 
-## 最佳的web远程调试方案
+## web远程调试方案推荐
 
 ### 特定浏览器
 * 直接使用官方支持的远程调试
  - [ios safari](https://developer.apple.com/safari/tools/)
  - [android UC browser(dev version)](http://www.uc.cn/business/developer/)
- - android QQ browser(dev version)
  - [android Chrome](https://developer.chrome.com/devtools/docs/debugger-protocol)
+ - [android Firefox](https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)
  - [Opera mobile](http://www.opera.com/dragonfly/documentation/remote/)
 
 ### 其他浏览器
 
-#### [weinre](http://people.apache.org/~pmuellr/weinre/)
+#### [weinre](http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)
 * 特点
  - html,css调试，修改后所见即所得
  - console.log输出
@@ -67,6 +69,16 @@ title: 最佳的web远程调试方案
 1. safari远程调试 [https://developer.apple.com/safari/tools/](https://developer.apple.com/safari/tools/)
 2. android uc browser开发版远程调试 [http://www.uc.cn/business/developer/](http://www.uc.cn/business/developer/)
 3. android chrome远程调试 [https://developer.chrome.com/devtools/docs/debugger-protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)
-4. Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
-5. web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/](http://people.apache.org/~pmuellr/weinre/)
-6. Aardwolf远程调试[http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
+4. android Firefox远程调试 [https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)
+5. Opera移动版远程调试 [http://www.opera.com/dragonfly/documentation/remote/](http://www.opera.com/dragonfly/documentation/remote/)
+6. web inspect remote -- weinre远程调试 [http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html](http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)
+7. Aardwolf远程调试 [http://lexandera.com/aardwolf/](http://lexandera.com/aardwolf/)
+8. android adb log [http://developer.android.com/guide/webapps/debugging.html](http://developer.android.com/guide/webapps/debugging.html)
+9. Android webview debug [http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean))
+10. WebKit Remote Debugging protocol [https://www.webkit.org/blog/1620/webkit-remote-debugging/](https://www.webkit.org/blog/1620/webkit-remote-debugging/
+11. Chrome v8 debugger protocol [https://code.google.com/p/v8/wiki/DebuggerProtocol](https://code.google.com/p/v8/wiki/DebuggerProtocol)
+
+## 后续计划
+* weinre详细介绍
+* Aardwolf详细介绍
+* weinre增强：weinre改进/Aardwolf整合
