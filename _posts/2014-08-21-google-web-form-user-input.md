@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Google web开发最佳实践(三)
-published: false
 ---
 
 
@@ -30,7 +29,16 @@ end
 
 
 {% highlight javascript %}
-     function aa(){
+    var a = 3;
+    //code comments
+    function aa(){
         var a = 3;
+    }
+    while(){
+        if() {
+
+        } else {
+            
+        }
     }
 {% endhighlight %}
