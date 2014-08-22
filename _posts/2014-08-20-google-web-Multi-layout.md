@@ -22,7 +22,7 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
 
 * 用meta视口标签来控制浏览器视口的宽度和缩放程度。
 * 添加width=device-width来适应不同的宽度。
-* 添加initial-scale=1，不允许网页缩放。
+* 添加initial-scale=1,建议一个css像素和设备无关像素的1:1的对应关系。
 * 如果用户不能缩放页面的话，要确保你的页面还是可用的。
 
 ---
