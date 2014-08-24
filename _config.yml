@@ -9,8 +9,8 @@ permalink:        pretty
 
 # Setup
 title:            aliqin
-tagline:          'f2e team of alibaba telecom'
-description:      'f2e team of alibaba telecom'
+tagline:          '阿里通信前端团队'
+description:      '阿里通信前端团队'
 url:              http://aliqin.github.io
 baseurl:          /
 logo:             '/public/images/logo.png'
