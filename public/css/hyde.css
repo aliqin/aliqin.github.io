@@ -89,8 +89,9 @@ html {
 
 /* Sidebar nav */
 .sidebar-nav {
-	list-style: none;
 	margin-bottom: 1rem;
+	list-style: none;
+	text-align: left;
 }
 
 .sidebar-nav .iconfont {
@@ -107,7 +108,7 @@ html {
 	text-decoration: underline;
 }
 
-.sidebar-nav .sidebar-nav-item.active {
+.sidebar-nav .active {
 	font-weight: bolder;
 	text-decoration: underline;
 }
@@ -136,6 +137,7 @@ html {
 .content {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
+	word-wrap: break-word;
 }
 
 @media (min-width: 48em) {
