@@ -349,6 +349,18 @@ tbody tr:nth-child(odd) th {
 	margin-bottom: 4em;
 }
 
+.post-info {
+    margin-bottom: 1em;
+    height: 28px;
+    line-height: 28px;
+}
+
+.post-info .gravatar {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
 /* Blog post or page title */
 .page-title,
 .post-title,
@@ -363,9 +375,8 @@ tbody tr:nth-child(odd) th {
 
 /* Meta data line below post title */
 .post-date {
-	display: block;
+	display: inline-block;
 	margin-top: -.5rem;
-	margin-bottom: 1rem;
 	color: #9a9a9a;
 }
 

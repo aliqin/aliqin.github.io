@@ -26,3 +26,11 @@ version:          0.0.1
 
 github:
   repo:           https://github.com/aliqin
+
+authors:
+  woodsrong:
+    display_name: 戊子
+    gravatar: 239110d47cab696aaf02a1beab5711ae
+  shenlm203:
+    display_name: 联民
+    gravatar: f20b7f6c97685546e97d0be31917cae4
