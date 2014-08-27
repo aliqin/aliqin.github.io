@@ -15,9 +15,9 @@ author: shenlm203
         - 站内搜索
     + 多设备布局
         - 主页和导航设计法则
-        - 响应式网页设计基础
-        - 响应式网页设计模式
-        - 导航和行为模式
+        - [响应式网页设计基础](http://aliqin.github.io/2014/05/16/gw-responsive-web-design-basics/)
+        - [响应式网页设计模式](http://aliqin.github.io/2014/05/16/gw-responsive-web-design-patterns/)
+        - [导航和行为模式](http://aliqin.github.io/2014/05/16/gw-nav-and-action-patterns/)
     + 表单和用户输入(未完成)
         - 创建惊艳的表单
         - 为你的网站添加触屏
