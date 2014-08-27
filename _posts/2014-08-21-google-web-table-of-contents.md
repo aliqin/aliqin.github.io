@@ -6,7 +6,7 @@ author: shenlm203
 
 #目录
 
-- [前言]()
+- [前言](http://aliqin.github.io/2014/08/20/google-web-get-started/)
 - 正文
     + 网站设计法则(未完成)
         - 宽屏网站设计要素
