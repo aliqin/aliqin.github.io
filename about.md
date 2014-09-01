@@ -3,6 +3,10 @@ layout: page
 title: About
 ---
 
+![浪潮之巅](/public/images/2014/surfing.jpg)
+
+> 多少次互联网浪潮我们擦身而过，这一次我们要站在浪潮之巅！
+
 ### 阿里通信前端团队
 
 * 西溪园区.杭州
@@ -13,8 +17,6 @@ title: About
 * 跨终端web / Hybrid App
 
 ### 招聘
-> 寻求志同道合的小伙伴加入
-
 * 职位：前端攻城狮
 * 地点：西溪园区.杭州
 
