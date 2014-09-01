@@ -6,7 +6,7 @@ author: shenlm203
 
 #目录
 
-- [前言](http://aliqin.github.io/2014/08/20/google-web-get-started/)
+- [前言](http://aliqin.github.io/2014/05/20/google-web-get-started/)
 - 正文
     + 网站设计法则(未完成)
         - 宽屏网站设计要素
@@ -55,6 +55,4 @@ author: shenlm203
 本文翻译自[Google Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
 由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
 由于原文的变动，可能会对现有的翻译细节作出调整。
-by [联民](http://www.atatech.org/users/80160) & [若欢](http://www.atatech.org/users/80172)
-
-
+by 联民 & 若欢
