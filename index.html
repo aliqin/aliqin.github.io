@@ -21,7 +21,10 @@ title: Home
             <span class="post-date">{{ post.date | date_to_string }}</span>
         </div>
 
-        {{ post.content }}
+		{{ post.content | strip_html | truncate: 300}}
+		{% if post.content | size > 300 %}
+		<a href="{{ post.url }}">阅读全文</a>
+		{% endif %}
     </div>
     {% endfor %}
 </div>
