@@ -19,7 +19,7 @@ author:
   name:           'aliqin'
   url:            https://github.com/aliqin
 
-paginate:         5
+paginate:         10
 
 # Custom vars
 version:          0.0.1
