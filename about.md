@@ -12,6 +12,16 @@ title: About
 * 西溪园区.杭州
 * <http://github.com/aliqin>
 
+### 我们的产品
+![浪潮之巅](/public/images/2014/products.png)
+
+* [官网](http://aliqin.cn)
+* [亲心170](http://aliqin.tmall.com/phone_num_intro.htm)
+* [阿里小号](http://aliqin.tmall.com/xiaohao_intro.htm)
+* [流量钱包](http://qianbao.tmall.com/)
+* [淘WiFi](http://wifi.taobao.com)
+* [出境游](http://act.aliqin.tmall.com/market/aliqin/outbound.php)
+
 ### 研究方向
 * 前端自动化构建研究
 * 跨终端web / Hybrid App
