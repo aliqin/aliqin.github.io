@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 阿里通信诚求前端人才
-author: yingbu
+author: chaoren1641
 ---
 
 ## 关于阿里通信
