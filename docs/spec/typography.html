@@ -7,10 +7,8 @@
     <title>Atui - 阿里通信组件库</title>
     <script>
       var hostname = location.hostname
-      root = 'http://g.alicdn.com/aliqin/atui/0.1.19/'
-      if(/localhost/ig.test(hostname)) {
-        root = 'http://localhost:8080/build/'
-      }
+      var env = 'online'
+      root = '//unpkg.com/atui@0.0.3/dist/'
     </script>
     <link rel="stylesheet" type="text/css" href="/index.css"/>
     <script>
@@ -26,15 +24,19 @@
         </li>
       </ul>
     </div>
+    <script type="text/javascript" src="//unpkg.com/vue@2.1.4/dist/vue.min.js"></script>
     <script>
-      document.write('<script src="'+ root +'../dist/vue.dev.js"><\/script>')
       document.write('<script src="'+ root +'atui.js"><\/script>')
       document.write('<script src="'+ root +'atuiWidget.js"><\/script>')
     </script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script> -->
     <script src="/common.js"></script>
     <script src="/index.js"></script>
-    <script src="http://localhost:8080/webpack-dev-server.js"></script>
+    <script type="text/javascript">
+      if(env === 'dev'){
+        document.write('<script src="'+ root +'../webpack-dev-server.js"><\/script>')
+      }
+    </script>
     <script>
 
       if (/(src\/components\/)|(src\/widgets\/)/.test(location.pathname) ) {
