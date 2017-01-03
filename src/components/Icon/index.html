@@ -8,10 +8,17 @@
     <script>
       var hostname = location.hostname
       var env = 'online'
-      root = '//unpkg.com/atui@0.0.3/dist/'
+      var root = '/'
+      if(~hostname.indexOf('localhost')){
+        env = 'dev'
+        root = '//localhost:8080/build/'
+      }
     </script>
     <link rel="stylesheet" type="text/css" href="/index.css"/>
-    <link rel="stylesheet" type="text/css" id="J_ThemeCss" href="//unpkg.com/atui@0.0.3/dist/greater-blue.css">
+    <script type="text/javascript">
+      document.write('<link rel="stylesheet" type="text/css" id="J_ThemeCss" href="' + root + 'greater-blue.css" \/>')
+    </script>
+    
   </head>
   <body>
     <div id="react-content"></div>
@@ -22,16 +29,13 @@
         </li>
       </ul>
     </div>
-    <script type="text/javascript" src="//unpkg.com/vue@2.1.4/dist/vue.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/atui@0.0.3/dist/atui.js"></script>
-    <script type="text/javascript" src="//unpkg.com/atui@0.0.3/dist/atuiWidget.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.1.8/dist/vue.js"></script>
+    <script type="text/javascript">
+      document.write('<script type="text/javascript" src="' + root + 'atui.js"><\/script>');
+      document.write('<script type="text/javascript" src="' + root + 'atuiWidget.js"><\/script>');
+    </script>
     <script src="/common.js"></script>
     <script src="/index.js"></script>
-    <script type="text/javascript">
-      if(env === 'dev'){
-        document.write('<script src="'+ root +'../webpack-dev-server.js"><\/script>')
-      }
-    </script>
     <script>
 
       if (/(src\/components\/)|(src\/widgets\/)/.test(location.pathname) ) {
