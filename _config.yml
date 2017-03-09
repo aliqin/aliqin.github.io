@@ -1,0 +1,38 @@
+# Dependencies
+markdown:         kramdown
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            aliqin
+tagline:          '阿里通信前端团队'
+description:      '阿里通信前端团队'
+url:              http://aliqin.github.io
+baseurl:          /
+logo:             '/public/images/logo.png'
+
+author:
+  name:           'aliqin'
+  url:            https://github.com/aliqin
+
+paginate:         10
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/aliqin
+
+authors:
+  woodsrong:
+    display_name: 戊子
+    gravatar: 239110d47cab696aaf02a1beab5711ae
+  shenlm203:
+    display_name: 联民
+    gravatar: f20b7f6c97685546e97d0be31917cae4
+  chaoren1641:
+    display_name: 英布
