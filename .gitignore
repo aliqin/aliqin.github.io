@@ -1,4 +1,6 @@
 .DS_Store
 .idea/
 .vscode/
-themes/
+themes/gohugo-amp
+themes/hugo-minimalist-theme
+themes/hugo-theme-air
