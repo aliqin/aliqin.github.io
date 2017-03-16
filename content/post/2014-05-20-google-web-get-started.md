@@ -2,13 +2,12 @@
 title = "Google Web开发最佳实践（一）"
 date = "2014-05-20T00:18:34+08:00"
 author = "shenlm203"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 本文翻译自 [Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
@@ -18,6 +17,9 @@ slug = "post-title"
 为有着不同兼容性，不同的屏幕尺寸和交互方法设备构建web看上去让人沮丧。
 构建多屏体验并没有听说的那么难。按照本教程中的课程，我们将为《CS256: 移动Web开发》课程做一个示范登录页，它可很好地运行于多种不同设备(小到手机，大到电视)。
 为了展示，手册带你通过如下两步入门。
+
+<!--more-->
+
 ![](http://gtms02.alicdn.com/tps/i2/TB1ufssFVXXXXaOXFXXF1nQTXXX-1375-750.jpg)
 
 ##1 创建网站的内容和结构

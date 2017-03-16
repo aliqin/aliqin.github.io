@@ -2,14 +2,13 @@
 title = "阿里通信诚求前端人才"
 date = "2016-10-28T00:18:34+08:00"
 author = "chaoren1641"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 weight = 10
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 ## 关于阿里通信

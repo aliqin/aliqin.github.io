@@ -2,17 +2,19 @@
 title = "导航和行为模式"
 date = "2014-05-16T00:18:34+08:00"
 author = "shenlm203"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 #1 应用栏
 多年使用互联网的经验告诉用户所有桌面站点都应该有一个页头（page header），但是在移动端，你需要的就是应用栏（APP Bar）。
+
+<!--more-->
+
 ![](http://gtms04.alicdn.com/tps/i4/TB1UXw6FVXXXXaWXXXXRnHmQFXX-2047-1090.png)
 每到一个站点，用户总是希望在每一个页面的顶端看到站点的logo，而且当用户点击顶端的logo时，他能再回到主页。在用户的传统认知中，网页都需要有个页头作为上述功能的载体，对应的在移动端则需要应用栏。
 

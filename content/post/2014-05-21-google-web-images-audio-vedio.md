@@ -2,13 +2,12 @@
 title = "Google web开发最佳实践(三)"
 date = "2014-05-21T00:18:34+08:00"
 author = "shenlm203"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 # 图像、音频和视频

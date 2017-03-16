@@ -2,18 +2,20 @@
 title = "响应式网页设计基础"
 date = "2014-05-16T00:18:34+08:00"
 author = "shenlm203"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 
 使用移动设备上网已然成为一大趋势，但不幸的是，很多网页都没有对这些移动设备做相应的优化。移动设备对网页大小和内容的呈现方式应该与桌面端有所不同。
 平板、手机、桌面电脑、游戏机、电视还有可穿戴设备……现在各种各样的设备导致了屏幕尺寸也是五花八门。而且在未来，屏幕的尺寸也会越来越不同，为了跟上这趋势，你的站点应该要尽量去适应各种屏幕尺寸才行。
+
+<!--more-->
+
 <video autoplay="" loop="" controls="" class="responsiveVideo">
     <source src="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.webm" type="video/webm">
     <source src="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.mp4" type="video/mp4">

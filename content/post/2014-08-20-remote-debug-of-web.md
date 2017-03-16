@@ -2,13 +2,12 @@
 title = "web远程调试方案推荐"
 date = "2014-08-20T00:18:34+08:00"
 author = "woodsrong"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
 
 

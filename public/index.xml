@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>阿里亲前端博客</title>
-    <link>http://aliqin.github.io/index.xml</link>
-    <description>Recent content on 阿里亲前端博客</description>
+    <title>阿里通信前端团队</title>
+    <link>http://quanfeng.tech/aliqin.github.io/index.xml</link>
+    <description>Recent content on 阿里通信前端团队</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <copyright>All rights reserved - 2017</copyright>
+    <copyright>Copyright © 2017. All rights reserved.</copyright>
     <lastBuildDate>Fri, 28 Oct 2016 00:18:34 +0800</lastBuildDate>
-    <atom:link href="http://aliqin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://quanfeng.tech/aliqin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>阿里通信诚求前端人才</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/%E9%98%BF%E9%87%8C%E9%80%9A%E4%BF%A1%E8%AF%9A%E6%B1%82%E5%89%8D%E7%AB%AF%E4%BA%BA%E6%89%8D/</link>
       <pubDate>Fri, 28 Oct 2016 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/%E9%98%BF%E9%87%8C%E9%80%9A%E4%BF%A1%E8%AF%9A%E6%B1%82%E5%89%8D%E7%AB%AF%E4%BA%BA%E6%89%8D/</guid>
       <description>&lt;h2 id=&#34;关于阿里通信&#34;&gt;关于阿里通信&lt;/h2&gt;
 
 &lt;p&gt;阿里通信是阿里巴巴集团在13年底成立的独立BU。从最初的虚拟运营商发展成为了全方位的互联网电信服务商。业务涵盖了几乎电信运营商所有业务类型，比如短信、流量、号卡、合约机、充值相关业务。&lt;/p&gt;
@@ -97,11 +97,18 @@
     
     <item>
       <title>Google Web开发最佳实践(总纲)</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BA%B2/</link>
       <pubDate>Thu, 21 Aug 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
-      <description>&lt;p&gt;#目录&lt;/p&gt;
+      <guid>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BA%B2/</guid>
+      <description>&lt;p&gt;本文翻译自&lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Google Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)
+由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
+由于原文的变动，可能会对现有的翻译细节作出调整。
+by 联民 &amp;amp; 若欢&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;#目录&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://aliqin.github.io/2014/05/20/google-web-get-started/&#34;&gt;前言&lt;/a&gt;&lt;/li&gt;
@@ -187,22 +194,15 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;ps：&lt;/em&gt;&lt;/strong&gt;
-本文翻译自&lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Google Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)
-由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
-由于原文的变动，可能会对现有的翻译细节作出调整。
-by 联民 &amp;amp; 若欢&lt;/p&gt;
-</description>
+&lt;hr /&gt;</description>
     </item>
     
     <item>
       <title>web远程调试方案推荐</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/web%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Wed, 20 Aug 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/web%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88%E6%8E%A8%E8%8D%90/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://img2.tbcdn.cn/L1/461/1/c13240faf3a4b929d6df74f5b274e9249ae70397&#34; alt=&#34;remote_debug_banner&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;什么是web远程调试&#34;&gt;什么是web远程调试？&lt;/h2&gt;
@@ -394,61 +394,11 @@ by 联民 &amp;amp; 若欢&lt;/p&gt;
     </item>
     
     <item>
-      <title>求前端工程师</title>
-      <link>http://aliqin.github.io/post-title/</link>
-      <pubDate>Tue, 17 Jun 2014 00:18:34 +0800</pubDate>
-      
-      <guid>http://aliqin.github.io/post-title/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://aliqin.github.io/public/images/2014/surfing.jpg&#34; alt=&#34;浪潮之巅&#34; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;多少次互联网浪潮擦身而过，这一次我们要站在浪潮之巅！&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;职位描述&#34;&gt;职位描述&lt;/h3&gt;
-
-&lt;p&gt;在这里，没有历史包袱，前端舞台我们一起搭；&lt;br&gt;
-在这里，Sass/Compass/Jade/CoffeeScript/Grunt听君摆布，随君起舞&lt;/p&gt;
-
-&lt;h3 id=&#34;我们的愿景&#34;&gt;我们的愿景&lt;/h3&gt;
-
-&lt;p&gt;重新定义通信行业，让天下没有又贵又麻烦的通信&lt;/p&gt;
-
-&lt;h3 id=&#34;我们的业务&#34;&gt;我们的业务&lt;/h3&gt;
-
-&lt;p&gt;PC和无线端的阿里通信产品线开发&lt;/p&gt;
-
-&lt;h3 id=&#34;前端团队发展方向&#34;&gt;前端团队发展方向&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;前端自动化构建研究&lt;/li&gt;
-&lt;li&gt;跨终端web / Hybrid App&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;我们的要求&#34;&gt;我们的要求&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;爱折腾前端技术,不折腾睡不着觉&lt;/li&gt;
-&lt;li&gt;善于使用工具提升前端研发效率&lt;/li&gt;
-&lt;li&gt;关注ECMAScript6/HTML5/CSS3&lt;/li&gt;
-&lt;li&gt;前端经验2年+&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;简历传送门&#34;&gt;简历传送门&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;mailto:hr-aliqin@alibaba-inc.com&#34;&gt;hr-aliqin@alibaba-inc.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
       <title>Google web开发最佳实践(三)</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%89/</link>
       <pubDate>Wed, 21 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%89/</guid>
       <description>&lt;h1 id=&#34;图像-音频和视频&#34;&gt;图像、音频和视频&lt;/h1&gt;
 
 &lt;p&gt;图像、音频和视频可以吸引用户，但是当他们的出现与网站格格不入，或者没有加载、加载缓慢的时候，就会流失用户。&lt;/p&gt;
@@ -1185,18 +1135,21 @@ The branch breaks, and he starts to fall.
     
     <item>
       <title>Google Web开发最佳实践（一）</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%80/</link>
       <pubDate>Tue, 20 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/google-web%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%80/</guid>
       <description>&lt;p&gt;本文翻译自 &lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;#Get Started-你的首个多屏网站&lt;/p&gt;
 
 &lt;p&gt;为有着不同兼容性，不同的屏幕尺寸和交互方法设备构建web看上去让人沮丧。
 构建多屏体验并没有听说的那么难。按照本教程中的课程，我们将为《CS256: 移动Web开发》课程做一个示范登录页，它可很好地运行于多种不同设备(小到手机，大到电视)。
-为了展示，手册带你通过如下两步入门。
-&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1ufssFVXXXXaOXFXXF1nQTXXX-1375-750.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+为了展示，手册带你通过如下两步入门。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1ufssFVXXXXaOXFXXF1nQTXXX-1375-750.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;##1 创建网站的内容和结构
 内容是任何网站最重要的部分。因此，让设计服务于内容，而不是设计决定内容。在这篇指南中，首先确定我们需要的内容，然后根据内容来创建结构，接着以简单的线性布局展示网页。线性布局在宽窄视口（ViewPort）方面具有良好效果。（注：ViewPort，视口、视觉窗口，即显示区域）&lt;/p&gt;
@@ -1698,19 +1651,21 @@ The branch breaks, and he starts to fall.
 &lt;li&gt;移动优先，形成基本的经验&lt;/li&gt;
 &lt;li&gt;一旦拥有移动经验，增加显示器的宽度，直到网页看起来不合适，并在此设置临界点&lt;/li&gt;
 &lt;li&gt;不断迭代&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>响应式网页设计基础</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/</guid>
       <description>&lt;p&gt;使用移动设备上网已然成为一大趋势，但不幸的是，很多网页都没有对这些移动设备做相应的优化。移动设备对网页大小和内容的呈现方式应该与桌面端有所不同。
-平板、手机、桌面电脑、游戏机、电视还有可穿戴设备……现在各种各样的设备导致了屏幕尺寸也是五花八门。而且在未来，屏幕的尺寸也会越来越不同，为了跟上这趋势，你的站点应该要尽量去适应各种屏幕尺寸才行。
-&lt;video autoplay=&#34;&#34; loop=&#34;&#34; controls=&#34;&#34; class=&#34;responsiveVideo&#34;&gt;
+平板、手机、桌面电脑、游戏机、电视还有可穿戴设备……现在各种各样的设备导致了屏幕尺寸也是五花八门。而且在未来，屏幕的尺寸也会越来越不同，为了跟上这趋势，你的站点应该要尽量去适应各种屏幕尺寸才行。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;video autoplay=&#34;&#34; loop=&#34;&#34; controls=&#34;&#34; class=&#34;responsiveVideo&#34;&gt;
     &lt;source src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.webm&#34; type=&#34;video/webm&#34;&gt;
     &lt;source src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
@@ -1925,19 +1880,20 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
 
 &lt;p&gt;##4.4 不要完全隐藏内容&lt;/p&gt;
 
-&lt;p&gt;当你想要根据屏幕尺寸来选择哪里内容是要隐藏的那些内容又是要显示的的时候，一定要小心。不要简单地把不能适应屏幕尺寸的内容直接隐藏，用户需要的并不是屏幕的尺寸。比如说，*天气预报*上的污染指数被隐藏了，那么春季易过敏的用户就不知道外面的天气适不适合出门了。&lt;/p&gt;
-</description>
+&lt;p&gt;当你想要根据屏幕尺寸来选择哪里内容是要隐藏的那些内容又是要显示的的时候，一定要小心。不要简单地把不能适应屏幕尺寸的内容直接隐藏，用户需要的并不是屏幕的尺寸。比如说，*天气预报*上的污染指数被隐藏了，那么春季易过敏的用户就不知道外面的天气适不适合出门了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>响应式网页设计模式</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
       <description>&lt;p&gt;虽然响应式网页设计模式正在快速发展，不过已经有几种成熟的设计模式可以流畅地兼容桌面端和移动端设备。
 大多数响应式网页的布局可以归纳为五种设计模式：mostly fluid、column drop、layout shifter、tiny tweaks和off canvas。一些情况下，页面可能会采用组合设计模式，例如组合使用column drop和off canvas。这些设计模式最初都是由Luke Wroblewski定义的，它们为响应式页面提供了一个坚实的基础。
 为创建简单易懂的示例，下面每一个案例都是基于flexbox通过真实的标签创建的，主要是在一个主div内放置了三个内容div。每个示例都是先从定义最小视图开始，然后在必要时候加上响应节点。尽管需要依赖特定前缀来实现最佳效果，但是flexbox布局模式已经可以很好的支持主流浏览器。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;#1 mostly fluid&lt;/p&gt;
 
@@ -2210,19 +2166,21 @@ Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放
     transform: translate(0,0);
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
       <title>导航和行为模式</title>
-      <link>http://aliqin.github.io/post-title/</link>
+      <link>http://quanfeng.tech/aliqin.github.io/%E5%AF%BC%E8%88%AA%E5%92%8C%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://aliqin.github.io/post-title/</guid>
+      <guid>http://quanfeng.tech/aliqin.github.io/%E5%AF%BC%E8%88%AA%E5%92%8C%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F/</guid>
       <description>&lt;p&gt;#1 应用栏
-多年使用互联网的经验告诉用户所有桌面站点都应该有一个页头（page header），但是在移动端，你需要的就是应用栏（APP Bar）。
-&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1UXw6FVXXXXaWXXXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
+多年使用互联网的经验告诉用户所有桌面站点都应该有一个页头（page header），但是在移动端，你需要的就是应用栏（APP Bar）。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1UXw6FVXXXXaWXXXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
 每到一个站点，用户总是希望在每一个页面的顶端看到站点的logo，而且当用户点击顶端的logo时，他能再回到主页。在用户的传统认知中，网页都需要有个页头作为上述功能的载体，对应的在移动端则需要应用栏。&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -2324,8 +2282,7 @@ Navigation Drawer是一个滑动面板，通常用来显示网站的导航菜单
 &lt;hr /&gt;
 
 &lt;p&gt;这么做的好处是你有了更多操作的空间，而且底栏的位置方便触碰，用户在原生底栏之上还多了一个可操作层。但是底栏上最多只能出现5种操作，还要注意底栏不可以太小以至于很难触碰。
-&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1iSEYFVXXXXaMXFXXW7GiKFXX-710-420.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
-</description>
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1iSEYFVXXXXaMXFXXW7GiKFXX-710-420.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

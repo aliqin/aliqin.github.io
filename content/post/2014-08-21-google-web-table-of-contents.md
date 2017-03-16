@@ -2,14 +2,21 @@
 title = "Google Web开发最佳实践(总纲)"
 date = "2014-08-21T00:18:34+08:00"
 author = "shenlm203"
-tags = ["tag1","tag2"]
+tags = []
 comments = true
 draft = false
 share = true
 menu = ""
 image = ""
-slug = "post-title"
 +++
+
+
+本文翻译自[Google Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
+由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
+由于原文的变动，可能会对现有的翻译细节作出调整。
+by 联民 & 若欢
+
+<!--more-->
 
 #目录
 
@@ -57,9 +64,3 @@ slug = "post-title"
         - 使用开发工具模拟
 
 ---
-
-***ps：***
-本文翻译自[Google Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
-由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
-由于原文的变动，可能会对现有的翻译细节作出调整。
-by 联民 & 若欢
