@@ -2,7 +2,7 @@
 title = "响应式网页设计模式"
 date = "2014-05-16T00:18:34+08:00"
 author = "shenlm203"
-tags = []
+tags = ["响应式Web"]
 comments = true
 draft = false
 share = true

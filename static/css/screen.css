@@ -34,7 +34,6 @@ audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 html {
-   font-family: sans-serif;
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
@@ -203,7 +202,8 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -230,7 +230,8 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    /*font-family: "Open Sans", sans-serif;*/
     text-rendering: geometricPrecision;
 }
 
@@ -531,7 +532,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
@@ -649,7 +650,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     color: #fff;
 }
 
@@ -658,7 +659,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    /*font-family: "Merriweather", serif;*/
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -729,6 +730,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-title a {
+    color: lightseagreen;
     text-decoration: none;
 }
 
@@ -740,19 +742,25 @@ body:not(.post-template) .post-title {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.7em;
+    color: #666;
 }
 
 .read-more {
+    color: lightseagreen;
+    font-size: 12px;
     text-decoration: none;
 }
 
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
+}
+.post-meta .tag {
+    color: lightseagreen;
 }
 
 .author-thumb {
@@ -926,6 +934,20 @@ body:not(.post-template) .post-title {
 .post-footer .author {
     margin-right: 180px;
 }
+.post-footer .author .img {
+    float: left;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-size: contain;
+    border-radius: 50%;
+    /*border: 1px solid #eee;*/
+    box-shadow: 0 0 1px #aaa;
+    margin-right: 10px;
+    transition: all .5s;
+}
+.post-footer .author .img:hover {
+    box-shadow: 0 0 10px #aaa;
+}
 
 .post-footer h4 a {
     color: #2e2e2e;
@@ -945,18 +967,19 @@ body:not(.post-template) .post-title {
     top: 6rem;
     right: 0;
     width: 180px;
+    text-align: right;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
+    margin: 1rem 0 1.6rem 1.6rem;
     color: #BBC7CC;
     text-decoration: none;
 }
 
 .post-footer .share a:hover {
-    color: #50585D;
+    color: lightseagreen;
 }
 
 
@@ -1073,7 +1096,7 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+    /*font-family: "Merriweather", serif;*/
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
@@ -1123,7 +1146,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1208,7 +1231,7 @@ body:not(.post-template) .post-title {
     margin: 8rem 0 0 0;
     padding: 0.5rem 15px;
     /*border-top: #EBF2F6 1px solid;*/
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
@@ -1702,7 +1725,7 @@ body:not(.post-template) .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;

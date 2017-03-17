@@ -1,0 +1,10 @@
+{{$author := index .Site.Data.authors (or .Params.author .Site.Params.author)}}
+{{$authorname := $author.name}}
+{{$authorbio := $author.bio}}
+{{$authorthumbnail := $author.thumbnail}}
+{{$authorwebsite := $author.website}}
+<section class="author">
+  <a class="img" href="{{ $authorwebsite }}" style="background-image: url({{ $authorthumbnail }})"></a>
+  <h4><a href="{{$authorwebsite}}">{{$authorname}}</a></h4>
+  <p>{{$authorbio}}</p>
+</section>

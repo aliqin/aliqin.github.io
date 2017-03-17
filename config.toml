@@ -3,8 +3,8 @@ title = "阿里通信前端团队"
 theme = "casper"
 languagecode = "zh-CN"
 copyright = "Copyright © 2017. All rights reserved."
-disqusshortname = "aliqin"
-paginate = 5
+paginate = 10
+enableEmoji = true
 pluralizelisttitles = false
 
 [[menu.main]]
@@ -19,20 +19,17 @@ url = "https://github.com/vjeantet"
 weight = 100
 
 [params]
-author = "Valère JEANTET"
-authorlocation = "Paris, France"
-authorwebsite = "http://vjeantet.fr"
-bio = "IT software and Security Engineer, Open source enthusiast."
+author = "aliqin"
 cover = "images/screen.png"
 description = "Whatever the mind of man can conceive and believe, it can achieve."
-githubName = "vjeantet"
+githubName = "githubname"
 googleAnalyticsUserID = "UA-79101-12"
 hideHUGOSupport = false
 logo = "images/logo.png"
-twitterName = "vjeantet"
+twitterName = "0326"
 
 [permalinks]
-post = "/:slug/"
+post = ":filename/"
 
 [sitemap]
 ChangeFreq = ""

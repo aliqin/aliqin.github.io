@@ -1,0 +1,33 @@
+{{ $baseurl := .Site.BaseURL }}
+<article class="post {{ .Section }}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        {{if isset .Params "excerpt" }}
+            {{ if .Params.excerpt }}
+                <p>{{ .Params.excerpt }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+            {{end}}
+        {{else}}
+            <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">更多内容 &raquo;</a></p>
+        {{end}}
+        
+    </section>
+    <footer class="post-meta">
+        {{$author := .Params.author}}
+        {{if isset .Site.Data.authors $author}}
+            {{$author := index .Site.Data.authors .Params.author }}
+            <img class="author-thumb" src="{{ $author.thumbnail }}" alt="Author image" nopin="nopin" />
+            {{$author.name}}
+        {{end}}
+            
+        {{if .Params.tags }}
+            {{ range $index, $tag := .Params.tags }}
+                <a class="tag" href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a> 
+            {{ end }}
+        {{end}}
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            {{ .Date.Format "2 Jan 2006" }}
+        </time>
+    </footer>
+</article>
