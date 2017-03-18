@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>阿里通信诚求前端人才 on 阿里通信前端团队</title>
-    <link>http://quanfeng.tech/aliqin.github.io/join-us/index.xml</link>
+    <link>https://aliqin.github.io/join-us/index.xml</link>
     <description>Recent content in 阿里通信诚求前端人才 on 阿里通信前端团队</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright © 2017. All rights reserved.</copyright>
     <lastBuildDate>Fri, 28 Oct 2016 00:18:34 +0800</lastBuildDate>
-    <atom:link href="http://quanfeng.tech/aliqin.github.io/join-us/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aliqin.github.io/join-us/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
