@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post on 阿里通信前端团队</title>
-    <link>http://quanfeng.tech/aliqin.github.io/post/index.xml</link>
+    <link>https://aliqin.github.io/post/index.xml</link>
     <description>Recent content in Post on 阿里通信前端团队</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright © 2017. All rights reserved.</copyright>
     <lastBuildDate>Thu, 21 Aug 2014 00:18:34 +0800</lastBuildDate>
-    <atom:link href="http://quanfeng.tech/aliqin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aliqin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Google Web开发最佳实践(总纲)</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-08-21-google-web-table-of-contents/</link>
+      <link>https://aliqin.github.io/2014-08-21-google-web-table-of-contents/</link>
       <pubDate>Thu, 21 Aug 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-08-21-google-web-table-of-contents/</guid>
+      <guid>https://aliqin.github.io/2014-08-21-google-web-table-of-contents/</guid>
       <description>&lt;p&gt;本文翻译自&lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Google Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)
 由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
 由于原文的变动，可能会对现有的翻译细节作出调整。
@@ -114,10 +114,10 @@ by 联民 &amp;amp; 若欢&lt;/p&gt;
     
     <item>
       <title>web远程调试方案推荐</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/</link>
+      <link>https://aliqin.github.io/2014-08-20-remote-debug-of-web/</link>
       <pubDate>Wed, 20 Aug 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/</guid>
+      <guid>https://aliqin.github.io/2014-08-20-remote-debug-of-web/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://img2.tbcdn.cn/L1/461/1/c13240faf3a4b929d6df74f5b274e9249ae70397&#34; alt=&#34;remote_debug_banner&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;什么是web远程调试&#34;&gt;什么是web远程调试？&lt;/h2&gt;
@@ -310,10 +310,10 @@ by 联民 &amp;amp; 若欢&lt;/p&gt;
     
     <item>
       <title>Google web开发最佳实践(三)</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</link>
+      <link>https://aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</link>
       <pubDate>Wed, 21 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</guid>
+      <guid>https://aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</guid>
       <description>&lt;h1 id=&#34;图像-音频和视频&#34;&gt;图像、音频和视频&lt;/h1&gt;
 
 &lt;p&gt;图像、音频和视频可以吸引用户，但是当他们的出现与网站格格不入，或者没有加载、加载缓慢的时候，就会流失用户。&lt;/p&gt;
@@ -1050,10 +1050,10 @@ The branch breaks, and he starts to fall.
     
     <item>
       <title>Google Web开发最佳实践（一）</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-05-20-google-web-get-started/</link>
+      <link>https://aliqin.github.io/2014-05-20-google-web-get-started/</link>
       <pubDate>Tue, 20 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-05-20-google-web-get-started/</guid>
+      <guid>https://aliqin.github.io/2014-05-20-google-web-get-started/</guid>
       <description>&lt;p&gt;本文翻译自 &lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;#Get Started-你的首个多屏网站&lt;/p&gt;
@@ -1571,10 +1571,10 @@ The branch breaks, and he starts to fall.
     
     <item>
       <title>响应式网页设计基础</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</link>
+      <link>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</guid>
+      <guid>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</guid>
       <description>&lt;p&gt;使用移动设备上网已然成为一大趋势，但不幸的是，很多网页都没有对这些移动设备做相应的优化。移动设备对网页大小和内容的呈现方式应该与桌面端有所不同。
 平板、手机、桌面电脑、游戏机、电视还有可穿戴设备……现在各种各样的设备导致了屏幕尺寸也是五花八门。而且在未来，屏幕的尺寸也会越来越不同，为了跟上这趋势，你的站点应该要尽量去适应各种屏幕尺寸才行。&lt;/p&gt;
 
@@ -1800,10 +1800,10 @@ Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页
     
     <item>
       <title>响应式网页设计模式</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</link>
+      <link>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</guid>
+      <guid>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</guid>
       <description>&lt;p&gt;虽然响应式网页设计模式正在快速发展，不过已经有几种成熟的设计模式可以流畅地兼容桌面端和移动端设备。
 大多数响应式网页的布局可以归纳为五种设计模式：mostly fluid、column drop、layout shifter、tiny tweaks和off canvas。一些情况下，页面可能会采用组合设计模式，例如组合使用column drop和off canvas。这些设计模式最初都是由Luke Wroblewski定义的，它们为响应式页面提供了一个坚实的基础。
 为创建简单易懂的示例，下面每一个案例都是基于flexbox通过真实的标签创建的，主要是在一个主div内放置了三个内容div。每个示例都是先从定义最小视图开始，然后在必要时候加上响应节点。尽管需要依赖特定前缀来实现最佳效果，但是flexbox布局模式已经可以很好的支持主流浏览器。&lt;/p&gt;
@@ -2086,10 +2086,10 @@ Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放
     
     <item>
       <title>导航和行为模式</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</link>
+      <link>https://aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</link>
       <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</guid>
+      <guid>https://aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</guid>
       <description>&lt;p&gt;#1 应用栏
 多年使用互联网的经验告诉用户所有桌面站点都应该有一个页头（page header），但是在移动端，你需要的就是应用栏（APP Bar）。&lt;/p&gt;
 
@@ -2202,10 +2202,10 @@ Navigation Drawer是一个滑动面板，通常用来显示网站的导航菜单
     
     <item>
       <title>阿里通信诚求前端人才</title>
-      <link>http://quanfeng.tech/aliqin.github.io/2016-10-28-ali-telecome-need-you/</link>
+      <link>https://aliqin.github.io/2016-10-28-ali-telecome-need-you/</link>
       <pubDate>Fri, 28 Oct 2016 00:18:34 +0800</pubDate>
       
-      <guid>http://quanfeng.tech/aliqin.github.io/2016-10-28-ali-telecome-need-you/</guid>
+      <guid>https://aliqin.github.io/2016-10-28-ali-telecome-need-you/</guid>
       <description>&lt;h2 id=&#34;关于阿里通信&#34;&gt;关于阿里通信&lt;/h2&gt;
 
 &lt;p&gt;阿里通信是阿里巴巴集团在13年底成立的独立BU。从最初的虚拟运营商发展成为了全方位的互联网电信服务商。业务涵盖了几乎电信运营商所有业务类型，比如短信、流量、号卡、合约机、充值相关业务。&lt;/p&gt;

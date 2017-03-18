@@ -1,4 +1,4 @@
-baseurl = "http://quanfeng.tech/aliqin.github.io/"
+baseurl = "https://aliqin.github.io/"
 title = "阿里通信前端团队"
 theme = "casper"
 languagecode = "zh-CN"
