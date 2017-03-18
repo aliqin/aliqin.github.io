@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="web远程调试方案推荐"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@0326"/>
+
+
+
+  	<meta property="og:title" content="web远程调试方案推荐 &middot; 阿里通信前端团队" />
+  	<meta property="og:site_name" content="阿里通信前端团队" />
+  	<meta property="og:url" content="http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/" />
+    
+    
+        
+            <meta property="og:image" content="http://quanfeng.tech/aliqin.github.io/images/screen.png"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="og:image" content="http://quanfeng.tech/aliqin.github.io/" />
+    <meta property="article:published_time" content="2014-08-20T00:18:34&#43;08:00" />
+
+    
+    
+
+    <title>web远程调试方案推荐 &middot; 阿里通信前端团队</title>
+
+    
+    <meta name="description" content="" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://quanfeng.tech/aliqin.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://quanfeng.tech/aliqin.github.io/images/apple-touch-icon.png" />
+    <link href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://quanfeng.tech/aliqin.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+    
+
+    
+      
+          <link href="http://quanfeng.tech/aliqin.github.io/index.xml" rel="alternate" type="application/rss+xml" title="阿里通信前端团队" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.18.1" />
+
+    <link rel="canonical" href="http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "",
+        "logo": "http://quanfeng.tech/aliqin.github.io/images/logo.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "",
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://quanfeng.tech/aliqin.github.io/images/logo.png",
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": "",
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "web远程调试方案推荐",
+    "name": "web远程调试方案推荐",
+    "wordCount":  207 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/",
+    "datePublished": "2014-08-20T00:18Z",
+    "dateModified": "2014-08-20T00:18Z",
+    
+    "keywords": "",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://quanfeng.tech/aliqin.github.io/2014-08-20-remote-debug-of-web/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      
+      
+      
+      
+
+      
+      
+
+    </script>
+    
+
+    
+</head>
+<body>
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://quanfeng.tech/aliqin.github.io/"><img src="http://quanfeng.tech/aliqin.github.io/images/logo.png" alt="Home" /></a>
+  
+  
+  <a class="menu-button" href="http://quanfeng.tech/aliqin.github.io/join-us"><span class="word">加入我们</span></a>
+<a class="menu-button" href="http://quanfeng.tech/aliqin.github.io/about"><span class="word">团队生活</span></a>
+<a class="menu-button" href="https://github.com/aliqin/atui" target="_blank"><span class="word">ATUI</span></a>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">web远程调试方案推荐</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2014-08-20T00:18:34&#43;08:00">
+            Aug 20, 2014
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p><img src="http://img2.tbcdn.cn/L1/461/1/c13240faf3a4b929d6df74f5b274e9249ae70397" alt="remote_debug_banner" /></p>
+
+<h2 id="什么是web远程调试">什么是web远程调试？</h2>
+
+<p>通过dev tools如chrome dev tools, firebug of firefox进行前端js/css/html调试已经是前端工程师的必备技能。随着移动互联网的发展，这一必备技能也随之迁移到移动端。虽然移动网站的数量已经跟上了移动互联网的浪潮，但是移动端浏览器调试工具的发展却落下了。远程调试最佳的解决方案是浏览器自身支持，假如android browser直接开启webkit远程调试端口，基本可以解决目前移动web开发中的绝大部分调试问题。庆幸的是曾经看到新闻，android browser将会替换默认为chrome，到时真是皆大欢喜！</p>
+
+<p></p>
+
+<p>移动端浏览器dev tools的落后，也促使了第三方调试工具的发展，如比较著名的weinre。</p>
+
+<h2 id="web远程调试特点">web远程调试特点</h2>
+
+<p>受限于移动端设备屏幕尺寸较小，web远程调试相对桌面浏览器调试有一些显著的特点：</p>
+
+<ul>
+<li>web page和dev tools必须分离使用才更方便</li>
+<li>web page和dev tools之前通过usb/network同步调试数据</li>
+<li>web page和dev tools之前会有一个proxy server用于双向同步数据</li>
+</ul>
+
+<h2 id="流行的web远程调试方案">流行的web远程调试方案</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Supported target Paltform</th>
+<th>Supported Features</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Weinre</td>
+<td>Ios4+, android2.1+, firefox, IE10+</td>
+<td>Elements, resources, network, timeline, console</td>
+</tr>
+
+<tr>
+<td>Aardwolf</td>
+<td>Ios, android, WinPhone 7, BlackBerry OS 6+</td>
+<td>Breakpoint</td>
+</tr>
+
+<tr>
+<td>Jsconsole</td>
+<td>Ios4.2+, android2.2.2+, webos</td>
+<td>Console</td>
+</tr>
+
+<tr>
+<td>DragonFly</td>
+<td>Opera mobile</td>
+<td>opera dragon panel</td>
+</tr>
+
+<tr>
+<td>Iphone app (JSConsole app or Bugaboo)</td>
+<td>Ios</td>
+<td>Console</td>
+</tr>
+
+<tr>
+<td><a href="http://developer.android.com/guide/webapps/debugging.html">Android adb log</a></td>
+<td>android2.1+</td>
+<td>Console</td>
+</tr>
+
+<tr>
+<td>Iphone Safari</td>
+<td>Ios</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td>Firefox (android)</td>
+<td>android</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td>UCweb browser dev (android)</td>
+<td>Ucweb android only</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td>QQ browser dev (android)</td>
+<td>QQBrowser android only</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td><a href="http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)">Android webview debug</a></td>
+<td>android4.4+ webview</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td><a href="https://www.webkit.org/blog/1620/webkit-remote-debugging/">WebKit Remote Debugging protocol</a></td>
+<td>webkit(pc)</td>
+<td>almost all features</td>
+</tr>
+
+<tr>
+<td><a href="https://code.google.com/p/v8/wiki/DebuggerProtocol">Chrome v8 debugger protocol</a></td>
+<td>V8 javascript engine</td>
+<td>almost all features</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="web远程调试方案推荐">web远程调试方案推荐</h2>
+
+<h3 id="特定浏览器">特定浏览器</h3>
+
+<ul>
+<li>直接使用官方支持的远程调试
+
+<ul>
+<li><a href="https://developer.apple.com/safari/tools/">ios safari</a></li>
+<li><a href="http://www.uc.cn/business/developer/">android UC browser(dev version)</a></li>
+<li><a href="https://developer.chrome.com/devtools/docs/remote-debugging">android Chrome</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android">android Firefox</a></li>
+<li><a href="http://www.opera.com/dragonfly/documentation/remote/">Opera mobile</a></li>
+</ul></li>
+</ul>
+
+<h3 id="其他浏览器">其他浏览器</h3>
+
+<h4 id="weinre-http-people-apache-org-pmuellr-weinre-docs-latest-home-html"><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a></h4>
+
+<ul>
+<li>特点
+
+<ul>
+<li>html,css调试，修改后所见即所得</li>
+<li>console.log输出</li>
+<li>简化的timeline面板支持</li>
+<li>简化的resources面板支持</li>
+</ul></li>
+<li>待改进增强
+
+<ul>
+<li>暂存注入调试js之前的log，调试js注入后输出全部log</li>
+<li>调试过程中比较容易断线，调试断线后自动重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高</li>
+</ul></li>
+</ul>
+
+<h4 id="aardwolf-http-lexandera-com-aardwolf"><a href="http://lexandera.com/aardwolf/">Aardwolf</a></h4>
+
+<ul>
+<li>特点
+
+<ul>
+<li>js断点</li>
+<li>js运行调用堆栈</li>
+</ul></li>
+<li>待改进
+
+<ul>
+<li>调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类</li>
+</ul></li>
+</ul>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ol>
+<li>safari远程调试 <a href="https://developer.apple.com/safari/tools/">https://developer.apple.com/safari/tools/</a></li>
+<li>android uc browser开发版远程调试 <a href="http://www.uc.cn/business/developer/">http://www.uc.cn/business/developer/</a></li>
+<li>android chrome远程调试 <a href="https://developer.chrome.com/devtools/docs/remote-debugging">https://developer.chrome.com/devtools/docs/remote-debugging</a></li>
+<li>android Firefox远程调试 [<a href="https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)">https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)</a></li>
+<li>Opera移动版远程调试 <a href="http://www.opera.com/dragonfly/documentation/remote/">http://www.opera.com/dragonfly/documentation/remote/</a></li>
+<li>web inspect remote &ndash; weinre远程调试 <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html</a></li>
+<li>Aardwolf远程调试 <a href="http://lexandera.com/aardwolf/">http://lexandera.com/aardwolf/</a></li>
+<li>android adb log <a href="http://developer.android.com/guide/webapps/debugging.html">http://developer.android.com/guide/webapps/debugging.html</a></li>
+<li>Android webview debug <a href="http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)">http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)</a></li>
+<li>WebKit Remote Debugging protocol <a href="https://www.webkit.org/blog/1620/webkit-remote-debugging/">https://www.webkit.org/blog/1620/webkit-remote-debugging/</a></li>
+<li>Chrome v8 debugger protocol <a href="https://code.google.com/p/v8/wiki/DebuggerProtocol">https://code.google.com/p/v8/wiki/DebuggerProtocol</a></li>
+</ol>
+
+<h2 id="后续计划">后续计划</h2>
+
+<ul>
+<li>weinre详细介绍</li>
+<li>Aardwolf详细介绍</li>
+<li>weinre增强：weinre改进/Aardwolf整合</li>
+</ul>
+    </section>
+
+
+  <footer class="post-footer">
+
+    
+
+
+
+
+<section class="author">
+  <a class="img" href="https://github.com/woodsrong" style="background-image: url(//avatars0.githubusercontent.com/u/1628010?v=3&amp;s=96)"></a>
+  <h4><a href="https://github.com/woodsrong">戊子</a></h4>
+  <p>用心生活！</p>
+</section>
+
+
+    
+<section class="share">
+  <h4>分享</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=web%e8%bf%9c%e7%a8%8b%e8%b0%83%e8%af%95%e6%96%b9%e6%a1%88%e6%8e%a8%e8%8d%90&nbsp;-&nbsp;%e9%98%bf%e9%87%8c%e9%80%9a%e4%bf%a1%e5%89%8d%e7%ab%af%e5%9b%a2%e9%98%9f&amp;url=http%3a%2f%2fquanfeng.tech%2faliqin.github.io%2f2014-08-20-remote-debug-of-web%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fquanfeng.tech%2faliqin.github.io%2f2014-08-20-remote-debug-of-web%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fquanfeng.tech%2faliqin.github.io%2f2014-08-20-remote-debug-of-web%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'aliqin';
+var disqus_url = 'http:\/\/quanfeng.tech\/aliqin.github.io\/2014-08-20-remote-debug-of-web\/';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">阿里通信前端团队</a> Copyright © 2017. All rights reserved.</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    
+    <script type="text/javascript" src="http://quanfeng.tech/aliqin.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
