@@ -1,0 +1,558 @@
+
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+
+    blockquote {
+        margin-left: 0;
+    }
+
+    .main-header {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: auto;
+        min-height: 240px;
+        height: 60vh;
+        padding: 15% 0;
+    }
+
+    .scroll-down,
+    .home-template .main-header:after { display: none; }
+
+    .archive-template .main-header {
+        min-height: 180px;
+        padding: 10% 0;
+    }
+
+    .blog-logo img {
+        padding: 4px 0;
+    }
+
+    .page-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .page-description {
+        font-size: 1.8rem;
+        line-height: 1.5em;
+    }
+
+    .post {
+        font-size: 0.95em
+    }
+
+    body:not(.post-template) .post-title {
+        font-size: 3.2rem;
+    }
+
+    hr {
+        margin: 2.4em 0;
+    }
+
+    ol, ul {
+        padding-left: 2em;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 3.1rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2.2rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    .author-profile {
+        padding-bottom: 4rem;
+    }
+
+    .author-profile .author-bio {
+        font-size: 1.6rem;
+    }
+
+    .author-meta span {
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .author-profile .author-meta span {
+        font-size: 1.6rem;
+    }
+
+    .post-head.main-header {
+        height:45vh;
+    }
+
+    .tag-head.main-header,
+    .author-head.main-header {
+        height: 30vh;
+    }
+
+    .no-cover.post-head.main-header {
+        height: 55px;
+        padding: 0;
+    }
+
+    .no-cover.author-head.main-header {
+        padding: 0;
+    }
+
+}
+
+
+/* ==========================================================================
+   11. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+
+    .main-header {
+        margin-bottom: 15px;
+        height: 40vh;
+    }
+
+    .no-cover.main-header {
+        height: 30vh;
+    }
+
+    .archive-template .main-header {
+        max-height: 20vh;
+        min-height: 160px;
+        padding: 10% 0;
+    }
+
+    .main-nav {
+        padding: 5px;
+        margin-bottom: 2rem;
+    }
+
+    .blog-logo {
+        padding: 5px;
+    }
+
+    .blog-logo img {
+        height: 30px;
+    }
+
+    .menu-button {
+        padding: 0 5px;
+    }
+    .nav ul {
+        padding: 60px 9% 5%;
+    }
+
+    .inner,
+    .pagination {
+        width: auto;
+        margin: 2rem auto;
+    }
+
+    .post {
+        width: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-bottom: 2rem;
+        line-height: 1.65em;
+    }
+
+    .post-date {
+        display: none;
+    }
+
+    .post-template .post-header {
+        margin-bottom: 2rem;
+    }
+
+    .post-template .post-date {
+        display: inline-block;
+    }
+
+    hr {
+        margin: 1.75em 0;
+    }
+
+    p, ul, ol, dl {
+        font-size: 0.95em;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .post-excerpt p {
+        font-size: 0.85em;
+    }
+
+    .page-description {
+        font-size: 1.6rem;
+    }
+
+    h1, h2, h3,
+    h4, h5, h6 {
+        margin: 0 0 0.3em 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+
+    h4 {
+        font-size: 1.9rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    body:not(.post-template) .post-title {
+        font-size: 2.5rem;
+    }
+
+    .post-template .post {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .post-template .site-footer {
+        margin-top: 0;
+    }
+
+    .post-content img {
+        padding: 0;
+        width: calc(100% + 32px); /* expand with to image + margins */
+        min-width: 0;
+        max-width: 112%; /* fallback when calc doesn't work */
+    }
+
+    .post-meta {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .post-footer {
+        padding: 5rem 0 3rem 0;
+        text-align: center;
+    }
+
+    .post-footer .author {
+        margin: 0 0 2rem 0;
+        padding: 0 0 1.6rem 0;
+        border-bottom: #EBF2F6 1px dashed;
+    }
+
+    .post-footer .share {
+        position: static;
+        width: auto;
+    }
+
+    .post-footer .share a {
+        margin: 1.4rem 0.8rem 0 0.8rem;
+    }
+
+    .author-meta li {
+        float: none;
+        margin: 0;
+        line-height: 1.75em;
+    }
+
+    .author-meta li:before {
+        display: none;
+    }
+
+    .older-posts,
+    .newer-posts {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .page-number {
+        display: block;
+    }
+
+    .site-footer {
+        margin-top: 3rem;
+    }
+
+    .author-profile {
+        padding-bottom: 2rem;
+    }
+
+    .post-head.main-header {
+        height: 30vh;
+    }
+
+    .tag-head.main-header,
+    .author-head.main-header {
+        height: 20vh;
+    }
+
+    .author-profile .author-image {
+        margin-top: -70px;
+    }
+
+    .author-profile .author-meta span {
+        font-size: 1.4rem;
+    }
+
+    .archive-template .main-header .page-description {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================================================
+   12. Animations
+   ========================================================================== */
+
+/* Used to fade in title/desc on the home page */
+@-webkit-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* Used to bounce .scroll-down on home page */
+@-webkit-keyframes bounce {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateY(0) ;
+                transform: translateY(0) ;
+    }
+    20% {
+        -webkit-transform: translateY(-10px) ;
+                transform: translateY(-10px) ;
+    }
+    30% {
+        -webkit-transform: translateY(-5px) ;
+                transform: translateY(-5px) ;
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0) ;
+                transform: translateY(0) ;
+    }
+    40% {
+        -webkit-transform: translateY(-10px) ;
+                transform: translateY(-10px) ;
+    }
+    60% {
+        -webkit-transform: translateY(-5px) ;
+                transform: translateY(-5px) ;
+    }
+}
+
+/* ==========================================================================
+   13. Suggestions - Further Reading Suggestions
+   ========================================================================== */
+.read-next {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    /*margin-top: 10rem;*/
+}
+
+.read-next-story {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 50%;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #222 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.read-next-story:hover:before {
+    background: rgba(0,0,0,0.8);
+    transition: all 0.2s ease;
+}
+.read-next-story:hover .post:before {
+    color: #222;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.read-next-story:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    transition: all 0.5s ease;
+}
+
+.read-next-story .post {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-bottom: none;
+}
+
+.read-next-story .post:before {
+    content: "Read This Next";
+    padding: 4px 10px 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    /*font-family: "Open Sans", sans-serif;*/
+    color: rgba(255,255,255,0.8);
+    border: rgba(255,255,255,0.5) 1px solid;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.read-next-story.prev .post:before {
+    content: "You Might Enjoy";
+}
+
+.read-next-story h2 {
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.read-next-story p {
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Special styles for posts with no cover images */
+.read-next-story.no-cover {
+    background: #f5f8fa;
+}
+
+.read-next-story.no-cover:before {
+    display: none;
+}
+
+.read-next-story.no-cover .post:before {
+    color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.2);
+}
+
+.read-next-story.no-cover h2 {
+    color: rgba(0,0,0,0.8);
+}
+
+.read-next-story.no-cover p {
+    color: rgba(0,0,0,0.5);
+}
+
+/* if there are two posts without covers, put a border between them */
+.read-next-story.no-cover + .read-next-story.no-cover {
+    border-left: rgba(0,0,100,0.04) 1px solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Correctly position site-footer when next to the .read-next container */
+.read-next + .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .read-next {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*margin-top: 4rem;*/
+    margin-top: 0;
+
+  }
+
+  .read-next p {
+    display: none;
+  }
+
+  .read-next-story.no-cover + .read-next-story.no-cover {
+    border-top: rgba(0,0,100,0.06) 1px solid;
+    border-left: none;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .read-next {
+    margin-top: 0;
+    margin-bottom: -37px;
+  }
+
+  .read-next .post {
+    width: 100%;
+  }
+}

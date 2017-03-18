@@ -1,0 +1,13 @@
+{{ if ne .Params.comments false}}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'aliqin';
+var disqus_url = '{{ .Permalink }}';
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+{{ end }}

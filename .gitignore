@@ -1,6 +1,7 @@
 .DS_Store
 .idea/
 .vscode/
+node_modules/
 public/
 themes/gohugo-amp
 themes/hugo-minimalist-theme
