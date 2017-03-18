@@ -17,7 +17,7 @@ image = ""
 
 <!--more-->
 
-#1 mostly fluid
+# 1 mostly fluid
 
 Mostly fluid设计模式主要由流体式栅格（fluid grid）构成。不管是大尺寸还是中型屏幕，它保持主体内容的大小，只调整主体与屏幕两边的边距。遇到更小的屏幕时，流体式栅格布局会让主体内容“流动”起来，形成堆栈式纵向排列布局。这种方式有个好处是，它通常只要在大屏幕和小屏幕之间设置一个响应点即可。
 ![](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/mostly-fluid.svg)
@@ -66,7 +66,7 @@ Mostly fluid设计模式主要由流体式栅格（fluid grid）构成。不管�
     }
 
 
-#2 Column drop
+# 2 Column drop
 对于满宽和多列的布局来说，column drop布局法在屏幕变小导致容不下太多内容时，会纵向排列div，最终使每一层都纵向垂直排列。这种布局方式，可以根据内容情况来选择响应点，改变响应点来适应不同设计。
 ![](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/column-drop.svg)
 与mostly fluid的示例类似，这种布局在最小视图下每块内容纵向依次排列。然而，当屏幕宽度超过600px时，第一个和第二个内容div占据了屏幕全部宽度。Div层的顺序则根据CSS中的order属性排列。当宽度达到800px时，三个内容div一起出现，并占据屏幕的全部宽度。
@@ -118,7 +118,7 @@ Mostly fluid设计模式主要由流体式栅格（fluid grid）构成。不管�
     }
 
 
-#3 layout shifter
+# 3 layout shifter
 
 Layout shifter布局是响应能力最强的，它通过多个响应点来适应多种屏幕宽度。这种布局的关键在于，内容不是向下流动或移到到其他列下面，而是四处移动。由于每个响应点对应的布局有巨大的差异，所以要保持一致需要更复杂的操作，并可能需要对元素内部做出改动，而不仅仅是改变全局布局。
 ![](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/layout-shifter.svg)
@@ -159,7 +159,7 @@ Layout shifter布局是响应能力最强的，它通过多个响应点来适应
       }
     }
 
-#4 tiny tweaks
+# 4 tiny tweaks
 Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放图片尺寸或细微地移动内容。这种布局对于单列布局非常适合，比如单页面线性网站和以文章为主的网站。
 ![](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/tiny-tweaks.svg)
 正如其名，示例在随着屏幕尺寸变动时改动非常小。当屏幕宽度越来越大时，字体大小和行距也跟着变大。
@@ -188,7 +188,7 @@ Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放
       }
     }
 
-#5 off canvas
+# 5 off canvas
 与堆栈式垂直排列内容列不同，off canvas设计模式将不常用的内容（也许是导航或屏幕外的菜单）只在大屏幕情况下显示，而在小屏幕下只显示主要内容。
 ![](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/off-canvas.svg)
 与垂直纵向排列内容不同，这个示例中通过transform: translate(-250px, 0)来隐藏两个内容div层， 然后使用JavaScript控制元素样式的增加来显示隐藏层。随着屏幕变得更宽，会移除元素设置为屏幕外的定位布局，然后在可视范围内中显示出来。

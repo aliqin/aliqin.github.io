@@ -12,7 +12,7 @@ image = ""
 
 本文翻译自 [Web Fundamentals:Best practices for modern web development](https://developers.google.com/web/fundamentals/) (可能需要[翻墙](https://code.google.com/p/goagent/wiki/InstallGuide))
 
-#Get Started-你的首个多屏网站
+# Get Started-你的首个多屏网站
 
 为有着不同兼容性，不同的屏幕尺寸和交互方法设备构建web看上去让人沮丧。
 构建多屏体验并没有听说的那么难。按照本教程中的课程，我们将为《CS256: 移动Web开发》课程做一个示范登录页，它可很好地运行于多种不同设备(小到手机，大到电视)。
@@ -22,10 +22,10 @@ image = ""
 
 ![](http://gtms02.alicdn.com/tps/i2/TB1ufssFVXXXXaOXFXXF1nQTXXX-1375-750.jpg)
 
-##1 创建网站的内容和结构
+## 1 创建网站的内容和结构
 内容是任何网站最重要的部分。因此，让设计服务于内容，而不是设计决定内容。在这篇指南中，首先确定我们需要的内容，然后根据内容来创建结构，接着以简单的线性布局展示网页。线性布局在宽窄视口（ViewPort）方面具有良好效果。（注：ViewPort，视口、视觉窗口，即显示区域）
 
-###1.1 创建网页结构
+### 1.1 创建网页结构
 确认我们的需求：
 
 * 一块描述我们高级产品 —“CS256：移动Web开发”教程 — 的区域
@@ -93,7 +93,7 @@ image = ""
           </body>
     </html>
 
-###1.2 向网页添加内容
+### 1.2 向网页添加内容
 该网站的基本部分已经完成。我们清楚这部分及其要展示的内容，并且知道这部分在整个信息架构中的各自位置。现在，我们开始扩建网站。
 
 **创建标题和表单**
@@ -275,15 +275,15 @@ image = ""
       </div>
     </footer>
 
-###1.3 总结
+### 1.3 总结
 我们已经创建好了网站的大纲，确定了全部的主要框架元素。我们确信所有相关内容已经准备妥当，以满足我们业务的需求。
 ![](http://gtms03.alicdn.com/tps/i3/TB1K5IPFVXXXXayXFXXtJRI0FXX-848-911.png)
 这个时候你会发现，网页看起来已经相当完美了，右边是已经设计完的效果。内容是任何网站最重要的方面。我们需要确保拥有良好的信息架构和坚实的信息密度。这篇指南提供了优秀的创建网站基础。我们将在下一篇指南中为内容设计样式。
 
 <!-- todo: 此处与翻译不一致，查阅 -->
-##2 让网站响应式
+## 2 让网站响应式
 
-###2.1 添加一个视口
+### 2.1 添加一个视口
 即使对于一个基本页面，你必须始终包含一个viewport 元数据标签。视口是建立多设备体验的最重要的组成部分。没有它，你的网站将无法良好运行于移动设备上。
 视口用于提示浏览器：网页页面需要进行调整以适应屏幕范围。你可以为视口指定多种配置，以控制页面的显示。我们推荐一个默认值：
 
@@ -295,7 +295,7 @@ image = ""
 [设置视口](https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-fundamentals/#set-the-viewport)
 [调整内容大小以适应视口](https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-fundamentals/#size-content-to-the-viewport)
 
-###2.2 使用简单的样式
+### 2.2 使用简单的样式
 我们公司及产品根据样式指南，提供了一个非常具体的品牌、字体指导方针。
 **样式指南**
 样式指南是深入认识页面的可视化表达的有效途径。它有助于确保设计首尾风格一致。
@@ -314,7 +314,7 @@ image = ""
       background-size: cover;
     }
 
-###2.3 设置首个临界点
+### 2.3 设置首个临界点
 当宽度大约为600px时，设计开始变得糟糕。在我们的例子中，行的长度会超过10个字（最佳的阅读长度），而这正是我们需要调整的地方。
 <video controls="" poster="https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/images/firstbreakpoint.png" style="width: 100%">
     <source src="https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/videos/firstbreakpoint.webm" type="video/webm">
@@ -338,7 +338,7 @@ image = ""
 [布局模式](https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-patterns/)
 [主要的流式布局](https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-patterns/#mostly-fluid)
 
-###2.4 限制设计界面的最大宽度
+### 2.4 限制设计界面的最大宽度
 我们仅选择两大布局：窄视口和宽视口：这大大简化了构建过程。
 我们决定，在窄视口中创建全幅部分，并且在宽视口中仍保持全幅。这意味着我们应限制屏幕的最大宽度，使得文本、段落不延伸成一长单行，出现超宽屏幕。我们选择800px作为最大值。
 为了实现这个目标，我们需要限制宽度，并将元素置于中心。在每个主要区域中，我们需要创建一个容器，将其外边距（margin）设为auto。这允许屏幕增大，但内容仍处于中心，最大尺寸为800px。
@@ -355,7 +355,7 @@ image = ""
       max-width: 800px;
     }
 
-###2.5 改变内边距和减少文本尺寸
+### 2.5 改变内边距和减少文本尺寸
 在窄视口中，我们没有大量空间来显示内容。因此，排版尺寸和磅值往往需大幅减少，以适应屏幕。
 在更宽视口中，我们需要考虑用户倾向于更大的屏幕，甚至更大。为了增加内容的可读性，我们可以增加排版的尺寸和磅值，也可以改变内边距，以使不同区域更加明显。
 在我们产品页面中，我们通过设置宽度方向的内边距为5%，以增加区域元素的内边距。我们也将增加每个部分顶部的大小。
@@ -363,7 +363,7 @@ image = ""
       padding: 20px 5%;
     }
     
-###2.6 调整元素以适应宽视口
+### 2.6 调整元素以适应宽视口
 窄视口以线性方式堆叠显示。每个主要区域及其里面的内容是依次从上到下排列。
 宽视口提供了额外的空间，使得内容能以最佳方式呈现在屏幕上。对于我们的产品页面，根据信息架构，意味着我们可以：
 
@@ -485,7 +485,7 @@ image = ""
       }
     }
 
-###2.7 总结
+### 2.7 总结
 
 祝贺你。当你阅读至此，你可创建你第一个产品的简单登陆页面，可跨大量不同设备、不同比例的表单、以及不同屏幕尺寸。
 如果你遵循这些原则，你将有一个良好的开端：

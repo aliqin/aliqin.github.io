@@ -48,16 +48,16 @@ h1 {
 }
 
 h2 {
-    font-size: 3.6rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
+    color: lightseagreen;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2.3rem;
 }
 
 h4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h5 {
@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-    color: #111;
+    color: lightseagreen;
 }
 
 p, ul, ol, dl {

@@ -90,7 +90,10 @@ body:not(.post-template) .post-title {
     color: lightseagreen;
     text-decoration: none;
 }
-
+.post-content h1 {
+    font-size: 3.5rem;
+    color: lightseagreen;
+}
 .post-excerpt h1,
 .post-excerpt h2 {
  display: none;   
@@ -110,7 +113,7 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
+    margin: 1.75rem 0 2.75rem 0;
     /*font-family: "Open Sans", sans-serif;*/
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -236,7 +239,7 @@ body:not(.post-template) .post-title {
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 100%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the

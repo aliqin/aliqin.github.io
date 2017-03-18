@@ -21,7 +21,7 @@ weight = 100
 [params]
 author = "aliqin"
 cover = "images/screen.png"
-description = "Whatever the mind of man can conceive and believe, it can achieve."
+description = "Alibaba Telecom Front-End Tech Team"
 githubName = "githubname"
 googleAnalyticsUserID = "UA-79101-12"
 hideHUGOSupport = false

@@ -35,19 +35,37 @@
 </header>
 
 <main class="content" role="main">
-    {{ $paginator := .Paginator }}
 
-	<div class="extra-pagination inner">
-    {{ partial "pagination.html" $paginator }}
-	</div>
+  <article class="post {{ .Section }}">
 
-	{{ range $index, $page := $paginator.Pages }}
-	   {{ partial "li.html" . }}
-	{{ end }}
+    <header class="post-header">
+        <section class="post-meta">
+        {{ if eq .Section "post"}}
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+        {{end}}
+         {{ range .Params.tags }}
+          <span class="post-tag small"><a href="{{ $baseurl }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
+         {{ end }}
+        </section>
+    </header>
 
-	{{ partial "pagination.html" $paginator }}
+    <section class="post-content">
+      {{ .Content }}
+    </section>
+
+
+  <footer class="post-footer">
+
+    {{ partial "author.html" . }}
+
+    {{ partial "share.html" . }}
+
+    {{ partial "disqus.html" . }}
+
+  </footer>
+</article>
+
 </main>
-
-
-
 {{ partial "footer.html" . }}

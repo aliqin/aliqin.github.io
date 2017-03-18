@@ -17,8 +17,6 @@ hugo server
 ```bash
 # 新建博客文章,统一使用date-article-name.md命名格式,如20170101-ES6-in-depth.md
 hugo new post/your-article.md
-
-# 新建页面
 ```
 所有本地工作完成后，就可以发布了。我们使用public文件夹下的静态内容作为站点，第一次提交需要将master分支关联到public文件夹下：
 ```bash
