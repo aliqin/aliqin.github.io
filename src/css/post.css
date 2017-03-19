@@ -104,6 +104,9 @@ body:not(.post-template) .post-title {
     line-height: 1.7em;
     color: #666;
 }
+.post-excerpt img {
+    width: 100%;
+}
 
 .read-more {
     color: lightseagreen;
