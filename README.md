@@ -10,8 +10,13 @@ brew update && brew install hugo
 # clone this repo
 git clone repo && cd repo
 
-# server and visit: http://localhost:1313/
-hugo server
+# clone casper themes, and remote the .git info
+cd themes
+git clone https://github.com/vjeantet/hugo-theme-casper casper
+rm -fr casper/.git
+
+# return root and server, then visit http://localhost:1313/
+cd .. && hugo server
 ```
 ### 新建博客文章
 ```bash
@@ -27,7 +32,7 @@ date = "2017-03-19T10:41:35+08:00"
 author = "aliqin"
 # 文章标签，可不填，控制在4个以内                    
 tags = []
-# 文章包体
+# 文章标题
 title = "文章标题"
 # 是否允许分享
 share = true
