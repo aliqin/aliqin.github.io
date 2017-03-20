@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const fs = require('fs')
 const sourcemaps = require('gulp-sourcemaps')
 // const browserSync = require('browser-sync').create()
 
@@ -43,6 +44,34 @@ gulp.task('server', () => {
   gulp.watch(['./src/**/*.js'], ['js'])
   gulp.watch(['./src/**/*.css'], ['css'])
   // gulp.watch(['./src/**/*.html']).on('change', browserSync.reload)
+})
+
+
+gulp.task('push', () => {
+  const publicDir = './publicx/'
+  fs.readdir(publicDir, (err, files) => {
+    if (err) {
+      fs.mkdir(publicDir, 0777, (err) =>{
+        if (err) throw err
+        initGitRepo()
+      })
+    } else {
+      initGitRepo()
+    }
+  })
+
+  function initGitRepo() {
+    const git = require('simple-git')(publicDir)
+    
+    git.outputHandler((command, stdout, stderr) => {
+      stdout.pipe(process.stdout)
+      stderr.pipe(process.stderr)
+    })
+    .clone('https://github.com/aliqin/aliqin.github.io.git', './',['-b', 'master'], (res) => {
+      console.log('success cloned!', res)
+    })
+    console.log('initGitRepo')
+  }
 })
 
 gulp.task('build', ['js', 'css'])

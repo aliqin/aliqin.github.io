@@ -8,7 +8,7 @@
 brew update && brew install hugo
 
 # clone this repo
-git clone repo && cd repo
+git clone git@github.com:aliqin/aliqin.github.io.git && cd aliqin.github.io
 
 # clone casper themes, and remote the .git info
 cd themes
@@ -72,12 +72,14 @@ git push origin master
 # 安装依赖
 npm install
 
-# 实时监听静态css/js文件修改
-npm run server
-
-# 启动hugo 服务，实时预览页面
-hugo server
+# 启动hugo 服务，实时预览页面, 并且实时监听静态css/js文件修改
+npm run dev
 ```
-完成开发后执行`npm run build && hugo`，之后将public文件夹push到master即可。
+Hugo的基本思路是默认使用themes/casper下面的文件，如果在项目根目录下有同名文件，则会有限使用根目录下文件。
+比如可以用根目录下的`layouts/`文件夹中内容覆盖`themes/casper/layouts`中内容，`static/css/screen.css`覆盖`themes/casper/static/css/screen.css`中内容。
+
+> 不要直接修改static/中文件，修改src/下文件然后`npm run build`生成在public/中。
+
+完成开发后执行`npm run build`，之后将public文件夹push到master即可。
 
 
