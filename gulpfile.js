@@ -47,3 +47,19 @@ gulp.task('server', () => {
 
 gulp.task('build', ['js', 'css'])
 // gulp.task('test', [''])
+
+gulp.task('publish', () => {
+  var ghpages = require('gh-pages')
+  var path = require('path')
+  ghpages.publish(path.join(__dirname, './'), {
+    branch: 'master',
+    message: '发布blog中...',
+    src:'public/**/*',
+    logger: function(message) {
+      console.log(message)
+    }
+  }, function(err) {
+    console.log(err || 'blog部署成功！')
+  });
+
+})
