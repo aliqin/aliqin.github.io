@@ -1,0 +1,2309 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on 阿里通信前端团队</title>
+    <link>https://aliqin.github.io/post/index.xml</link>
+    <description>Recent content in Post on 阿里通信前端团队</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2017. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 21 Aug 2014 00:18:34 +0800</lastBuildDate>
+    <atom:link href="https://aliqin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Google Web开发最佳实践(总纲)</title>
+      <link>https://aliqin.github.io/2014-08-21-google-web-table-of-contents/</link>
+      <pubDate>Thu, 21 Aug 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-08-21-google-web-table-of-contents/</guid>
+      <description>&lt;p&gt;本文翻译自&lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Google Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)
+由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
+由于原文的变动，可能会对现有的翻译细节作出调整。
+by 联民 &amp;amp; 若欢&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliqin.github.io/2014/05/20/google-web-get-started/&#34;&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;正文
+
+&lt;ul&gt;
+&lt;li&gt;网站设计法则(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;宽屏网站设计要素&lt;/li&gt;
+&lt;li&gt;首页和导航&lt;/li&gt;
+&lt;li&gt;优化表单入口&lt;/li&gt;
+&lt;li&gt;站内搜索&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;多设备布局
+
+&lt;ul&gt;
+&lt;li&gt;主页和导航设计法则&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliqin.github.io/2014/05/16/gw-responsive-web-design-basics/&#34;&gt;响应式网页设计基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliqin.github.io/2014/05/16/gw-responsive-web-design-patterns/&#34;&gt;响应式网页设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliqin.github.io/2014/05/16/gw-nav-and-action-patterns/&#34;&gt;导航和行为模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;表单和用户输入(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;创建惊艳的表单&lt;/li&gt;
+&lt;li&gt;为你的网站添加触屏&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;视觉和感受(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;动画&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;图片、视频和音频
+
+&lt;ul&gt;
+&lt;li&gt;图片&lt;/li&gt;
+&lt;li&gt;视频&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;货币化(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;关键法则&lt;/li&gt;
+&lt;li&gt;广告&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;设备可访问性(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;用户定位&lt;/li&gt;
+&lt;li&gt;点击通话&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;性能优化(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;关键渲染路径&lt;/li&gt;
+&lt;li&gt;优化内容展现&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;工具(未完成)
+
+&lt;ul&gt;
+&lt;li&gt;搭建环境
+
+&lt;ul&gt;
+&lt;li&gt;选择好的编辑器&lt;/li&gt;
+&lt;li&gt;安装开发者工具&lt;/li&gt;
+&lt;li&gt;安装Web Starter Kit&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;构建你的站点
+
+&lt;ul&gt;
+&lt;li&gt;什么是构建进程&lt;/li&gt;
+&lt;li&gt;用Web Starter Kit构建站点&lt;/li&gt;
+&lt;li&gt;借助谷歌开发者工具调试网页&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;测试类型
+
+&lt;ul&gt;
+&lt;li&gt;实时设备测试&lt;/li&gt;
+&lt;li&gt;云测试&lt;/li&gt;
+&lt;li&gt;使用开发工具模拟&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>web远程调试方案推荐</title>
+      <link>https://aliqin.github.io/2014-08-20-remote-debug-of-web/</link>
+      <pubDate>Wed, 20 Aug 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-08-20-remote-debug-of-web/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://img2.tbcdn.cn/L1/461/1/c13240faf3a4b929d6df74f5b274e9249ae70397&#34; alt=&#34;remote_debug_banner&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;什么是web远程调试&#34;&gt;什么是web远程调试？&lt;/h2&gt;
+
+&lt;p&gt;通过dev tools如chrome dev tools, firebug of firefox进行前端js/css/html调试已经是前端工程师的必备技能。随着移动互联网的发展，这一必备技能也随之迁移到移动端。虽然移动网站的数量已经跟上了移动互联网的浪潮，但是移动端浏览器调试工具的发展却落下了。远程调试最佳的解决方案是浏览器自身支持，假如android browser直接开启webkit远程调试端口，基本可以解决目前移动web开发中的绝大部分调试问题。庆幸的是曾经看到新闻，android browser将会替换默认为chrome，到时真是皆大欢喜！&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;移动端浏览器dev tools的落后，也促使了第三方调试工具的发展，如比较著名的weinre。&lt;/p&gt;
+
+&lt;h2 id=&#34;web远程调试特点&#34;&gt;web远程调试特点&lt;/h2&gt;
+
+&lt;p&gt;受限于移动端设备屏幕尺寸较小，web远程调试相对桌面浏览器调试有一些显著的特点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;web page和dev tools必须分离使用才更方便&lt;/li&gt;
+&lt;li&gt;web page和dev tools之前通过usb/network同步调试数据&lt;/li&gt;
+&lt;li&gt;web page和dev tools之前会有一个proxy server用于双向同步数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;流行的web远程调试方案&#34;&gt;流行的web远程调试方案&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Supported target Paltform&lt;/th&gt;
+&lt;th&gt;Supported Features&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Weinre&lt;/td&gt;
+&lt;td&gt;Ios4+, android2.1+, firefox, IE10+&lt;/td&gt;
+&lt;td&gt;Elements, resources, network, timeline, console&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Aardwolf&lt;/td&gt;
+&lt;td&gt;Ios, android, WinPhone 7, BlackBerry OS 6+&lt;/td&gt;
+&lt;td&gt;Breakpoint&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Jsconsole&lt;/td&gt;
+&lt;td&gt;Ios4.2+, android2.2.2+, webos&lt;/td&gt;
+&lt;td&gt;Console&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;DragonFly&lt;/td&gt;
+&lt;td&gt;Opera mobile&lt;/td&gt;
+&lt;td&gt;opera dragon panel&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Iphone app (JSConsole app or Bugaboo)&lt;/td&gt;
+&lt;td&gt;Ios&lt;/td&gt;
+&lt;td&gt;Console&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://developer.android.com/guide/webapps/debugging.html&#34;&gt;Android adb log&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;android2.1+&lt;/td&gt;
+&lt;td&gt;Console&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Iphone Safari&lt;/td&gt;
+&lt;td&gt;Ios&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Firefox (android)&lt;/td&gt;
+&lt;td&gt;android&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;UCweb browser dev (android)&lt;/td&gt;
+&lt;td&gt;Ucweb android only&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;QQ browser dev (android)&lt;/td&gt;
+&lt;td&gt;QQBrowser android only&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)&#34;&gt;Android webview debug&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;android4.4+ webview&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.webkit.org/blog/1620/webkit-remote-debugging/&#34;&gt;WebKit Remote Debugging protocol&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;webkit(pc)&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://code.google.com/p/v8/wiki/DebuggerProtocol&#34;&gt;Chrome v8 debugger protocol&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;V8 javascript engine&lt;/td&gt;
+&lt;td&gt;almost all features&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;web远程调试方案推荐&#34;&gt;web远程调试方案推荐&lt;/h2&gt;
+
+&lt;h3 id=&#34;特定浏览器&#34;&gt;特定浏览器&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;直接使用官方支持的远程调试
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/safari/tools/&#34;&gt;ios safari&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.uc.cn/business/developer/&#34;&gt;android UC browser(dev version)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.chrome.com/devtools/docs/remote-debugging&#34;&gt;android Chrome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android&#34;&gt;android Firefox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.opera.com/dragonfly/documentation/remote/&#34;&gt;Opera mobile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;其他浏览器&#34;&gt;其他浏览器&lt;/h3&gt;
+
+&lt;h4 id=&#34;weinre-http-people-apache-org-pmuellr-weinre-docs-latest-home-html&#34;&gt;&lt;a href=&#34;http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html&#34;&gt;weinre&lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;特点
+
+&lt;ul&gt;
+&lt;li&gt;html,css调试，修改后所见即所得&lt;/li&gt;
+&lt;li&gt;console.log输出&lt;/li&gt;
+&lt;li&gt;简化的timeline面板支持&lt;/li&gt;
+&lt;li&gt;简化的resources面板支持&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;待改进增强
+
+&lt;ul&gt;
+&lt;li&gt;暂存注入调试js之前的log，调试js注入后输出全部log&lt;/li&gt;
+&lt;li&gt;调试过程中比较容易断线，调试断线后自动重连；优化调试信息同步，渐进增强从xhr改为socket，传输效率更高&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;aardwolf-http-lexandera-com-aardwolf&#34;&gt;&lt;a href=&#34;http://lexandera.com/aardwolf/&#34;&gt;Aardwolf&lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;特点
+
+&lt;ul&gt;
+&lt;li&gt;js断点&lt;/li&gt;
+&lt;li&gt;js运行调用堆栈&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;待改进
+
+&lt;ul&gt;
+&lt;li&gt;调试调用不方便，可考虑直接集成到前端构建grunt/gulp之类&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;safari远程调试 &lt;a href=&#34;https://developer.apple.com/safari/tools/&#34;&gt;https://developer.apple.com/safari/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android uc browser开发版远程调试 &lt;a href=&#34;http://www.uc.cn/business/developer/&#34;&gt;http://www.uc.cn/business/developer/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android chrome远程调试 &lt;a href=&#34;https://developer.chrome.com/devtools/docs/remote-debugging&#34;&gt;https://developer.chrome.com/devtools/docs/remote-debugging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android Firefox远程调试 [&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Opera移动版远程调试 &lt;a href=&#34;http://www.opera.com/dragonfly/documentation/remote/&#34;&gt;http://www.opera.com/dragonfly/documentation/remote/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;web inspect remote &amp;ndash; weinre远程调试 &lt;a href=&#34;http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html&#34;&gt;http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aardwolf远程调试 &lt;a href=&#34;http://lexandera.com/aardwolf/&#34;&gt;http://lexandera.com/aardwolf/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android adb log &lt;a href=&#34;http://developer.android.com/guide/webapps/debugging.html&#34;&gt;http://developer.android.com/guide/webapps/debugging.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Android webview debug &lt;a href=&#34;http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)&#34;&gt;http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebKit Remote Debugging protocol &lt;a href=&#34;https://www.webkit.org/blog/1620/webkit-remote-debugging/&#34;&gt;https://www.webkit.org/blog/1620/webkit-remote-debugging/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chrome v8 debugger protocol &lt;a href=&#34;https://code.google.com/p/v8/wiki/DebuggerProtocol&#34;&gt;https://code.google.com/p/v8/wiki/DebuggerProtocol&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;后续计划&#34;&gt;后续计划&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;weinre详细介绍&lt;/li&gt;
+&lt;li&gt;Aardwolf详细介绍&lt;/li&gt;
+&lt;li&gt;weinre增强：weinre改进/Aardwolf整合&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Google web开发最佳实践(三)</title>
+      <link>https://aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</link>
+      <pubDate>Wed, 21 May 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-05-21-google-web-images-audio-vedio/</guid>
+      <description>&lt;h1 id=&#34;图像-音频和视频&#34;&gt;图像、音频和视频&lt;/h1&gt;
+
+&lt;p&gt;图像、音频和视频可以吸引用户，但是当他们的出现与网站格格不入，或者没有加载、加载缓慢的时候，就会流失用户。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-图像&#34;&gt;1 图像&lt;/h2&gt;
+
+&lt;p&gt;一图胜千言，说的是图像是每个页面中不可或缺的一部分。图像同时占据着页面下载字节数的绝大部分。在响应式设计中，按照设备特性变化的不仅有布局还有图片。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-1-标签中的图像&#34;&gt;1.1 标签中的图像&lt;/h3&gt;
+
+&lt;p&gt;img元素是强大的。它能够下载、解析并且渲染内容。现代的浏览器可以支持多种图像格式。引入能够跨设备的图像，与放置专为桌面浏览器定制的图像没什么不同，只需要几个小的调整就能有很好的体验。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TR;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;对图像使用相对大小单位&lt;/li&gt;
+&lt;li&gt;使用img标签的srcset属性为高DPI设备优化&lt;/li&gt;
+&lt;li&gt;响应式图像的艺术方向（Art direction in responsive images with picture）&lt;/li&gt;
+&lt;li&gt;其他图像技术&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;1-1-1-对图像使用相对大小单位&#34;&gt;1.1.1 对图像使用相对大小单位&lt;/h4&gt;
+
+&lt;p&gt;在指定图像宽度时，请记得使用相对单位，防止图像超出可视区域。例如规则 width: 50%;会使图像宽度变成容器元素（而不是相对于可视区域或者实际像素）宽度的50%。
+因为CSS允许内容超出容器，有必要使用max-width: 100%规则防止图像及其他元素的溢出。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;img, embed, object, video {
+    max-width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;确保使用alt属性为img元素提供有意义的描述，这些措施能提高网站的可访问性，更好地为屏幕阅读器等辅助设施提供上下文。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-1-2-使用img标签的srcset属性为高dpi设备优化&#34;&gt;1.1.2 使用img标签的srcset属性为高DPI设备优化&lt;/h4&gt;
+
+&lt;p&gt;CSS中的image-set()函数增强了background属性的表现，使得为不同特性的设备提供不同的图片变得更加容易。与CSS函数image-set的工作方式相同， srcset 属性允许浏览器根据设备特性选择最佳图像，例如在2x大小的显示屏上显示2x的图像，或者在网络带宽受限时显示1x大小的图片。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;photo.png&amp;quot; srcset=&amp;quot;photo@2x.png 2x&amp;quot; ...&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在那些不支持srcset的浏览器上，只会简单地显示src属性指定的默认图像。这就是为什么总包含1x大小图片的做法很重要，因为它能显示在所有的设备上。支持srcset属性的浏览器会解析由英文逗号分割的图像/条件列表，并且只会下载显示最合适的图像。
+虽然条件包括像素密度、可视区域宽度和高度，而浏览器目前支持的，还只有像素密度。要保持当前行为与未来特性的一致，只需要在属性中坚持指定2x大小的图像就可以了。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-1-3-art-direction-in-responsive-images-with-picture&#34;&gt;1.1.3 Art direction in responsive images with picture&lt;/h4&gt;
+
+&lt;p&gt;根据设备的特性改变图像，被称为一种艺术方向，可以使用图片元素来完成。图片元素定义了一个声明性的解决方案，这个方案是基于不同特征（如设备大小、设备分辨率等）提供不同版本的图像。
+&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1BrpaGXXXXXXSXXXXFe2mIVXX-600-328.png&#34; alt=&#34;&#34; /&gt;
+&lt;!-- todo： 翻译不完善 --&gt;
+当一个响应式设计规定，不同的图像出现在不同的设备屏幕上时，就要使用图片元素。图片元素和视频元素相类似，可以包含多个源元素，基于媒体查询或者图像格式可以指定不同的图像文件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;picture&amp;gt;
+    &amp;lt;source media=&amp;quot;(min-width: 800px)&amp;quot; srcset=&amp;quot;head.jpg, head-2x.jpg 2x&amp;quot;&amp;gt;
+    &amp;lt;source media=&amp;quot;(min-width: 450px)&amp;quot; srcset=&amp;quot;head-small.jpg, head-small-2x.jpg 2x&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;head-fb.jpg&amp;quot; srcset=&amp;quot;head-fb-2x.jpg 2x&amp;quot; &amp;gt;
+&amp;lt;/picture&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上面的例子中，如果浏览器的宽度大于800px，那么300.png或者600.png将是可用的，具体的使用选择将取决于设备的分辨率。如果浏览器的宽度在400px至800px之间，那么200.png或者400.png将是可用的，同样，具体的视同选择将取决于设备的分辨率。为了做到向后兼容，也为了不支持图片元素的浏览器能正常访问，img元素也是必不可少的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;相对大小的图片&lt;/strong&gt;
+当图片的尺寸无法确定的时候，我们很难指定一张图片的具体宽高。像图片使用百分比定宽，流式布局和依赖浏览器窗口自适应等情况。
+通过添加与该图像元素的尺寸相关的宽度描述符，而非提供固定的图像尺寸，可以允许浏览器自动加载最佳尺寸的图像。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;lighthouse-200.jpg&amp;quot; sizes=&amp;quot;50vw&amp;quot;
+    srcset=&amp;quot;lighthouse-100.jpg 100w, lighthouse-200.jpg 200w,
+    lighthouse-400.jpg 400w, lighthouse-800.jpg 800w,
+    lighthouse-1000.jpg 1000w, lighthouse-1400.jpg 1400w,
+    lighthouse-1800.jpg 1800w&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面例子呈现的图像的宽度是浏览器视窗的一半（根据属性sizes=“50vw”）。吴坤浏览器的窗口是如何的大，最终呈现的图像来源，都是根据浏览器的宽度和设备的像素比例来选择的。下面的表格显示了浏览器会选择的图像：&lt;/p&gt;
+
+&lt;table class=&#34;table-4&#34;&gt;&lt;colgroup&gt;&lt;col span=&#34;1&#34;&gt;&lt;col span=&#34;1&#34;&gt;&lt;col span=&#34;1&#34;&gt;&lt;col span=&#34;1&#34;&gt;&lt;/colgroup&gt;&lt;thead&gt;&lt;tr&gt;&lt;th data-th=&#34;Browser width&#34;&gt;Browser width&lt;/th&gt;&lt;th data-th=&#34;Device pixel ratio&#34;&gt;Device pixel ratio&lt;/th&gt;&lt;th data-th=&#34;Image used&#34;&gt;Image used&lt;/th&gt;&lt;th data-th=&#34;Effective resolution&#34;&gt;Effective resolution&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;400px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;1&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;200.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;1x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;400px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;2&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;400.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;2x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;320px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;2&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;400.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;2.5x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;600px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;2&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;800.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;2.67x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;640px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;3&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;1000.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;3.125x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Browser width&#34;&gt;1100px&lt;/td&gt;&lt;td data-th=&#34;Device pixel ratio&#34;&gt;1&lt;/td&gt;&lt;td data-th=&#34;Image used&#34;&gt;&lt;code&gt;1400.png&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Effective resolution&#34;&gt;1.27x&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;设置响应式图片断点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在许多情况下，大小或者图像的改变依赖于网站的布局断点。例如，在小屏幕上，你可能想要图像覆盖全部视窗，在大屏幕上，它应该只占视窗的一小部分。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;img src=&amp;quot;400.png&amp;quot;
+    sizes=&amp;quot;(min-width: 600px) 25vw, (min-width: 500px) 50vw, 100vw&amp;quot;
+    srcset=&amp;quot;100.png 100w, 200.png 200w, 400.png 400w,
+             800.png 800w, 1600.png 1600w, 2000.png 2000w&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面例子中的sizes属性使用了多种媒体查询去对应不同大小的图像。当浏览器的宽度大于600px时，图像的宽度将会是浏览器视窗的25%；当浏览器的宽度在500px到600px之间时，图像的宽度将会使浏览器视窗的一半；而当浏览器窗口宽度小于500px时，图像宽度就和浏览器视窗一样。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-1-4-配置可放大的产品图片&#34;&gt;1.1.4 配置可放大的产品图片&lt;/h4&gt;
+
+&lt;p&gt;买家想看到他们正在买什么。在零售类网站中，用户希望能提供更高分辨率的商品细节。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1nJg6FVXXXXXIXFXXzsgj2VXX-325-550.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.jcrew.com/&#34;&gt;J. Crew site&lt;/a&gt; 就是一个很好的支持触屏和图片放大的例子。它通过一个可消失浮层暗示图片是可以点击和支持放大查看细节的。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-1-5-其他图像技术&#34;&gt;1.1.5 其他图像技术&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;图片压缩&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;压缩图像技术总是为所有设备提供高压缩的2x大小图片，而不论设备的规格。取决于图像的种类和压缩级别，图像质量看上去不会有太大改变，但是大小会显著降低。技术总是为所有设备提供高压缩的2x大小图片，而不论设备的规格。取决于图像的种类和压缩级别，图像质量看上去不会有太大改变，但是大小会显著降低。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;因为它需要占用更多的内存并且解码。在小屏幕上放缩大尺寸图片成本高昂，对内存和处理能力有限的低端设备来说尤其痛苦。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JavaScript图像替代方案&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript图像替代方案会检查设备能力，并且做“正确的操作”。
+你可以通过window.devicePixelRatio属性判断设备分辨率长宽比，获得屏幕宽度、高度，甚至可以通过 navigator.connection 嗅探网络连接、伪造请求。一旦收集了所有的信息，你可以选择加载哪张图片。
+这种做法的坏处是，使用JavaScript就意味着在相应的加载器完全解析之前，图像的加载会有延迟。这意味着在 pageload 事件出发之前，图像还尚未加载。而且，浏览器有可能会同时下载1x大小和2x大小的图片，增加了页面的重量。&lt;/p&gt;
+
+&lt;p&gt;###1.2 css中的图片&lt;/p&gt;
+
+&lt;p&gt;CSS 的 &lt;code&gt;background&lt;/code&gt; 属性是向元素添加复杂图像的有利工具，让添加多张图片，或者重复图片等更加简单。与媒体查询结合时，background属性变得更加强大，能做到按照屏幕分辨率，可视区域大小等有条件地加载背景图片。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;考虑显示设备的特征，使用最好的图片，包括考虑屏幕大小，设备分辨率和页面布局。&lt;/li&gt;
+&lt;li&gt;在CSS中更改 background-image 属性，为高DPI的设备使用媒体查询的 min-resolution 和 -webkit-min-device-pixel-ratio 属性。&lt;/li&gt;
+&lt;li&gt;使用 srcset 属性，在提供原始1x大小图像的基础上提供高分辨率图像。&lt;/li&gt;
+&lt;li&gt;在使用JS图像的替代技术时考虑花费的性能，或者在低分辨率设备上使用高压缩的高分辨率图片。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;1-2-1-为图片加载或艺术指导-art-direction-使用媒体查询&#34;&gt;1.2.1 为图片加载或艺术指导(art direction)使用媒体查询&lt;/h4&gt;
+
+&lt;p&gt;媒体查询不仅影响页面布局，还可以根据可视区域宽度有条件地加载图片，提供艺术指导。
+在下面的例子中，小屏幕上只会下载显示small.png并应用到div上，而大屏幕上会将background-image: url(body.png) 应用到body上，同时background-image: url(large.png) 应用到 div上。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.example {
+  height: 400px;
+  background-image: url(small.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+}
+
+@media (min-width: 500px) {
+  body {
+    background-image: url(body.png);
+  }
+  .example {
+    background-image: url(large.png);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;1-2-2-使用image-set提供高分辨率图片&#34;&gt;1.2.2 使用image-set提供高分辨率图片&lt;/h4&gt;
+
+&lt;p&gt;CSS中的image-set()函数增强了background属性的表现，使得为不同的设备特性提供不同的图片变得更容易。这允许浏览器根据设备特性选择最佳图像，例如在2x大小的显示屏上显示2x的图像，或者在网络带宽受限时显示1x大小的图片。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;background-image: image-set(
+  url(icon1x.jpg) 1x,
+  url(icon2x.jpg) 2x
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;加载了正确的图片，浏览器也会将它调整到合适的大小。换句话说，浏览器假设2x大小的图片是1x大小图片的二倍，于是便会以2倍的比例缩小2x大小的图片，所以页面上的图片大小看上去是一致的。
+对 image-set() 函数的支持还很新，并且仅仅在带有-webkit 前缀的Chrome和Safari浏览器中支持。另外还要考虑当 image-set() 不起作用的时候设置备用图片的情况，例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; .sample {
+    width: 128px;
+    height: 128px;
+    background-image: url(icon1x.png);
+    background-image: -webkit-image-set(
+        url(icon1x.png) 1x,
+        url(icon2x.png) 2x
+    );
+    background-image: image-set(
+        url(icon1x.png) 1x,
+        url(icon2x.png) 2x
+    );
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的样式会在支持image-set的浏览器中加载合适的资源，而在不支持的时候使用1x大小的资源。最需要注意的问题是浏览器对 image-set() 的支持还不够，大多数浏览器还是会得到1x大小的资源。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-2-3-使用媒体查询提供高分辨率图片或者艺术指导&#34;&gt;1.2.3 使用媒体查询提供高分辨率图片或者艺术指导&lt;/h4&gt;
+
+&lt;p&gt;媒体查询规则创建在设备宽高比之上，让它可以为2x或者1x大小屏幕指定不同的图片。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media (min-resolution: 2dppx),
+(-webkit-min-device-pixel-ratio: 2)
+{
+  /* High dpi styles &amp;amp; resources here */
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Chrome, Firefox 和 Opera 浏览器都支持标准的 (min-resolution: 2dppx)属性，而Safari和Android浏览器都需要写上厂商前缀，并且去掉dppx单位。请记住，这些样式只会在满足媒体查询的时候加载，而你必须指定最基本的样式。指定基本样式的做法能保证即使浏览器不支持特定分辨率的媒体查询，也能渲染某些东西。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.sample {
+    width: 128px;
+    height: 128px;
+    background-image: url(icon1x.png);
+}
+
+@media (min-resolution: 2dppx), /* Standard syntax */
+(-webkit-min-device-pixel-ratio: 2)  /* Safari &amp;amp; Android Browser */
+{
+    .sample {
+        background-size: contain;
+        background-image: url(icon2x.png);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你也可以根据可视区域大小使用 min-width 语法显示替代图片。这项技术的好处在于，如果媒体查询不匹配日，图像便不会下载。例如， bg.png 只在浏览器的宽度为500px或者更大的宽度上才会下载并应用到 body 上：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media (min-width: 500px) {
+  body {
+    background-image: url(bg.png);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-3-使用svg作为图标&#34;&gt;1.3 使用SVG作为图标&lt;/h3&gt;
+
+&lt;p&gt;当要向页面中添加图标时，如果可能使用SVG或在某些情况下使用unicode字符。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用SVG和unicode作为图标代替位图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;1-3-1-使用unicode代替简单图标&#34;&gt;1.3.1 使用unicode代替简单图标&lt;/h4&gt;
+
+&lt;p&gt;多字体都支持数量庞大的Unicode图示，这些图示可以用来替代图片。与图片不同，Unicode字体的放缩性很好，不管他们出现在屏幕上是大是小，他们看上去都会很好。
+在普通字符集之外，Unicode还会包含数字形式的符号 (⅐)、箭头 (←)、数学运算符 (√)、几何形状(★)、控件图片(▶)、盲文符号 (⠏)、音符(♬)、希腊字母(Ω)、甚至还有国际象棋棋子(♞)。
+使用Unicode字符就像使用命名HTML实体一样，使用 &amp;amp;#XXXX 的格式，这里的XXXX代表着Unicode字符码。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;You&#39;re a super &amp;amp;#9733;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You’re a super ★&lt;/p&gt;
+
+&lt;h4 id=&#34;1-3-2-使用svg代替复杂图标&#34;&gt;1.3.2 使用SVG代替复杂图标&lt;/h4&gt;
+
+&lt;p&gt;对于更复杂的图标需求，图标字体通常更轻量，易于使用，通过单个HTTP请求就能获得。图标字体相对于图像有几个好处：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;图标字体是矢量图，而且可以无限缩放;&lt;/li&gt;
+&lt;li&gt;对于颜色、阴影、透明度和动画的CSS效果更加直接;&lt;/li&gt;
+&lt;li&gt;整套图标都可以包含在一行文字中;&lt;/li&gt;
+&lt;li&gt;有语义&lt;/li&gt;
+&lt;li&gt;通过适当的属性提供更好的可访问性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有了SVG图标，你也可以添加目录式行内SVG：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;svg version=&amp;quot;1.1&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;
+       xmlns:xlink=&amp;quot;http://www.w3.org/1999/xlink&amp;quot;
+       width=&amp;quot;32&amp;quot; height=&amp;quot;32&amp;quot; viewBox=&amp;quot;0 0 32 32&amp;quot;&amp;gt;
+    &amp;lt;path d=&amp;quot;M27 4l-15 15-7-7-5 5 12 12 20-20z&amp;quot; fill=&amp;quot;#000000&amp;quot;&amp;gt;&amp;lt;/path&amp;gt;
+&amp;lt;/svg&amp;gt;
+or by using an image tag, like this credit card icon:
+&amp;lt;img src=&amp;quot;credit.svg&amp;quot;&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;1-3-3-谨慎使用图标字体&#34;&gt;1.3.3 谨慎使用图标字体&lt;/h4&gt;
+
+&lt;p&gt;图标字体易用且非常流行，但是相较于SVG来说仍有一些不足。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;它们是可以无限缩放的矢量图形，但是可能会走样导致呈现出错误的形状。&lt;/li&gt;
+&lt;li&gt;有限的CSS样式&lt;/li&gt;
+&lt;li&gt;仅靠line-height, letter-spacing等很难做到像素级精确&lt;/li&gt;
+&lt;li&gt;无语义，且很难在屏幕阅读器和其他辅助技术上使用&lt;/li&gt;
+&lt;li&gt;使用率很低，要使用很少量的图标可能要加载非常大的字体文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1LzBXGXXXXXaMXXXXZ03gZVXX-320-568.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;使用 Font Awesome，你既可以完全使用Unicode，就像HTML5 logo (&amp;lt;span class=&amp;quot;awesome&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;)，也可以向 &amp;amp;lt;i&amp;amp;gt;元素添加特殊的class，像是 CSS3，logo (&amp;lt;i class=&amp;quot;fa fa-css3&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;)。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;网上有成百上千的免费和付费图标字体，包括Font Awesome、Pictos 和 Glyphicons。
+请确保需要使用这些图标的时候，能够平衡额外的HTTP请求和文件大小。例如，如果你只需要少数的几个图标，那最好是使用一张图片或者一张Sprite图。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-4-图片性能优化&#34;&gt;1.4 图片性能优化&lt;/h3&gt;
+
+&lt;p&gt;图像通常占据页面下载字节数的绝大部分，同时也占据了可观的视觉空间。结果是，优化图片能极大地节约带宽提高性能：浏览器下载的字节数越少，客户端所竞争的带宽就越少，浏览器能下载显示所有的资源就越快。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;不要只是随意地选取图像格式，要理解可用格式间的差异，并使用最合适的格式。&lt;/li&gt;
+&lt;li&gt;在工作流程中引入图像优化和压缩工具减少文件大小。&lt;/li&gt;
+&lt;li&gt;将最常使用的图片合并为sprite图，以减少HTTP请求数。&lt;/li&gt;
+&lt;li&gt;考虑只在图片进入可视区域时加载，提升初次加载速度，减少初次加载的页面体积。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;1-4-1-选择正确的格式&#34;&gt;1.4.1 选择正确的格式&lt;/h4&gt;
+
+&lt;p&gt;有两种类型的图片需要考虑： 矢量图 和 位图. 对于位图来说，你同时需要选择正确的压缩格式，例如：GIF、PNG和JPG。
+&lt;strong&gt;位图&lt;/strong&gt;，是照片一类的图像，由许多独立成格的像素或者点表示。位图常来源于相机或者扫描仪，或者可以在浏览器的canvas元素中生成。图像尺寸越大，文件体积就越大。当放大到比原来大小还大时，位图就会变得模糊，因为浏览器需要猜测如何去填补遗失的像素。
+&lt;strong&gt;矢量图&lt;/strong&gt;，像是logo和线条图，是由一系列曲线，线条，形状和填充颜色定义的。矢量图是由像Adobe Illustrator或者Inkscape这样的程序创造，并以SVG这样的格式保存得来的。因为矢量图是由一些简单的基元创造的，可以在不改变图片大小，并且不损失图像质量的情况下进行缩放。
+选择了正确的格式以后，考虑图像的来源(位图或者矢量图)和内容(颜色、动画、文本等)都很重要。没有哪一种格式适用于所有的图像类型，每种格式都有它自身的长处和短处。
+可以从以下指导开始选择正确的格式：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JPG 用于照片。&lt;/li&gt;
+&lt;li&gt;SVG 用于矢量作品和单色图形，例如logo和线条画。如果没有矢量作品，还可以尝试 WebP 或者 PNG 格式。&lt;/li&gt;
+&lt;li&gt;使用PNG格式而不是GIF格式，因为PNG格式色彩更丰富，还能提供更好的压缩比。&lt;/li&gt;
+&lt;li&gt;而对于长动画，考虑使用&lt;video\&gt;标签，因为它能提供更好的图像质量，还给用户提供回放的控制权。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;1-4-2-减少文件体积&#34;&gt;1.4.2 减少文件体积&lt;/h4&gt;
+
+&lt;p&gt;图像的文件体积可以考虑使用‘后处理’方案在保存后减少体积。有许多图像压缩的工具——有损的、无损的、在线的、图形化的以及命令行的。在可能的情况下，最好尝试自动化的图像优化方案，让它成为你工作流程的一等公民。
+这里有一些工具可以在无损的情况下处理 JPG 和 PNG 文件而不影响图像质量。对于 JPG文件，请尝试 jpegtran 或者 jpegoptim (只在 Linux 上可用；同时请使用 –strip-all 选项)。对于 PNG文件，请尝试 OptiPNG 或者 PNGOUT。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-4-3-使用sprites&#34;&gt;1.4.3 使用sprites&lt;/h4&gt;
+
+&lt;p&gt;CSS sprite是一种将数个图片合成为一张大‘sprite 图’的图像。这单张图可以在元素上指定background图片(sprite图)后加上相应的偏移量显示正确的部分。
+&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1gC7.FVXXXXbnXXXXZZMo2pXX-190-352.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.sprite-sheet {
+  background-image: url(sprite-sheet.png);
+  width: 40px;
+  height: 25px;
+}
+
+.google-logo {
+  width: 125px;
+  height: 45px;
+  background-position: -190px -170px;
+}
+
+.gmail {
+  background-position: -150px -210px;
+}
+
+.maps {
+  height: 40px;
+  background-position: -120px -165px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sprite图的好处是，既可以减少下载多张图片的下载数，又可以保证缓存能起作用。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-4-4-考虑延迟加载&#34;&gt;1.4.4 考虑延迟加载&lt;/h4&gt;
+
+&lt;p&gt;延迟加载可以显著地加速含有图片的长页面加载速度，通过按需加载，或者在主要内容完成加载渲染后再加载等方式完成。除了性能提升，使用延迟加载也可以创造出无限滚动的体验效果。
+创建无限滚动页面要注意，因为内容只会在可见的时候加载，搜索引擎可能永远见不到相应的内容。另外，如果用户想要查看footer处的信息将永远不能查看到，因为总会有新内容加载出来。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-5-完全避免使用图片&#34;&gt;1.5 完全避免使用图片&lt;/h3&gt;
+
+&lt;p&gt;有时候，最好的图片本身却并不是图片。在尽可能的情况下，请优先使用浏览器自带的特性来提供相同或者相似的功能。浏览器之前要产生视觉效果可能需要图片。这意味着浏览器现在可以不需要下载单个图片，也不需要努力阻止图片被放大。而图标可以使用Unicode或者特殊的图标字体生成。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;尽可能避免使用图片，而充分发挥浏览器的能力，使用Unicode字符替代图片，以及使用图标字体替换复杂图标。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;1-5-1-将文本放在标签中-而不是嵌进图片内&#34;&gt;1.5.1 将文本放在标签中，而不是嵌进图片内&lt;/h4&gt;
+
+&lt;p&gt;在尽可能的情况下，文本就应该是文本，而不要嵌进图片中。不能像那些使用图片作为头条信息或者将电话、地址等联络信息写进图片的例子一样，这种做法妨碍人们去复制粘贴信息，让屏幕阅读器的可访问性变差，也不是响应式应有的做法。可取而代之的，是将文本放在标签中，使用Webfont完成你所需的样式。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-5-2-使用css替代图片&#34;&gt;1.5.2 使用CSS替代图片&lt;/h4&gt;
+
+&lt;p&gt;现代浏览器能够使用CSS特性，创造之前需要使用图像来完成的样式。例如，复杂渐变可以使用 background 属性创建，阴影可以使用 box-shadow 创建，而圆角可以使用 border-radius 属性添加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+  div#noImage {
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
+    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
+  }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;请记住使用这些技术要求一定的渲染周期，在移动设备上影响较大。如果过度使用，你将失去得到的任何好处，并且可能影响性能。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-视频&#34;&gt;2 视频&lt;/h2&gt;
+
+&lt;p&gt;请记住使用这些技术要求一定的渲染周期，在移动设备上影响较大。如果过度使用，你将失去得到的任何好处，并且可能影响性能。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-1-添加视频&#34;&gt;2.1 添加视频&lt;/h3&gt;
+
+&lt;p&gt;学习将视频添加到你的网站中最简单的方式，从而确保用户在任何设备上都能得到最佳的体验。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;添加视频元素（组件）&lt;/li&gt;
+&lt;li&gt;指定多个文件格式，制作视频的多种格式来覆盖广泛的移动平台&lt;/li&gt;
+&lt;li&gt;指定开始和结束时间&lt;/li&gt;
+&lt;li&gt;包含海报图片&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;2-1-1-添加视频元素&#34;&gt;2.1.1 添加视频元素&lt;/h4&gt;
+
+&lt;p&gt;在网站上用视频元素加载、解码并播放视频&lt;/p&gt;
+
+&lt;video&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/chrome.webm&#34; type=&#34;video/webm&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/chrome.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
+&lt;/video&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&amp;quot;chrome.webm&amp;quot; type=&amp;quot;video/webm&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;Your browser does not support the video element.&amp;lt;/p&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-1-2-指定多个文件格式&#34;&gt;2.1.2 指定多个文件格式&lt;/h4&gt;
+
+&lt;p&gt;不是所有浏览器都支持相同的视频格式的，&lt;source&gt;元素可以让你指定多种格式作为备选，以防用户的浏览器不支持某些格式。举例来说：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;video controls&amp;gt;
+  &amp;lt;source src=&amp;quot;chrome.webm&amp;quot; type=&amp;quot;video/webm&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;chrome.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
+  &amp;lt;p&amp;gt;This browser does not support the video element.&amp;lt;/p&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当浏览器解析&lt;source&gt;标签时，它将使用可选的type属性来帮助决定下载哪个文件或是播放哪个文件。如果浏览器支持WebM格式的话，它会播放chrome.webm文件，如果不支持，它会检查其是否能支持MPEG-4视频的播放，可以参考《极客们的数字媒体入门》来找到更多有关网络上的音频和视频是如何工作的。这种方法比起HTML上不同的服务或是服务器端脚本来讲有诸多优势，尤其是在手机端（移动端）：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;开发人员可以按照优先顺序列出格式&lt;/li&gt;
+&lt;li&gt;原生客户端切换减少了等待时间;只发出一个请求来获取内容&lt;/li&gt;
+&lt;li&gt;让浏览器来选择一种格式更简单、更快，也能也比用用户代理检测来使服务器支持数据库更可靠。&lt;/li&gt;
+&lt;li&gt;制定每个文件源的类型提高了网络性能；该浏览器可以直接选择一个视频源，而无需对先下载一部分视频来“嗅”（识别）一下视频的格式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用你的手机浏览器开发者工具，比较一下有type属性和没有用到type属性时的网络活动情况。同时检查一下你浏览器开发者工具的响应标题，确保你的服务器报告了正确的MINE类型；否则视频源的类型检查将无法正常工作。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-1-3-指定开始和结束时间&#34;&gt;2.1.3 指定开始和结束时间&lt;/h4&gt;
+
+&lt;p&gt;节省带宽，并使你的网站反映更灵敏：使用Media Fragments API接口来为视频元素添加开始时间和结束时间。&lt;/p&gt;
+
+&lt;video controls=&#34;&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/chrome.webm#t=5,10&#34; type=&#34;video/webm&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/chrome.mp4#t=5,10&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
+&lt;/video&gt;
+
+&lt;p&gt;代码加入到媒体的URL中，举个例子，如果想播放视频的第五秒到第十秒这段内容，只需要：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;source src=&amp;quot;video/chrome.webm#t=5,10&amp;quot; type=&amp;quot;video/webm&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你还可以用Media Fragments API来提供对于一个视频的多个图像——就像DVD中的提示点一样——而不用编码或是提供于多个文件。
+&lt;strong&gt;记住：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Media Fragments API 支持大多数平台，但是不支持IOS平台。&lt;/li&gt;
+&lt;li&gt;确保你的服务器支持Range Requests（范围请求）。Range Requests在默认情况下被大多数服务器所启用，但一些托管服务可能会将其关闭。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用你的浏览器开发者工具，在响应标题中检查
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1eEkSFVXXXXbtXVXXX.FD0XXX-2135-1282.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-1-4-包含海报图片&#34;&gt;2.1.4 包含海报图片&lt;/h4&gt;
+
+&lt;p&gt;在视频元素中添加一个poster属性，从而你的用户将在这些元素加载时就对视频内容有所了解，而不需要在下载视频或是开始播放之后才知道其内容。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;video poster=&amp;quot;poster.jpg&amp;quot; ...&amp;gt;
+    ...
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果视频的src受损或者所提供的视频格式全部不被支持时，poster也可以是一个备选。poster图像的唯一缺点是会有一个额外的文件请求，这回消耗一定的带宽并且需要渲染。如果想了解更多信息，请参见图像优化这章。
+下面是两个并列在一起比较的无海报图片和含有海报图片的视频——我们将海报图像做成灰度图来证明其不是视频。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1Q4w_FVXXXXciXXXXOUv7RFXX-829-626.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-2-提供传统平台的替代品&#34;&gt;2.2 提供传统平台的替代品&lt;/h3&gt;
+
+&lt;p&gt;并不是所有平台都支持所有的视频格式，检查一下主流平台所支持的视频格式，并且确保你的视频在这些主流平台中都可以运行。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-2-1-确认支持的视频格式&#34;&gt;2.2.1 确认支持的视频格式&lt;/h4&gt;
+
+&lt;p&gt;使用 canPlayType() 可找出所支持的视频格式。该方法有一个由 mime-type 和可选的解码器组成的字符串变量，返回下面这些值：&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Return value&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Return value&#34;&gt;(empty string)&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;The container and/or codec isn&#39;t supported.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Return value&#34;&gt;&lt;code&gt;maybe&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;The container and codec(s) might be supported, but the browser will need to download some video to check.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Return value&#34;&gt;&lt;code&gt;probably&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;The format appears to be supported.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;这里有些范例， canPlayType() 的参数和在Chrome运行时的返回值：&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Response&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/xyz&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;(empty string)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/xyz; codecs=&#34;avc1.42E01E, mp4a.40.2&#34;&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;(empty string)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/xyz; codecs=&#34;nonsense, noise&#34;&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;(empty string)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/mp4; codecs=&#34;avc1.42E01E, mp4a.40.2&#34;&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;&lt;code&gt;probably&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/webm&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;&lt;code&gt;maybe&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Type&#34;&gt;&lt;code&gt;video/webm; codecs=&#34;vp8, vorbis&#34;&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Response&#34;&gt;&lt;code&gt;probably&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h4 id=&#34;2-2-2-生成多种格式的视频&#34;&gt;2.2.2 生成多种格式的视频&lt;/h4&gt;
+
+&lt;p&gt;有很多工具可以把同一视频保存为其他格式：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;桌面工具： &lt;a href=&#34;https://ffmpeg.org/&#34;&gt;FFmpeg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GUI 应用程序：&lt;a href=&#34;https://www.mirovideoconverter.com/&#34;&gt;Miro&lt;/a&gt;、&lt;a href=&#34;https://handbrake.fr/&#34;&gt;HandBrake&lt;/a&gt;、&lt;a href=&#34;https://www.videolan.org/&#34;&gt;VLC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在线编码/转码服务：&lt;a href=&#34;https://en.wikipedia.org/wiki/Zencoder&#34;&gt;Zencoder&lt;/a&gt;、&lt;a href=&#34;https://aws.amazon.com/elastictranscoder&#34;&gt;Amazon Elastic Encoder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-2-3-检测所使用的视频格式&#34;&gt;2.2.3 检测所使用的视频格式&lt;/h4&gt;
+
+&lt;p&gt;想知道浏览器实际支持哪些视频格式么？
+在 JavaScript 中，使用视频的currentSrc 属性，可返回所使用的源。
+想看这个操作的话，可以查看这个示例：Chrome 和 Firefox 选用 chrome.webm（因为它是这两个浏览器所支持的视频格式列表的第一个条目），而 Safari 选用 chrome.mp4。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-3-自定义视频播放器&#34;&gt;2.3 自定义视频播放器&lt;/h3&gt;
+
+&lt;p&gt;不同平台播放视频的方式不同。移动平台的解决方案需要考虑设备的方向（横向或者纵向视图）。使用全屏API来控制视频内容的全屏视图。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-3-1-跨设备的设备方向检测&#34;&gt;2.3.1 跨设备的设备方向检测&lt;/h4&gt;
+
+&lt;p&gt;在台式显示器或者笔记本电脑上很少会考虑设备的方向，但如果要在手机和平板上做网页设计，设备的方向就尤为重要了。
+iPhone上的Safari对横竖方向转换的支持就做得很好。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1WmUSFVXXXXcBXVXXaZfs6XXX-652-371.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;而iPad与Chrome for Android对设备方向的支持则可能会出现问题。比如，在iPad的横向模式上播放无任何配置的视频就会是这个样子：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB172JXGXXXXXciXXXX8JnCIVXX-600-450.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在CSS上设置视频width:100%或者max-width:100%可以解决大部分的设备横向布局问题。你也可以考虑使用全屏的解决方案。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-3-2-页内或全屏播放&#34;&gt;2.3.2 页内或全屏播放&lt;/h4&gt;
+
+&lt;p&gt;不同平台播放视频的方式不一样。iPhone上的Safari会在页内显示视频元素，而播放时会进入全屏：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1qEUYFVXXXXXoaXXX3sk2NVXX-400-600.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在安卓上，视频默认在页内播放，用户可以按全屏按钮请求全屏。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1bbU4FVXXXXcSXFXX7oBEJVXX-360-600.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iPad上的Safari在页内播放视频：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB172JXGXXXXXciXXXX8JnCIVXX-600-450.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-3-3-控制全屏内容&#34;&gt;2.3.3 控制全屏内容&lt;/h4&gt;
+
+&lt;p&gt;对于不支持全屏播放的平台，可以使用广泛支持的全屏API。用这个API去控制全屏内容或者页面。&lt;/p&gt;
+
+&lt;p&gt;要全屏一个元素，比如一个视频：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;elem.requestFullScreen();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使整个document对象全屏&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;document.body.requestFullScreen();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还可以监听全屏状态转换&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;video.addEventListener(&amp;quot;fullscreenchange&amp;quot;, handler);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者检测一个元素是否正处于全屏模式&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;console.log(&amp;quot;In full screen mode: &amp;quot;, video.displayingFullscreen);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还可以用CSS伪类 :fullscreen 去改变元素在全屏模式下的样式。在支持全屏API的设备上，可以考虑用缩略图作为视频的占位符。&lt;/p&gt;
+
+&lt;video autoplay=&#34;&#34; loop=&#34;&#34; class=&#34;center&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/fullscreen.webm&#34; type=&#34;video/webm&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/media/video/video/fullscreen.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
+&lt;/video&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;requestFullScreen() 当前还处在测试阶段，可能需要额外的代码来实现完整的跨浏览器支持。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-4-合理调整视频尺寸&#34;&gt;2.4 合理调整视频尺寸&lt;/h3&gt;
+
+&lt;p&gt;当事情涉及到保证你的用户开心时，视频的大小就很重要了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用大尺寸和高质量视频时注意不要超出平台的承受范围。&lt;/li&gt;
+&lt;li&gt;视频应尽可能的短。&lt;/li&gt;
+&lt;li&gt;过长的视频可能会引起下载和加载的中断；有的浏览器会等待视频下载完才开始播放。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-4-1-检查视频大小&#34;&gt;2.4.1 检查视频大小&lt;/h4&gt;
+
+&lt;p&gt;视频真正的编码帧大小有可能与视频元素的大小不一样（就像图片不一定按照它本身的大小显示）。要检测视频编码的大小，可以用视频元素的 videoWidth 和 videoHeight 属性。而 width 和 height 则返回视频元素的大小，这两个值可能已被 CSS 或内联 width 和 height 属性修改了。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-4-2-确保视频没有溢出容器&#34;&gt;2.4.2 确保视频没有溢出容器&lt;/h4&gt;
+
+&lt;p&gt;当视频元素大小超过窗口时就有可能会溢出容器，此时用户将无法看到完整的内容或使用上面的控件。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1H0.YFVXXXXcMXVXXOy7X4VXX-647-353.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;你可以通过 JavaScript 或 CSS 控制视频大小。像 FitVids 之类的 JavaScript 库或插件可以方便地保持适当的大小和宽高比，甚至可以用在 YouTube 和其它源的 Flash 视频上。
+使用 CSS 媒体查询去指定元素的大小随窗口尺寸变化而变化。max-width: 100% 会是你的好朋友。
+&lt;strong&gt;注意：&lt;/strong&gt;不要强行改变视频的宽高比。压扁或者拉伸都会很难看。
+对于 iframes 中的媒体内容（像 YouTube 视频），可以采用响应式的方法（如John Surdakowski提出的这个）。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;video-container&amp;quot;&amp;gt;
+  &amp;lt;iframe src=&amp;quot;//www.youtube.com/embed/l-BA9Ee2XuM&amp;quot;
+          frameborder=&amp;quot;0&amp;quot; width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot;&amp;gt;
+  &amp;lt;/iframe&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- 对比可响应式例子和不可响应的例子 --&gt;
+
+&lt;h3 id=&#34;2-5-可访问性很重要&#34;&gt;2.5 可访问性很重要&lt;/h3&gt;
+
+&lt;p&gt;可访问性不是一个特性。缺少了字幕和描述，有视力或听力障碍的用户根本无法去了解一个视频。相比糟糕的用户体验，添加此类内容花费的时间不算什么。所以，为所有用户都提供一个基本的用户体验吧。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-5-1-引入字幕来增加可访问性&#34;&gt;2.5.1 引入字幕来增加可访问性&lt;/h4&gt;
+
+&lt;p&gt;利用轨道元素（track element）添加字母或描述来增加媒体在移动设备上的可访问性。
+&lt;strong&gt;记住：&lt;/strong&gt;Chrome for Android，iOS Safari 和当前所有的桌面浏览器都支持轨道元素，除了火狐。可以用填充物（polyfills）替代，我们推荐 Playr 或者Captionator。
+使用了轨道元素后，字幕看起来是这样的：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1IK8XGXXXXXcwXXXX09MwNpXX-819-491.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-5-2-添加轨道元素&#34;&gt;2.5.2 添加轨道元素&lt;/h4&gt;
+
+&lt;p&gt;为视频添加字幕很简单，就是添加一个轨道元素作为视频元素的孩子。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;video controls&amp;gt;
+    &amp;lt;source src=&amp;quot;chrome.webm&amp;quot; type=&amp;quot;video/webm&amp;quot; /&amp;gt;
+    &amp;lt;source src=&amp;quot;chrome.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
+  &amp;lt;track src=&amp;quot;chrome-subtitles-en.vtt&amp;quot; label=&amp;quot;English captions&amp;quot;
+         kind=&amp;quot;captions&amp;quot; srclang=&amp;quot;en&amp;quot; default&amp;gt;
+  &amp;lt;p&amp;gt;This browser does not support the video element.&amp;lt;/p&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;轨道元素的 src 属性提供了轨道文件的位置。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-5-3-在轨道文件中定义字幕&#34;&gt;2.5.3 在轨道文件中定义字幕&lt;/h4&gt;
+
+&lt;p&gt;轨道文件使用 WebVTT 格式描述时间的开始&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;WEBVTT
+
+00:00.000 --&amp;gt; 00:04.000
+Man sitting on a tree branch, using a laptop.
+
+00:05.000 --&amp;gt; 00:08.000
+The branch breaks, and he starts to fall.
+
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-6-快速参考&#34;&gt;2.6 快速参考&lt;/h3&gt;
+
+&lt;p&gt;video元素的属性一览表&lt;/p&gt;
+
+&lt;h4 id=&#34;2-6-1-视频元素的属性&#34;&gt;2.6.1 视频元素的属性&lt;/h4&gt;
+
+&lt;p&gt;要查看完整的视频元素属性和定义，参阅W3C的&lt;a href=&#34;http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element&#34;&gt;视频元素&lt;/a&gt;。&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Attribute&lt;/th&gt;&lt;th&gt;Availability&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;All browsers&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Address (URL) of the video.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;poster&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;All browsers&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;preload&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;All mobile browsers ignore preload.&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Hints to the browser that preloading metadata (or some video) in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;autoplay&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;Not supported on iPhone or Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Start download and playback as soon as possible (see Autoplay section).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;All browsers&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Loop the video.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Attribute&#34;&gt;&lt;code&gt;controls&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Availability&#34;&gt;All browsers&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Show the default video controls (play, pause, etc.)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Autoplay&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;对于桌面版，autoplay 告诉浏览器尽可能早的开始下载和播放。在 iOS 和 Chrome for Android 上，autoplay 是无效的，用户必须点击屏幕去播放视频。
+即使在支持自动播放的平台上，你也要考虑启用它是不是一个好主意：
+* 数据流量有可能是昂贵的。
+* 不经询问，一开始就下载和播放会不经意的占用带宽和 CPU，延迟了页面的渲染。
+* 用户所处的环境可能不适合播放视频和音频。
+自动播放行为可以在 Android 网络视图（WebView）通过 WebSettings API 配置。它默认是 true 但一个网络视图应用程序可以选择禁用它。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Preload&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;preload 属性提示浏览器应该预加载多少信息和内容。&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Value&#34;&gt;&lt;code&gt;none&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;The user may not even watch the video – don&#39;t preload anything&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Value&#34;&gt;&lt;code&gt;metadata&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Metadata (duration, dimensions, text tracks) should be preloaded, but with minimal video.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Value&#34;&gt;&lt;code&gt;auto&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Downloading the entire video right away is considered desirable.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;preload 属性在不同的平台上有不同的效果。比如，Chrome 的桌面版会缓冲25秒的视频，但 iOS 与 Android 版则不会。这意味着在移动版上会出现桌面版所没有的播放启动延迟。详情参阅 &lt;a href=&#34;https://stevesouders.com/tests/mediaevents.php&#34;&gt;Steve Souders’test page&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-6-2-javascript&#34;&gt;2.6.2 JavaScript&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.html5rocks.com/en/tutorials/video/basics/#toc-javascript&#34;&gt;The HTML5 Rocks Video article&lt;/a&gt; 很好的总结了控制视频播放的 JavaScript 属性、方法和事件。我们这里已经包括了这些内容，并更新了与移动方面相关的一些内容。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;属性：&lt;/strong&gt;
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;currentTime&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Get or set playback position in seconds.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;volume&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Get or set current volume level for the video.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;muted&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Get or set audio muting.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;playbackRate&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Get or set playback rate; 1 is normal speed forward.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;buffered&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Information about how much of the video has been buffered and is ready to play (see &lt;a href=&#34;http://people.mozilla.org/~cpearce/buffered-demo.html&#34; title=&#34;Demo displaying amount of buffered video in a canvas element&#34;&gt;demo&lt;/a&gt;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;currentSrc&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;The address of the video being played.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;videoWidth&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Width of the video in pixels (which may be different from the video element width).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Property&#34;&gt;&lt;code&gt;videoHeight&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Height of the video in pixels (which may be different from the video element height).&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;playbackRate和volume在移动端都不支持&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Method&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Method&#34;&gt;&lt;code&gt;load()&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Load or reload a video source without initiating playback: for example, when the video src is changed using JavaScript.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Method&#34;&gt;&lt;code&gt;play()&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Play the video from its current location.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Method&#34;&gt;&lt;code&gt;pause()&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Pause the video at its current location.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Method&#34;&gt;&lt;code&gt;canPlayType(&#39;format&#39;)&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Find out which formats are supported (see Check which formats are supported).&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;在移动设备上（除了 Opera 和 Android）play() 和 pause() 只有在响应用户动作的时候才有效，比如点击一个按钮（参阅样例）。同样地，对于嵌入 YouTube 视频之类的内容也不能启动播放。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;事件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这只是可能发射的媒体事件的一个子集。完整的列表请参阅 Mozilla 开发者社群上的&lt;a href=&#34;https://developer.mozilla.org/docs/Web/Guide/Events/Media_events&#34;&gt;媒体事件&lt;/a&gt;页面。&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Event&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;canplaythrough&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired when enough data is available that the browser believes it can play the video completely without interruption.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;ended&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired when video has finished playing.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired if an error occurs.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;playing&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired when video starts playing for the first time, after being paused, or when restarting.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;progress&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired periodically to indicate download progress.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;waiting&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired when an action is delayed pending completion of another action.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;Event&#34;&gt;&lt;code&gt;loadedmetadata&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Description&#34;&gt;Fired when browser finishes loading metadata for video: duration, dimensions and text tracks.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>Google Web开发最佳实践（一）</title>
+      <link>https://aliqin.github.io/2014-05-20-google-web-get-started/</link>
+      <pubDate>Tue, 20 May 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-05-20-google-web-get-started/</guid>
+      <description>&lt;p&gt;本文翻译自 &lt;a href=&#34;https://developers.google.com/web/fundamentals/&#34;&gt;Web Fundamentals:Best practices for modern web development&lt;/a&gt; (可能需要&lt;a href=&#34;https://code.google.com/p/goagent/wiki/InstallGuide&#34;&gt;翻墙&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h1 id=&#34;get-started-你的首个多屏网站&#34;&gt;Get Started-你的首个多屏网站&lt;/h1&gt;
+
+&lt;p&gt;为有着不同兼容性，不同的屏幕尺寸和交互方法设备构建web看上去让人沮丧。
+构建多屏体验并没有听说的那么难。按照本教程中的课程，我们将为《CS256: 移动Web开发》课程做一个示范登录页，它可很好地运行于多种不同设备(小到手机，大到电视)。
+为了展示，手册带你通过如下两步入门。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1ufssFVXXXXaOXFXXF1nQTXXX-1375-750.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-创建网站的内容和结构&#34;&gt;1 创建网站的内容和结构&lt;/h2&gt;
+
+&lt;p&gt;内容是任何网站最重要的部分。因此，让设计服务于内容，而不是设计决定内容。在这篇指南中，首先确定我们需要的内容，然后根据内容来创建结构，接着以简单的线性布局展示网页。线性布局在宽窄视口（ViewPort）方面具有良好效果。（注：ViewPort，视口、视觉窗口，即显示区域）&lt;/p&gt;
+
+&lt;h3 id=&#34;1-1-创建网页结构&#34;&gt;1.1 创建网页结构&lt;/h3&gt;
+
+&lt;p&gt;确认我们的需求：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一块描述我们高级产品 —“CS256：移动Web开发”教程 — 的区域&lt;/li&gt;
+&lt;li&gt;一个表单，用于收集对我们产品感兴趣用户的信息&lt;/li&gt;
+&lt;li&gt;一段深入描述，以及视频&lt;/li&gt;
+&lt;li&gt;一些实际课程产品中的图片&lt;/li&gt;
+&lt;li&gt;一个数据表格，用来支持产品理念的信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;首先确定我们需要的内容&lt;/li&gt;
+&lt;li&gt;勾画出信息架构（IA）的窄、宽视口&lt;/li&gt;
+&lt;li&gt;创建内容页面的骨架图，无须样式化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;我们还分别从窄视口和宽视口出发，列出了粗略的信息架构和布局。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1pUsWFVXXXXXJXpXX.pwpZVXX-290-647.png&#34; alt=&#34;&#34; /&gt;
+这很容易转化成用于指导项目后续工作的网页框架的粗略部分。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+     &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+     &amp;lt;title&amp;gt;CS256: Mobile Web development - structure&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;headline&amp;quot;&amp;gt;
+      &amp;lt;header&amp;gt;
+        &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+      &amp;lt;/header&amp;gt;
+      &amp;lt;div id=&amp;quot;blurb&amp;quot;&amp;gt;
+        &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+      &amp;lt;/div&amp;gt;
+      &amp;lt;form method=&amp;quot;post&amp;quot; id=&amp;quot;register&amp;quot;&amp;gt;
+      &amp;lt;/form&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;section1&amp;quot;&amp;gt;
+      &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+      &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+      &amp;lt;video&amp;gt;&amp;lt;/video&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;section2&amp;quot;&amp;gt;
+      &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+      &amp;lt;div id=&amp;quot;images&amp;quot;&amp;gt;
+        &amp;lt;img&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;section3&amp;quot;&amp;gt;
+      &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;footer&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/footer&amp;gt;
+      &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-2-向网页添加内容&#34;&gt;1.2 向网页添加内容&lt;/h3&gt;
+
+&lt;p&gt;该网站的基本部分已经完成。我们清楚这部分及其要展示的内容，并且知道这部分在整个信息架构中的各自位置。现在，我们开始扩建网站。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;创建标题和表单&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;标题和注册申请表单是该页面的关键部分，必须快速呈现给用户。
+添加标题仅需要几行简单的代码。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;headline&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;header&amp;gt;
+      &amp;lt;h1&amp;gt;Mobile Web Development&amp;lt;/h1&amp;gt;
+      &amp;lt;p&amp;gt;Building Mobile Web Experiences&amp;lt;/p&amp;gt;
+    &amp;lt;/header&amp;gt;
+    &amp;lt;div id=&amp;quot;blurb&amp;quot;&amp;gt;
+      &amp;lt;p&amp;gt;So you&#39;ve heard mobile is kind of a big deal, and you&#39;re not
+      sure how to transform your traditional desktop-focused web apps
+      into fast, effective multi-device experiences.&amp;lt;/p&amp;gt;
+      &amp;lt;p&amp;gt;This course is designed to teach web developers what
+      they need to know to create great cross-device web
+      experiences.&amp;lt;/p&amp;gt;
+      &amp;lt;p&amp;gt;This course will focus on building mobile-first web apps,
+      which will work across multiple platforms including:&amp;lt;/p&amp;gt;
+      &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;Android,&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;iOS,&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;and others.&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;form method=&amp;quot;post&amp;quot; id=&amp;quot;register&amp;quot;&amp;gt;
+    &amp;lt;/form&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们还需要填充表单。表单简易，用于搜集用户的名字、电话、回他们电话的恰当时间。
+所有的表单应该具有标签和placeholders（预期值的提示信息），以便于用户聚焦相应的元素，了解往其中应该填写的内容，还有利于协助工具理解表单结构。名称属性不仅用于把表单值传输到服务器，还用于浏览器针对用户如何自动填写表单问题上给出重要提示。
+我们还添加了语义类型，使得用户能够更快、更简单地在移动设备上输入内容。例如，当输入电话号码时，拨号键盘应恰好呈现在用户眼前。
+相关链接
+    &lt;a href=&#34;https://developers.google.com/web/fundamentals/input/form/&#34;&gt;创建一个神奇的表单&lt;/a&gt;
+    &lt;a href=&#34;https://developers.google.com/web/fundamentals/input/form/label-and-name-inputs&#34;&gt;正确地输入标签和名称&lt;/a&gt;
+    &lt;a href=&#34;https://developers.google.com/web/fundamentals/input/form/choose-the-best-input-type&#34;&gt;选择最佳的input类型&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;创建视频和信息区域&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;内容的视频、信息区域稍微复杂一些，包括了一个我们产品功能的项目符号列表，还包含一个展示我们产品服务于用户的预留视频。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;section1&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;h2&amp;gt;What will I learn?&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;After completing this class, you&#39;ll have built a web application with a first-class mobile experience.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;You&#39;ll understand what it takes to:&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;build great web experiences on mobile devices&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;use the tools you need to test performance&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;apply your knowledge to your own projects in the future&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;video controls poster=&amp;quot;udacity.png&amp;quot;&amp;gt;
+      &amp;lt;source src=&amp;quot;udacity.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;&amp;lt;/source&amp;gt;
+      &amp;lt;source src=&amp;quot;udacity.webm&amp;quot; type=&amp;quot;video/webm&amp;quot;&amp;gt;&amp;lt;/source&amp;gt;
+      &amp;lt;p&amp;gt;Sorry your browser doesn&#39;t support video.
+         &amp;lt;a href=&amp;quot;udacity.mov&amp;quot;&amp;gt;Download the video&amp;lt;/a&amp;gt;.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/video&amp;gt;
+    &amp;lt;br&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;视频通常以互动性较强的方式来描述内容，经常用来阐述一个产品或概念。
+遵循最佳实践原则，你可以轻松地在你的网站整合视频：
+* 添加controls属性，方便人们播放视频
+* 添加poster图片，提供内容预览
+* 添加多个&lt;source&gt;元素，以支持多种视频格式
+* 当窗口无法播放视频时，添加带视频链接的文本，供人们下载视频&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;video controls poster=&amp;quot;udacity.png&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;udacity.webm&amp;quot; type=&amp;quot;video/webm&amp;quot;&amp;gt;&amp;lt;/source&amp;gt;
+  &amp;lt;source src=&amp;quot;udacity.mov&amp;quot; type=&amp;quot;video/mov&amp;quot;&amp;gt;&amp;lt;/source&amp;gt;
+  &amp;lt;p&amp;gt;Sorry your browser doesn&#39;t support video.
+     &amp;lt;a href=&amp;quot;udacity.mov&amp;quot;&amp;gt;Download the video&amp;lt;/a&amp;gt;.
+  &amp;lt;/p&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;相关链接
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/media/video/&#34;&gt;有效使用视频&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/media/video/&#34;&gt;改变开始播放位置&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/media/video/&#34;&gt;包含一张视频的海报&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;创建图片区域&lt;/strong&gt;
+没有图片的网站会略显枯燥。有两种类型的图片：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;内容图片—嵌入文档的图片，用于传达其他内容信息&lt;/li&gt;
+&lt;li&gt;样式图片—让网站看起来更漂亮的图片，包括背景图片、图案、渐变。我们将在下篇文章中讲述。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;图片区域是内容图片的集合。这些图片出现在我们的产品中。
+内容图片对于传达页面内容起着极为重要的作用，可以把他们想象成报纸上的图片所发挥的作用。我们正在使用的图片是一个名为*Chris Wilson, Peter Lubbers and Sean Bennet.*的项目所使用的图片。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;section2&amp;quot;&amp;gt;
+  &amp;lt;h2&amp;gt;Instructors&amp;lt;/h2&amp;gt;
+  &amp;lt;p&amp;gt;The worlds leading mobile autorities&amp;lt;/p&amp;gt;
+
+  &amp;lt;div id=&amp;quot;images&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;chriswilson.png&amp;quot; alt=&amp;quot;Chris Wilson: Course Instructor&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;peterlubbers.png&amp;quot; alt=&amp;quot;Peter Lubbers: Course Instructor&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;seanbennett.png&amp;quot; alt=&amp;quot;Sean Bennet: Course Developer&amp;quot;&amp;gt;
+  &amp;lt;/div&amp;gt;
+
+  &amp;lt;br&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;图片设置成与屏幕宽度一样宽。这个设置在移动设备上行之有效，但在桌面程序中表现平平。我们将在响应式设计部分讲述这个问题。
+相关链接
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/media/images/&#34;&gt;有效使用图片&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/media/images/#images-in-markup&#34;&gt;在标记中正确使用图片&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization&#34;&gt;优化图片压缩&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;很多人没有查看图像的能力，他们经常使用一些辅助的技术，像是屏幕阅读器。屏幕阅读器可以分析页面上的数据，然后将分析结果口头转达给用户。为了确保屏幕阅读器可以将解析结果正确的反映给使用者，你要尽量保证你的内容图像具有可描述的alt属性。
+在添加alt属性时，一定要确保alt属性文本在充分描述图像的同时，尽可能的简明扼要。例如，在我们的事例当中，我们将alt属性简单的标记为“Name：role”，该标记足够呈现给用户该章节的作者及其工作。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;添加数据列表部分&lt;/strong&gt;
+最后一部分是简单的表格，用于列出产品的详细统计数据。
+表格仅限用于列表示资料，如信息矩阵。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;section3&amp;quot;&amp;gt;
+  &amp;lt;h2&amp;gt;Mobile. Why should I care?&amp;lt;/h2&amp;gt;
+  &amp;lt;p&amp;gt;It is huge.  Everywhere.&amp;lt;/p&amp;gt;
+  &amp;lt;table&amp;gt;
+    &amp;lt;caption&amp;gt;
+      &amp;lt;p&amp;gt;Data from &amp;lt;a href=&amp;quot;http://gs.statcounter.com/#desktop+mobile+tablet-comparison-ww-monthly-201303-201403&amp;quot;&amp;gt;StatsCounter&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/caption&amp;gt;
+    &amp;lt;thead&amp;gt;
+       &amp;lt;tr&amp;gt;
+         &amp;lt;th&amp;gt;Country&amp;lt;/th&amp;gt;
+         &amp;lt;th&amp;gt;Desktop share&amp;lt;/th&amp;gt;
+         &amp;lt;th&amp;gt;Tablet share&amp;lt;/th&amp;gt;
+         &amp;lt;th&amp;gt;Mobile share&amp;lt;/th&amp;gt;
+       &amp;lt;/tr&amp;gt;
+    &amp;lt;/thead&amp;gt;
+    &amp;lt;colgroup&amp;gt;
+       &amp;lt;col span=&amp;quot;1&amp;quot;&amp;gt;
+       &amp;lt;col span=&amp;quot;1&amp;quot;&amp;gt;
+       &amp;lt;col span=&amp;quot;1&amp;quot;&amp;gt;
+       &amp;lt;col span=&amp;quot;1&amp;quot;&amp;gt;
+    &amp;lt;/colgroup&amp;gt;
+    &amp;lt;tbody&amp;gt;
+     &amp;lt;tr&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Country&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://gs.statcounter.com/#desktop+mobile+tablet-comparison-IN-monthly-201303-201403&amp;quot;&amp;gt;India&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Desktop share&amp;quot;&amp;gt;32%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Tablet share&amp;quot;&amp;gt;1%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Mobile share&amp;quot;&amp;gt;67%&amp;lt;/td&amp;gt;
+      &amp;lt;/tr&amp;gt;
+      &amp;lt;tr&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Country&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://gs.statcounter.com/#desktop+mobile+tablet-comparison-GB-monthly-201303-201403&amp;quot;&amp;gt;GB&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Desktop share&amp;quot;&amp;gt;69%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Tablet share&amp;quot;&amp;gt;13%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Mobile share&amp;quot;&amp;gt;18%&amp;lt;/td&amp;gt;
+      &amp;lt;/tr&amp;gt;
+      &amp;lt;tr&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Country&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://gs.statcounter.com/#desktop+mobile+tablet-comparison-US-monthly-201303-201403&amp;quot;&amp;gt;US&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Desktop share&amp;quot;&amp;gt;69%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Tablet share&amp;quot;&amp;gt;9%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Mobile share&amp;quot;&amp;gt;22%&amp;lt;/td&amp;gt;
+      &amp;lt;/tr&amp;gt;
+      &amp;lt;tr&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Country&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://gs.statcounter.com/#desktop+mobile+tablet-comparison-CN-monthly-201303-201403&amp;quot;&amp;gt;China&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Desktop share&amp;quot;&amp;gt;86%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Tablet share&amp;quot;&amp;gt;4%&amp;lt;/td&amp;gt;
+        &amp;lt;td data-th=&amp;quot;Mobile share&amp;quot;&amp;gt;10%&amp;lt;/td&amp;gt;
+      &amp;lt;/tr&amp;gt;
+    &amp;lt;/tbody&amp;gt;
+  &amp;lt;/table&amp;gt;
+  &amp;lt;br&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;添加页脚footer&lt;/strong&gt;
+大部分网站需要一个页脚，用来展示诸如条款和条件、免责声明等内容，以及无须出现在页面的主导航或主内容区域的其他内容。
+在我们的网站中，我们将链接到使用条款和条件、联系页面、以及我们的社交帐号。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;footer&amp;gt;
+  &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;We always need a footer.&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/footer&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-3-总结&#34;&gt;1.3 总结&lt;/h3&gt;
+
+&lt;p&gt;我们已经创建好了网站的大纲，确定了全部的主要框架元素。我们确信所有相关内容已经准备妥当，以满足我们业务的需求。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1K5IPFVXXXXayXFXXtJRI0FXX-848-911.png&#34; alt=&#34;&#34; /&gt;
+这个时候你会发现，网页看起来已经相当完美了，右边是已经设计完的效果。内容是任何网站最重要的方面。我们需要确保拥有良好的信息架构和坚实的信息密度。这篇指南提供了优秀的创建网站基础。我们将在下一篇指南中为内容设计样式。&lt;/p&gt;
+
+&lt;!-- todo: 此处与翻译不一致，查阅 --&gt;
+
+&lt;h2 id=&#34;2-让网站响应式&#34;&gt;2 让网站响应式&lt;/h2&gt;
+
+&lt;h3 id=&#34;2-1-添加一个视口&#34;&gt;2.1 添加一个视口&lt;/h3&gt;
+
+&lt;p&gt;即使对于一个基本页面，你必须始终包含一个viewport 元数据标签。视口是建立多设备体验的最重要的组成部分。没有它，你的网站将无法良好运行于移动设备上。
+视口用于提示浏览器：网页页面需要进行调整以适应屏幕范围。你可以为视口指定多种配置，以控制页面的显示。我们推荐一个默认值：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;视口元素位于文档头部，仅需声明一次。&lt;/p&gt;
+
+&lt;p&gt;了解更多关于使用视口的最佳实践：
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-fundamentals/#set-the-viewport&#34;&gt;设置视口&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-fundamentals/#size-content-to-the-viewport&#34;&gt;调整内容大小以适应视口&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-2-使用简单的样式&#34;&gt;2.2 使用简单的样式&lt;/h3&gt;
+
+&lt;p&gt;我们公司及产品根据样式指南，提供了一个非常具体的品牌、字体指导方针。
+&lt;strong&gt;样式指南&lt;/strong&gt;
+样式指南是深入认识页面的可视化表达的有效途径。它有助于确保设计首尾风格一致。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1nvIsFVXXXXc0XpXXF7Mu6pXX-864-163.png&#34; alt=&#34;&#34; /&gt;
+&lt;strong&gt;添加样式化图片&lt;/strong&gt;
+在前篇指南中，我们添加了所谓的“内容图片”。这些图片对于描述我们产品很重要。样式图片不是核心内容的一部分，但增添了视觉冲击力，或引导用户注意力至特定内容。
+这方面的一个很好的例子是：顶部内容的标题图片。它经常被用来吸引用户阅读更多的产品。
+它们可以非常简单地包含进来。在我们的例子中，样式图片为背景，应用简单的css即可。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1rO7PFVXXXXboXXXX7SdxOXXX-400-849.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#headline {
+  padding: 0.8em;
+  color: white;
+  font-family: Roboto, sans-serif;
+  background-image: url(backgroundimage.jpg);
+  background-size: cover;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-3-设置首个临界点&#34;&gt;2.3 设置首个临界点&lt;/h3&gt;
+
+&lt;p&gt;当宽度大约为600px时，设计开始变得糟糕。在我们的例子中，行的长度会超过10个字（最佳的阅读长度），而这正是我们需要调整的地方。
+&lt;video controls=&#34;&#34; poster=&#34;https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/images/firstbreakpoint.png&#34; style=&#34;width: 100%&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/videos/firstbreakpoint.webm&#34; type=&#34;video/webm&#34;&gt;
+&lt;/video&gt;
+600px似乎是我们创建第一个临界点的良好位置，因为它确定了范围，重新定位元素，使之更好地适应屏幕。我们使用一种称为“媒介查询（Media Queries）”的技术，可做到这一点。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media (min-width: 600px) {
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;更大的屏幕意味着拥有更多的空间，因此，在如何显示内容的问题上具有更强的灵活性。
+从当前我们产品页面的效果看来，接下来我们需要：
+* 约束设计的最大宽度
+* 修改元素内边距和减少文本尺寸
+* 移动表单，与标题内容浮动对齐
+* 确保视频浮动于内容周围
+* 减少图像尺寸，显示于更合适的网格&lt;/p&gt;
+
+&lt;p&gt;了解更多关于使用“媒介查询”的方式和位置：
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness&#34;&gt;使用“媒介查询”&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-patterns/&#34;&gt;布局模式&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/multi-device-layouts/rwd-patterns/#mostly-fluid&#34;&gt;主要的流式布局&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-4-限制设计界面的最大宽度&#34;&gt;2.4 限制设计界面的最大宽度&lt;/h3&gt;
+
+&lt;p&gt;我们仅选择两大布局：窄视口和宽视口：这大大简化了构建过程。
+我们决定，在窄视口中创建全幅部分，并且在宽视口中仍保持全幅。这意味着我们应限制屏幕的最大宽度，使得文本、段落不延伸成一长单行，出现超宽屏幕。我们选择800px作为最大值。
+为了实现这个目标，我们需要限制宽度，并将元素置于中心。在每个主要区域中，我们需要创建一个容器，将其外边距（margin）设为auto。这允许屏幕增大，但内容仍处于中心，最大尺寸为800px。
+如下所示，容器是一个简单的div：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;...&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&amp;quot;section1&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;What will I learn?&amp;lt;/h2&amp;gt;
+
+.container {
+  margin: auto;
+  max-width: 800px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-5-改变内边距和减少文本尺寸&#34;&gt;2.5 改变内边距和减少文本尺寸&lt;/h3&gt;
+
+&lt;p&gt;在窄视口中，我们没有大量空间来显示内容。因此，排版尺寸和磅值往往需大幅减少，以适应屏幕。
+在更宽视口中，我们需要考虑用户倾向于更大的屏幕，甚至更大。为了增加内容的可读性，我们可以增加排版的尺寸和磅值，也可以改变内边距，以使不同区域更加明显。
+在我们产品页面中，我们通过设置宽度方向的内边距为5%，以增加区域元素的内边距。我们也将增加每个部分顶部的大小。
+    #headline {
+      padding: 20px 5%;
+    }&lt;/p&gt;
+
+&lt;h3 id=&#34;2-6-调整元素以适应宽视口&#34;&gt;2.6 调整元素以适应宽视口&lt;/h3&gt;
+
+&lt;p&gt;窄视口以线性方式堆叠显示。每个主要区域及其里面的内容是依次从上到下排列。
+宽视口提供了额外的空间，使得内容能以最佳方式呈现在屏幕上。对于我们的产品页面，根据信息架构，意味着我们可以：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;移动表单，贴近头标题信息&lt;/li&gt;
+&lt;li&gt;将视频放在重要功能列表右边&lt;/li&gt;
+&lt;li&gt;平铺图像&lt;/li&gt;
+&lt;li&gt;展开表格&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;使表单元素浮动&lt;/strong&gt;
+窄视口意味着拥有较少的横向空间，不能充裕地放置屏幕上的元素。
+为了更有效地利用屏幕的横向空间，我们需要打破顶部的线性流式布局，移动表单和表项，使得彼此紧邻。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#headline #blurb {
+  float: left;
+  font-weight: 200;
+  width: 50%;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+#headline #register {
+  float:right;
+  padding: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+#headline br {
+  clear: both;
+}
+
+#headline {
+  padding: 20px 5%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;video controls=&#34;&#34; poster=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/images/floatingform.png&#34; style=&#34;width: 100%&#34;&gt;
+  &lt;source src=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.mov&#34; type=&#34;video/mov&#34;&gt;
+  &lt;source src=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.webm&#34; type=&#34;video/webm&#34;&gt;
+  &lt;p&gt;Sorry your browser doesn&#39;t support video. &lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/videos/floatingform.mov&#34;&gt;Download the video&lt;/a&gt;.&lt;/p&gt;
+&lt;/video&gt;
+
+&lt;p&gt;&lt;strong&gt;使视频元素浮动&lt;/strong&gt;
+在窄视口中，将视频设计为占屏幕的整个宽度，放置在重要功能列表后面。在宽视口中，当视屏位于功能列表后面时，视频变得太大，看起来不合适。
+视频元素需移出窄视口的垂直流式布局，应与内容的项目符号列表并列显示。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#section1 ul {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 1em;
+}
+
+#section1 video {
+  width: 50%;
+  float: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;平铺图片&lt;/strong&gt;
+在窄视口（大部分移动设备）接口中，图像设置为屏幕的整个宽度、垂直堆叠。这在宽视口中得不到很好地扩展。
+为了使图片在宽视口中看起来合适，将图片宽度缩放容器的30%，水平放置（而不是窄视口的垂直放置）。我们还将增加边框半径和盒子阴影（box-shadow），使图像看起来更吸引人。
+&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1ONkYFVXXXXalXpXXW4RsLFXX-893-446.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; #section2 div img {
+   width: 30%;
+   margin: 1%;
+   box-sizing: border-box;
+   border-radius: 50% 50%;
+   box-shadow: black 0px 0px 5px;
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;让图片自适应DPI&lt;/strong&gt;
+使用图片时，要考虑视口大小、显示分辨率。
+在过去，网页专为96dpi屏幕而设计。随着移动设备的出现，我们已见证了屏幕像素密度的逐渐增大，更别说笔记本电脑的Retina显示屏了。因此，被编码为96dpi的图像，往往在高保真dpi设备上看起来很糟糕。
+我们有一个还没被广泛采用的解决方案。对于支持该方案的浏览器，你可以在高分辨显示器上显示高像素的图像。
+了解更多关于针对不同屏幕分辨率有效使用图片：
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/images/#enhance-imgs-with-srcset-for-high-dpi-devices&#34;&gt;针对高保真dpi设备，使用srcset属性来增强图片效果&lt;/a&gt;
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/documentation/introduction-to-media/images/#use-media-queries-to-provide-high-res-images-or-art-direction&#34;&gt;使用媒介查询，以提供高分辨率的图片或艺术设计&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;数据表格&lt;/strong&gt;
+表格很难合适地展示在窄视口的设备上，需要特殊考虑。
+在窄视口中，我们建议将表分成两排，把标题和表格单元调到一排，呈列状。
+&lt;a href=&#34;https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/videos/responsivetable.webm&#34;&gt;在浏览器中查看演示视频&lt;/a&gt;
+在我们的网站中，必须单独为表格内容创建一个额外的临界点。由于最初是为移动设备构造网页，去掉已应用的样式是困难的，所以我们必须在宽视口css中关闭窄视口下表格的部分css。这向我们呈现了一个明确、连贯变化。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media screen and (max-width: 600px) {
+  table thead {
+    display: none;
+  }
+
+  table td {
+    display: block;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: left;
+    background: #e9e9e9;
+  }
+
+  table td:before {
+    content: attr(data-th) &amp;quot; :&amp;quot;;
+    display: inline-block;
+    color: #000000;
+    background: #e9e9e9;
+    border-right: 2px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 33%;
+    max-height: 100%;
+
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 13px;
+    padding-top: 13px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-7-总结&#34;&gt;2.7 总结&lt;/h3&gt;
+
+&lt;p&gt;祝贺你。当你阅读至此，你可创建你第一个产品的简单登陆页面，可跨大量不同设备、不同比例的表单、以及不同屏幕尺寸。
+如果你遵循这些原则，你将有一个良好的开端：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;写代码之前，创建一个基本的信息架构和清楚需要的内容&lt;/li&gt;
+&lt;li&gt;总是设置一个视口&lt;/li&gt;
+&lt;li&gt;移动优先，形成基本的经验&lt;/li&gt;
+&lt;li&gt;一旦拥有移动经验，增加显示器的宽度，直到网页看起来不合适，并在此设置临界点&lt;/li&gt;
+&lt;li&gt;不断迭代&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>响应式网页设计基础</title>
+      <link>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</link>
+      <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-basics/</guid>
+      <description>&lt;p&gt;使用移动设备上网已然成为一大趋势，但不幸的是，很多网页都没有对这些移动设备做相应的优化。移动设备对网页大小和内容的呈现方式应该与桌面端有所不同。
+平板、手机、桌面电脑、游戏机、电视还有可穿戴设备……现在各种各样的设备导致了屏幕尺寸也是五花八门。而且在未来，屏幕的尺寸也会越来越不同，为了跟上这趋势，你的站点应该要尽量去适应各种屏幕尺寸才行。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;video autoplay=&#34;&#34; loop=&#34;&#34; controls=&#34;&#34; class=&#34;responsiveVideo&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.webm&#34; type=&#34;video/webm&#34;&gt;
+    &lt;source src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/videos/resize.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+Ethan Marcotte 最先在 A List Apart 中定义了响应式网页设计：网页可以根据用户正在使用的设备来做出响应，布局的更改是基于设备的大小和容量。举例来说，在一部手机上，用户会看到一栏的内容；在平板上，可能内容还是相同的，但是是分两栏呈现的。&lt;/p&gt;
+
+&lt;h1 id=&#34;1-设置视口&#34;&gt;1 设置视口&lt;/h1&gt;
+
+&lt;p&gt;针对设备优化的页面需要在文档头部加上meta视口元素，视口标签可以告诉浏览器网页的宽度和缩放程度是什么。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用meta视口标签来控制浏览器视口的宽度和缩放程度。&lt;/li&gt;
+&lt;li&gt;添加width=device-width来适应不同的宽度。&lt;/li&gt;
+&lt;li&gt;添加initial-scale=1,建议一个css像素和设备无关像素的1:1的对应关系。&lt;/li&gt;
+&lt;li&gt;如果用户不能缩放页面的话，要确保你的页面还是可用的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;为了提供最好的用户体验，移动端的浏览器会按照桌面端的屏幕宽度来渲染页面（通常是980px左右，这个值会根据设备的不同有所浮动），为了更容易地阅读页面，字体会相应的加大，内容也会有所缩放来适应屏幕。对于用户来说，这么做的结果就是页面上的字体可能忽大忽小，还可能需要双击或者捏动缩放屏幕才能看清内容。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;用meta视口的width=device-width来控制页面以适应密度无关像素的屏幕的宽度，这样页面就在回流的时候可以适应不同的屏幕尺寸，无论是在小屏幕的移动端或者是大屏幕的桌面端都可以适应。
+&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1PQ76FVXXXXXaXXXXcmddOXXX-400-711.png&#34; alt=&#34;4&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1Acg3FVXXXXbIXXXXcmddOXXX-400-711.png&#34; alt=&#34;4&#34; width=&#34;50%&#34;&gt;
+当横屏的时候，有些浏览器会保持页面的宽度不变然后放大屏幕，而不是用回流重新加载出页面。添加initial-scale=1属性，使得无论手持设备的方向是怎么样的，CSS的像素和密度无关像素都是1:1的关系，另外还能让页面占满整个横屏宽度。
+&lt;em&gt;注意：用逗号来分隔这些属性，以保证老式浏览器的兼容性。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;确保视口可用&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;除了要设置initial-scale,你还可以设置针对视口应用minimum-scale、maximum-scale还有user-scalable属性。不过一旦这几个属性设置好了，用户就没法随意缩放视口了，这对视口的可用性造成了一定问题。&lt;/p&gt;
+
+&lt;h1 id=&#34;2-内容大小适应窗口&#34;&gt;2 内容大小适应窗口&lt;/h1&gt;
+
+&lt;p&gt;无论是在桌面设备还是移动设备上，用户总是习惯性垂直地浏览网页而不是横向地浏览。强制用户更改浏览页面的习惯，或者需要缩小页面才能看到它的全貌，这些都是很差的用户体验。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果要在元素上使用固定宽度，数值不能太大。&lt;/li&gt;
+&lt;li&gt;不能以某一个特定的视口尺寸作为内容的渲染标准。&lt;/li&gt;
+&lt;li&gt;用CSS媒体查询来定义不同尺寸的屏幕所需要的不同的样式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;当你使用meta视口标签开发一个移动站点的时候，常常不小心就创建出不兼容部分视口的页面。举例来说，如果一个图片的宽度超过视口的宽度，就会出现横向滚动条。你需要调整内容来适应视口的宽度，以便用户不需要横向滚动。不同的设备CSS的像素点在屏幕维度和宽度是不一样的（例如手机和平板之间，甚至不同的手机屏幕都不一样），不能用特定的视口宽度来渲染内容。 对页面上的元素设置较大的绝对宽度（下面的例子所示），会导致在屏幕小的设备上,层超出视口的宽度（例子：320px分辨率的设备屏幕，例如iPhone）。所以你需要考虑使用相对的宽度值，比如百分比（例如：width: 100%;）。相似地，在使用数值较大的绝对对的定位时也要小心，小屏幕上可能会出现元素溢出到视口外面的情况。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1RM7SFVXXXXbgXVXXyx8dOXXX-400-710.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB10HgUFVXXXXcKXFXXcmddOXXX-400-711.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;3-css媒体查询实现响应式&#34;&gt;3 CSS媒体查询实现响应式&lt;/h1&gt;
+
+&lt;p&gt;媒体查询是一种可以应用在CSS样式上的简易过滤器，它可以根据设备的渲染特性（包括显示类型、宽度、高度、转向甚至是分辨率）来显示不同的样式。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;媒体查询可以根据设备特性应用不同的样式。&lt;/li&gt;
+&lt;li&gt;使用min-width确保最大的体验程度。&lt;/li&gt;
+&lt;li&gt;对元素使用相对大小，防止布局被破坏&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;举个例子，你可以把所有需要应用的打印上的样式放入打印媒体查询中：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;print.css&amp;quot; media=&amp;quot;print&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;除了在样式表的链接上使用media属性，还有另外两种方式可以实现媒体查询：在CSS文件中添加@media和@import。出于性能的考虑，前两个方法都比使用@import要好。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media print {
+  /* print style sheets go here */
+}
+
+@import url(print.css) print;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- todo: 此处与翻译不一致，查阅 --&gt;
+
+&lt;p&gt;媒体查询使用的逻辑不是互斥的，如果过滤器发现符合了某一标准，那么利用CSS的优先级规则使得对应的样式可以生效。
+媒体查询使得响应式的体验得以实现：根据屏幕尺寸的不同，特定的样式得以应用。有了媒体查询语句，就可以根据设备的不同特性应用不同的样式了。
+&lt;table class=&#34;table-2&#34;&gt;&lt;colgroup&gt;&lt;col span=&#34;1&#34;&gt;&lt;col span=&#34;1&#34;&gt;&lt;/colgroup&gt;&lt;thead&gt;&lt;tr&gt;&lt;th data-th=&#34;attribute&#34;&gt;attribute&lt;/th&gt;&lt;th data-th=&#34;Result&#34;&gt;Result&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;min-width&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules applied for any browser width over the value defined in the query.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;max-width&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules applied for any browser width under the value defined in the query.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;min-height&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules applied for any browser height over the value defined in the query.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;max-height&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules applied for any browser height under the value defined in the query.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;orientation=portrait&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules applied for any browser where the height is greater than or equal to the width.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-th=&#34;attribute&#34;&gt;&lt;code&gt;orientation=landscape&lt;/code&gt;&lt;/td&gt;&lt;td data-th=&#34;Result&#34;&gt;Rules for any browser where the width is greater than the height.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+来看看下面这个例子：
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1l4I5FVXXXXaQXXXXIg6rIVXX-600-360.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(max-width: 640px)&amp;quot; href=&amp;quot;max-640px.css&amp;quot;&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(min-width: 640px)&amp;quot; href=&amp;quot;min-640px.css&amp;quot;&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(orientation: portrait)&amp;quot; href=&amp;quot;portrait.css&amp;quot;&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(orientation: landscape)&amp;quot; href=&amp;quot;landscape.css&amp;quot;&amp;gt;
+&amp;lt;style&amp;gt;
+  @media (min-width: 500px) and (max-width: 600px) {
+    h1 {
+      color: fuchsia;
+    }
+
+    .desc:after {
+      content:&amp;quot; In fact, it&#39;s between 500px and 600px wide.&amp;quot;;
+    }
+  }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;说明:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;当浏览器宽度在0px到640px之间，max-640px.css就会生效。&lt;/li&gt;
+&lt;li&gt;当浏览器宽度在500px到600px之间，在@media中定义的样式会生效。&lt;/li&gt;
+&lt;li&gt;如果浏览器是在640px或者以上的，min-640px.css会生效。&lt;/li&gt;
+&lt;li&gt;如果浏览器的宽度大于高度，landscape.css就会生效。&lt;/li&gt;
+&lt;li&gt;如果浏览器的高度大于宽度，portrait.css就会生效。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;3-1-min-device-width的笔记&#34;&gt;3.1 min-device-width的笔记&lt;/h2&gt;
+
+&lt;p&gt;除了*-width, 还可以根据 &lt;em&gt;-device-width来设置查询条件。不过这两个属性的差别虽然很小但是非常重要：min-width是基于浏览器窗口的尺寸，win-device-width却是基于屏幕的尺寸。在移动设备上，这一点并不是很重要，毕竟用户是不能在移动设备上调整浏览器窗口大小的。不过在桌面端，用户是可以控制窗口的大小，所以如果网页的内容可以自然适应窗口是最好不过的了。因此，这个情况下你就不应该使用&lt;/em&gt;-device-width，否则在桌面端页面是不会随着浏览器窗口大小的改变而调整的。&lt;/p&gt;
+
+&lt;h2 id=&#34;3-2-使用相对单位&#34;&gt;3.2 使用相对单位&lt;/h2&gt;
+
+&lt;p&gt;与传统的固定宽度布局对比，响应式设计背后的理念就是流动性和平衡性。使用相对单位的方法，可以简化布局，还能防止创建出大于视口的组件。举例来说，对在最外层的div设置100%的宽度，确保它可以恰恰好占满视口。这样的话，无论是在320px的iPhone，还是342px的黑莓Z10或者360pxNexus 5上，这个div都可以恰好占满视口。另外，使用相对单位还能让浏览器可以根据用户的缩放比例来渲染内容，而不需要添加横向滚动条。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB18jI4FVXXXXbKXXXXOx8VKpXX-888-277.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;4-如何选择视图&#34;&gt;4 如何选择视图&lt;/h1&gt;
+
+&lt;p&gt;当你在考虑根据设备的不同来设计视图的时候，请小心！如果视图是依赖于特定的设备、产品、品牌或者操作系统，很可能你会进入维护的噩梦中。所以正确的方式应该是，由内容来决定布局是如何放置在容器中的。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;根据内容创建视图，不要依赖于特定的设备、产品或者品牌&lt;/li&gt;
+&lt;li&gt;从最小的移动设备开始，而后逐步提升体验使得屏幕实际使用面增加。&lt;/li&gt;
+&lt;li&gt;一行文本至多70到80个字。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;4-1-从小做起&#34;&gt;4.1 从小做起&lt;/h2&gt;
+
+&lt;p&gt;从小屏幕开始设计内容，然后再扩大到大尺寸的屏幕，直到你需要使用到视图为止。这样你的视图就可以根据内容来优化，而且所使用的视图数量会是最小的，换言之，这么做是有利于后续维护。现在回头看看我们一开始提到的例子：天气预报。现在你要做的第一步就是—让这个页面可以适应小屏幕。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1dIU6FVXXXXbmXXXX1llbOXXX-400-667.png&#34; alt=&#34;&#34; /&gt;
+接下来，调整浏览器的大小，直到页面元素间留有过多的空白为止，当然现在这个页面看起来挺丑的。虽然说设定宽度的边界值是一个很主观的事情，但是很明显600px以上对于这个页面来说太宽了。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1l9UFFVXXXXXCXVXXIg6rIVXX-600-360.png&#34; alt=&#34;&#34; /&gt;
+为了在600px的宽度下插入一个视图，我们需要创建两个样式表：一个用于浏览器宽度在600px或者以下；另一个是在宽度大于600px时生效。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;weather.css&amp;quot;&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(max-width:600px)&amp;quot; href=&amp;quot;weather-2-small.css&amp;quot;&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;(min-width:601px)&amp;quot; href=&amp;quot;weather-2-large.css&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最后，重构一下你的CSS。在这个例子中，我们有些通用的属性放在weather.css中：字体、图标、基本的定位还有颜色。针对小屏幕的样式放在weather-small.css中，大屏幕的样式则是放在weather-large.css中。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1ziIIFVXXXXXCXVXXIg6rIVXX-600-360.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;!-- todo: 翻译不符 --&gt;
+
+&lt;h2 id=&#34;4-2-使用小型视图&#34;&gt;4.2 使用小型视图&lt;/h2&gt;
+
+&lt;p&gt;当布局需要有很大改动的时候视图也会大换血，不过当你需要一些小改动的时候，视图也能提供帮助。比如在两个主要视图之间，你可以更改某个元素margin或者padding值，或者增加字号可以使布局显得更自然一些。现在从小屏幕上的布局开始优化天气预报的页面。当视口宽度大于360px的时候要增加字号；接下来，如果有足够空间的话，可以把最高温和最低温分开来，这样他们就能在同一条线上，而不是竖着排列。这样还能用更大的图标来显示天气状况。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media (min-width: 360px) {
+  body {
+    font-size: 1.0em;
+  }
+}
+
+@media (min-width: 500px) {
+  .seven-day-fc .temp-low,
+  .seven-day-fc .temp-high {
+    display: inline-block;
+    width: 45%;
+  }
+
+  .seven-day-fc .seven-day-temp {
+    margin-left: 5%;
+  }
+
+  .seven-day-fc .icon {
+    width: 64px;
+    height: 64px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1C0gJFVXXXXaHXVXX3GI8NVXX-400-632.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1ZrsTFVXXXXbEXFXXhvg9NVXX-400-640.png&#34; alt=&#34;&#34; /&gt;
+相似地，对于大屏幕，最好要限制页面的最大宽度，防止整个屏幕都被这个页面占用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; @media (min-width: 700px) {
+  .weather-forecast {
+    width: 700px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-3-针对阅读体验优化文本&#34;&gt;4.3 针对阅读体验优化文本&lt;/h2&gt;
+
+&lt;p&gt;传统的阅读理论认为理想的文字数量应该是每行70到80个字符（英文中大概是8到9个单词一行），因此如果每行文字超过了10个单词了，你就需要考虑使用新的视图了。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1k1IYFVXXXXbdXpXXcmddOXXX-400-711.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1ZOA6FVXXXXbAXXXXo_fwIVXX-600-417.png&#34; alt=&#34;&#34; /&gt;
+现在让我们仔细研究一下上面的博文例子。在相对小的屏幕上，字体是使用Roboto，字号是1em，这样一行就是10个的单词，但是在大屏幕上你就需要换一个视图，不然一行就有太多字了。在这个例子中，如果浏览器的宽度大于575px，理想的内容宽度是550px。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  @media (min-width: 575px) {
+  article {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-4-不要完全隐藏内容&#34;&gt;4.4 不要完全隐藏内容&lt;/h2&gt;
+
+&lt;p&gt;当你想要根据屏幕尺寸来选择哪里内容是要隐藏的那些内容又是要显示的的时候，一定要小心。不要简单地把不能适应屏幕尺寸的内容直接隐藏，用户需要的并不是屏幕的尺寸。比如说，*天气预报*上的污染指数被隐藏了，那么春季易过敏的用户就不知道外面的天气适不适合出门了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>响应式网页设计模式</title>
+      <link>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</link>
+      <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-05-16-gw-responsive-web-design-patterns/</guid>
+      <description>&lt;p&gt;虽然响应式网页设计模式正在快速发展，不过已经有几种成熟的设计模式可以流畅地兼容桌面端和移动端设备。
+大多数响应式网页的布局可以归纳为五种设计模式：mostly fluid、column drop、layout shifter、tiny tweaks和off canvas。一些情况下，页面可能会采用组合设计模式，例如组合使用column drop和off canvas。这些设计模式最初都是由Luke Wroblewski定义的，它们为响应式页面提供了一个坚实的基础。
+为创建简单易懂的示例，下面每一个案例都是基于flexbox通过真实的标签创建的，主要是在一个主div内放置了三个内容div。每个示例都是先从定义最小视图开始，然后在必要时候加上响应节点。尽管需要依赖特定前缀来实现最佳效果，但是flexbox布局模式已经可以很好的支持主流浏览器。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-mostly-fluid&#34;&gt;1 mostly fluid&lt;/h1&gt;
+
+&lt;p&gt;Mostly fluid设计模式主要由流体式栅格（fluid grid）构成。不管是大尺寸还是中型屏幕，它保持主体内容的大小，只调整主体与屏幕两边的边距。遇到更小的屏幕时，流体式栅格布局会让主体内容“流动”起来，形成堆栈式纵向排列布局。这种方式有个好处是，它通常只要在大屏幕和小屏幕之间设置一个响应点即可。
+&lt;img src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/mostly-fluid.svg&#34; alt=&#34;&#34; /&gt;
+在最小视图情况下，每个内容div都垂直排列，一旦屏幕达到600px宽时，第一个内容div保持宽度100%，而下面两个div如图所示，两列并排位于第一个div下方。超过800px宽时，主容器div会固定宽度并在屏幕上居中。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;使用这种设计模式的网站包括：&lt;/em&gt;
+&lt;a href=&#34;http://mediaqueri.es/ala/&#34;&gt;A List Apart&lt;/a&gt;
+&lt;a href=&#34;http://mediaqueri.es/&#34;&gt;Media Queries&lt;/a&gt;
+&lt;a href=&#34;http://simplebits.com/&#34;&gt;SimpleBits&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .c2, .c3, .c4, .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .c1 {
+    width: 60%;
+  }
+  .c2 {
+    width: 40%;
+  }
+  .c3, .c4, .c5 {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;2-column-drop&#34;&gt;2 Column drop&lt;/h1&gt;
+
+&lt;p&gt;对于满宽和多列的布局来说，column drop布局法在屏幕变小导致容不下太多内容时，会纵向排列div，最终使每一层都纵向垂直排列。这种布局方式，可以根据内容情况来选择响应点，改变响应点来适应不同设计。
+&lt;img src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/column-drop.svg&#34; alt=&#34;&#34; /&gt;
+与mostly fluid的示例类似，这种布局在最小视图下每块内容纵向依次排列。然而，当屏幕宽度超过600px时，第一个和第二个内容div占据了屏幕全部宽度。Div层的顺序则根据CSS中的order属性排列。当宽度达到800px时，三个内容div一起出现，并占据屏幕的全部宽度。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;使用这种设计模式的网站包括：&lt;/em&gt;
+&lt;a href=&#34;http://modernizr.com/&#34;&gt;Modernizr&lt;/a&gt;
+&lt;a href=&#34;http://weenudge.com/&#34;&gt;Wee Nudge&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; .container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.c1, .c2, .c3 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .c1 {
+    width: 60%;
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  .c2 {
+    width: 40%;
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  .c3 {
+    width: 100%;
+    -webkit-order: 3;
+    order: 3;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .c2 {
+    width: 20%;
+  }
+
+  .c3 {
+    width: 20%;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;3-layout-shifter&#34;&gt;3 layout shifter&lt;/h1&gt;
+
+&lt;p&gt;Layout shifter布局是响应能力最强的，它通过多个响应点来适应多种屏幕宽度。这种布局的关键在于，内容不是向下流动或移到到其他列下面，而是四处移动。由于每个响应点对应的布局有巨大的差异，所以要保持一致需要更复杂的操作，并可能需要对元素内部做出改动，而不仅仅是改变全局布局。
+&lt;img src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/layout-shifter.svg&#34; alt=&#34;&#34; /&gt;
+这个简化的例子展示了layout shifter的设计模式。其处于小屏幕情况时，内容div纵向排列。但当屏幕变大时，布局发生了很大的改变，布局形成左边一个div层，而右边由两个div层垂直排列组成。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;使用这种设计模式的网站包括：&lt;/em&gt;
+&lt;a href=&#34;http://foodsense.is/&#34;&gt;Food Sense&lt;/a&gt;
+&lt;a href=&#34;http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html&#34;&gt;Seminal Responsive Design Example&lt;/a&gt;
+&lt;a href=&#34;http://www.anderssonwise.com/&#34;&gt;Andersson-Wise Architects&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.c1, .c2, .c3, .c4 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .c1 {
+    width: 25%;
+  }
+
+  .c4 {
+    width: 75%;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;4-tiny-tweaks&#34;&gt;4 tiny tweaks&lt;/h1&gt;
+
+&lt;p&gt;Tiny tweaks会对布局做出细微的改变，比如调整字体大小、缩放图片尺寸或细微地移动内容。这种布局对于单列布局非常适合，比如单页面线性网站和以文章为主的网站。
+&lt;img src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/tiny-tweaks.svg&#34; alt=&#34;&#34; /&gt;
+正如其名，示例在随着屏幕尺寸变动时改动非常小。当屏幕宽度越来越大时，字体大小和行距也跟着变大。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;使用这种设计模式的网站包括：&lt;/em&gt;
+&lt;a href=&#34;http://shinydemos.com/&#34;&gt;Opera’s Shiny Demos&lt;/a&gt;
+&lt;a href=&#34;http://gingerwhale.com/&#34;&gt;Ginger Whale&lt;/a&gt;
+&lt;a href=&#34;http://futurefriendlyweb.com/&#34;&gt;Future Friendly&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.c1 {
+  padding: 10px;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .c1 {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 800px) {
+  .c1 {
+    padding: 40px;
+    font-size: 2em;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;5-off-canvas&#34;&gt;5 off canvas&lt;/h1&gt;
+
+&lt;p&gt;与堆栈式垂直排列内容列不同，off canvas设计模式将不常用的内容（也许是导航或屏幕外的菜单）只在大屏幕情况下显示，而在小屏幕下只显示主要内容。
+&lt;img src=&#34;https://developers.google.com/web/fundamentals/layouts/rwd-patterns/imgs/off-canvas.svg&#34; alt=&#34;&#34; /&gt;
+与垂直纵向排列内容不同，这个示例中通过transform: translate(-250px, 0)来隐藏两个内容div层， 然后使用JavaScript控制元素样式的增加来显示隐藏层。随着屏幕变得更宽，会移除元素设置为屏幕外的定位布局，然后在可视范围内中显示出来。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;使用这种设计模式的网站包括：&lt;/em&gt;
+&lt;a href=&#34;http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/&#34;&gt;HTML5Rocks Articles&lt;/a&gt;
+&lt;a href=&#34;http://www.google.com/nexus/&#34;&gt;Google Nexus&lt;/a&gt;
+&lt;a href=&#34;https://m.facebook.com/&#34;&gt;Facebook’s Mobile Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;body {
+  overflow-x: hidden;
+}
+
+.container {
+  display: block;
+}
+
+.c1, .c3 {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+
+  /*
+    This is a trick to improve performance on newer versions of Chrome
+    #perfmatters
+  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+
+  z-index: 1;
+}
+
+.c1 {
+  /*
+  Using translate3d as a trick to improve performance on older versions of Chrome
+  See: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+  #perfmatters
+  */
+  -webkit-transform: translate(-250px,0);
+  transform: translate(-250px,0);
+}
+
+.c2 {
+  width: 100%;
+  position: absolute;
+}
+
+.c3 {
+  left: 100%;
+}
+
+.c1.open {
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.c3.open {
+  -webkit-transform: translate(-250px,0);
+  transform: translate(-250px,0);
+}
+
+@media (min-width: 500px) {
+  /* If the screen is wider then 500px, use Flexbox */
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+  .c1 {
+    position: relative;
+    -webkit-transition: none 0s ease-out;
+    transition: none 0s ease-out;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+  .c2 {
+    position: static;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    overflow-x: auto;
+  }
+  .c3 {
+    position: relative;
+    left: auto;
+    -webkit-transition: none 0s ease-out;
+    transition: none 0s ease-out;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>导航和行为模式</title>
+      <link>https://aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</link>
+      <pubDate>Fri, 16 May 2014 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2014-05-16-gw-nav-and-action-patterns/</guid>
+      <description>&lt;h1 id=&#34;1-应用栏&#34;&gt;1 应用栏&lt;/h1&gt;
+
+&lt;p&gt;多年使用互联网的经验告诉用户所有桌面站点都应该有一个页头（page header），但是在移动端，你需要的就是应用栏（APP Bar）。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://gtms04.alicdn.com/tps/i4/TB1UXw6FVXXXXaWXXXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
+每到一个站点，用户总是希望在每一个页面的顶端看到站点的logo，而且当用户点击顶端的logo时，他能再回到主页。在用户的传统认知中，网页都需要有个页头作为上述功能的载体，对应的在移动端则需要应用栏。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;logo要放在每一屏的最顶端，用户可以通过点击logo回到主页。&lt;/li&gt;
+&lt;li&gt;如果你有一个目录按钮，将它放在应用栏的最左或者最右，而且整个站点的目录按钮都要在相同的位置，不能忽左忽右的。&lt;/li&gt;
+&lt;li&gt;页面上一些关键的操作应该放在应用栏上。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;应用栏包含有三点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;站点logo&lt;/li&gt;
+&lt;li&gt;主要动作&lt;/li&gt;
+&lt;li&gt;（可选）菜单按钮&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;几乎所有在互联网里的站点都有发生动作的地方，就拿搜索来说：将按钮放在应用栏上来做一些交互，会培养用户养成某些习惯，使得看到当前页面他们就会知道需要怎么和网页交互。
+如果你需要菜单，将汉堡包图标（三条横线）放在应用栏的最左或者最右。一旦你选定好了图标的位置，就不要再改动它了，也就是站点上所有的页面都在相同的位置放置上这样一个图标，这样用户学习使用你的站点的成本就非常的低。&lt;/p&gt;
+
+&lt;h2 id=&#34;1-1-按钮在左边还是右边&#34;&gt;1.1 按钮在左边还是右边&lt;/h2&gt;
+
+&lt;p&gt;如果在菜单上你想要添加滑动，那么菜单最好是要放在左边或者右边。
+页面的左上角应该算是UI设计中最重要的一个位置，但如果是单手持机，这也是最难触碰到的位置。而将菜单放在右上角会突出这个图标，显示它的重要性，但是单手持机的时候，这个位置又容易被误碰。
+&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1D.kYFVXXXXaXXFXXWgIpNFXX-608-360.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1mRM3FVXXXXaxXpXXWgIpNFXX-608-360.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-2-设计指南&#34;&gt;1.2 设计指南&lt;/h2&gt;
+
+&lt;p&gt;应用栏是一个你需要将一系列主要内容放在上面的东西，用户可以通过它估计到一些与站点有关的信息，在应用栏上你可以玩各种有趣的花样：更改栏目、按钮的样式，还有交互上也能表现新意。
+&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB1.U.TFVXXXXchXFXXWgIpNFXX-608-360.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB12w3YFVXXXXXKXFXXWgIpNFXX-608-360.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;2-tab-bar&#34;&gt;2 Tab Bar&lt;/h1&gt;
+
+&lt;p&gt;Tab Bar可以用作为网站的主导航。它可以向用户显示你网站的主体区域，也可以帮助用户快速辨认他们在网站中所处的位置。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1vrg5FVXXXXc9XXXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
+Tab Bar可以快速在网站中不同区域内容之间进行切换。不过，它只适用于结构相对简单的网站，这样，在浏览网站时用户可以方便地知道他们在哪，以及要去到哪儿。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;当你的网站只有不超过5个板块时使用它。&lt;/li&gt;
+&lt;li&gt;将它放置在主体内容的上方或下方。&lt;/li&gt;
+&lt;li&gt;将当前所选中的区域设置得明显些，方便用户辨认。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;将tab的总数限制在5个以下，不然每个图标和其点击区域会变得太小，使用户在点击tab时太过费力。
+将你的tab放置在主体内容的上方或下方，这种做法是在用户最佳体验和最佳设计中取得的一种平衡。
+使用tab的一个好处是，它提供用户一种一致的导航方式，使用户可以快速知道他们浏览到了哪儿。
+&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB19ZEWFVXXXXcDXFXXm63eUXXX-699-420.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1gbE5FVXXXXc8XXXXC9UuNFXX-608-420.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;3-navigation-drawer&#34;&gt;3 Navigation Drawer&lt;/h1&gt;
+
+&lt;p&gt;当网站具有太多板块和子板块时，采用Navigation Bar是更好的做法。它即可以作为一个处于画布外的可滑动元素，也可以用来显示网站全局状态。
+&lt;img src=&#34;http://gtms01.alicdn.com/tps/i1/TB1EK.5FVXXXXc8XXXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
+Navigation Drawer是一个滑动面板，通常用来显示网站的导航菜单，同时也用来反映网站的全局状态，例如用户登录。
+用户可以通过放置在屏幕上方App Bar上的菜单按钮来滑出菜单。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Navigation Drawer必须让用户可以很方便地打开。&lt;/li&gt;
+&lt;li&gt;如果网站的板块太多，可以考虑将一些内容分组，通过展开/收缩组来控制菜单项。避免向用户强加过多的东西。&lt;/li&gt;
+&lt;li&gt;不要将非常重要的操作藏在滑动面板内。例如搜索，就应该显眼的放置在主页上，而不是藏在隐藏的面板里。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;这种做法的主要优势是，在可上下滚动的面板元素内，内容允许增加，这适用于大型网站结构，同时又只占据屏幕很小的空间。
+对于用户来说，要让他们花最少的学习成本在网站上找到Navigation Drawer，一个显眼的菜单按钮是非常重要的。
+&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB10FwYFVXXXXa2XFXXGrP71VXX-642-358.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tabs VS Navigation Drawer&lt;/strong&gt;
+一些开发者发现，当他们使用Tab而非Naviagtion Drawer时，会获得更高的交互赞誉。然而，选择何种方式是在Navigation Drawer的灵活性和Tab Bar的直观性中进行平衡，你需要考虑哪种方式最适合你的网站。&lt;/p&gt;
+
+&lt;h1 id=&#34;4-底栏&#34;&gt;4 底栏&lt;/h1&gt;
+
+&lt;p&gt;如果你在开发一款Web应用时发现，用户可能需要的操作的数目超过了应用栏可以放置的数量，那么最好的解决方式就是把一些操作放到底栏上。
+&lt;img src=&#34;http://gtms02.alicdn.com/tps/i2/TB12hs1FVXXXXXEXFXXRnHmQFXX-2047-1090.png&#34; alt=&#34;&#34; /&gt;
+现在我们已经知道了可以将操作放在应用栏上。对于大部分站点来说(特别是那些内容导向的站点)，用户能进行的操作相对较少，所以一个应用栏就够了。比起这样的站点，Web应用就不一样了，UI上的每一个区域都会更多的操作。如果你不打算使用选项卡（Tab）但又有很多的交互要放在应用栏上，那最好还是把一些动作放到底栏上吧。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;TL;DR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;只有当你不准备使用选项卡（Tab Bar）的时候才使用这个方法。&lt;/li&gt;
+&lt;li&gt;底栏上最多只能有5项。&lt;/li&gt;
+&lt;li&gt;除非应用栏已经放不下了，否则不要用底栏。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;这么做的好处是你有了更多操作的空间，而且底栏的位置方便触碰，用户在原生底栏之上还多了一个可操作层。但是底栏上最多只能出现5种操作，还要注意底栏不可以太小以至于很难触碰。
+&lt;img src=&#34;http://gtms03.alicdn.com/tps/i3/TB1iSEYFVXXXXaMXFXXW7GiKFXX-710-420.png&#34; alt=&#34;&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里通信诚求前端人才</title>
+      <link>https://aliqin.github.io/2016-10-28-ali-telecome-need-you/</link>
+      <pubDate>Fri, 28 Oct 2016 00:18:34 +0800</pubDate>
+      
+      <guid>https://aliqin.github.io/2016-10-28-ali-telecome-need-you/</guid>
+      <description>&lt;h2 id=&#34;关于阿里通信&#34;&gt;关于阿里通信&lt;/h2&gt;
+
+&lt;p&gt;阿里通信是阿里巴巴集团在13年底成立的独立BU。从最初的虚拟运营商发展成为了全方位的互联网电信服务商。业务涵盖了几乎电信运营商所有业务类型，比如短信、流量、号卡、合约机、充值相关业务。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;我们的愿景&#34;&gt;我们的愿景&lt;/h2&gt;
+
+&lt;p&gt;让联接更简单&lt;/p&gt;
+
+&lt;h2 id=&#34;相关业务案例&#34;&gt;相关业务案例&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aliqin.tmall.com&#34;&gt;阿里通信号卡&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wt.tmall.com&#34;&gt;天猫营业厅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://alitj.tmall.com/&#34;&gt;阿里天机-通信电商能力开放平台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wt.tmall.com&#34;&gt;天猫营业厅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.alidayu.com&#34;&gt;云通信平台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;手淘 - 话费流量充值&lt;/li&gt;
+&lt;li&gt;手淘 - 我的淘宝-我的通信&lt;/li&gt;
+&lt;li&gt;手淘 - 我的淘宝-卡券包-流量钱包&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;另外还有对天猫商家的一些商家系统和中后台服务系统，这里就不一一举例&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;前端团队使用的技术&#34;&gt;前端团队使用的技术&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;移动端大部分是Vue + Webpack，少部分老项目是Zepto但现在需求不多；PC端由于会考虑到IE8，还是会使用阿里内部的Kissy框架&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.alidayu.com&#34;&gt;云通信平台阿里大&lt;/a&gt;于使用了NodeJS + Vue&lt;/li&gt;
+&lt;li&gt;发布在手淘和天猫里的页面，少部分有Weex(Native)渲染，我们的目标是未来Native页面会多过Web页面&lt;/li&gt;
+&lt;li&gt;今年接下来会有一些新项目开发，基本上会优先考虑Vue2.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;我们的要求&#34;&gt;我们的要求&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;前端经验2年+，因为要求职级是P6&lt;/li&gt;
+&lt;li&gt;喜欢尝试和了解新鲜事物，特别是前端技术&lt;/li&gt;
+&lt;li&gt;善于使用工具提升前端研发效率&lt;/li&gt;
+&lt;li&gt;关注ES6、Webpack、Vue、React、PWA等前沿技术&lt;/li&gt;
+&lt;li&gt;如果你有Geek精神，例如喜欢研究VR技术、搞搞物联网开发，那我们最欢迎了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;代遇福利&#34;&gt;代遇福利&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;薪资根据能力来，牛B多少都不是问题&lt;/li&gt;
+&lt;li&gt;福利方面可以参考&lt;a href=&#34;https://campus.alibaba.com/welfare.htm&#34;&gt;阿里薪酬福利介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;团队生活&#34;&gt;团队生活&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;丰富的业余生活，吃饭电影K歌周边自驾游的事常发生&lt;/li&gt;
+&lt;li&gt;团队有超高颜值的妹子，代码写得好不说，还负责团队业余活动安排&lt;/li&gt;
+&lt;li&gt;鼓励技术分享、跨团队技术交流&lt;/li&gt;
+&lt;li&gt;团队氛围轻松融洽，可以跟老板随便开玩笑&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;工作地点&#34;&gt;工作地点&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;阿里巴巴杭州西溪园区（员工最多的园区），环境高大上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;简历传送门&#34;&gt;简历传送门&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;mailto:chris.chencq@alibaba-inc.com&#34;&gt;chris.chencq@alibaba-inc.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;欢迎自荐或推荐前端人才，推荐简历成功入职可享受6000元（税前）奖金&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

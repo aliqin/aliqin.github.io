@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+  	<meta property="og:title" content="Google Web开发最佳实践(总纲) &middot; 阿里通信前端团队" />
+  	<meta property="og:site_name" content="阿里通信前端团队" />
+  	<meta property="og:url" content="https://aliqin.github.io/2014-08-21-google-web-table-of-contents/" />
+    
+    
+        
+            <meta property="og:image" content="https://aliqin.github.io/images/screen.png"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="og:image" content="https://aliqin.github.io/" />
+    <meta property="article:published_time" content="2014-08-21T00:18:34&#43;08:00" />
+
+    
+    
+
+    <title>Google Web开发最佳实践(总纲) &middot; 阿里通信前端团队</title>
+
+    
+    <meta name="description" content="" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://aliqin.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://aliqin.github.io/images/apple-touch-icon.png" />
+    <link href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://aliqin.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+    
+
+    
+      
+          <link href="https://aliqin.github.io/index.xml" rel="alternate" type="application/rss+xml" title="阿里通信前端团队" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.19" />
+
+    <link rel="canonical" href="https://aliqin.github.io/2014-08-21-google-web-table-of-contents/" />
+
+    
+      
+    
+
+    
+    <script>
+      
+      
+      
+      
+
+      
+      
+
+    </script>
+    
+
+    
+</head>
+<body>
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="https://aliqin.github.io/"><img src="https://aliqin.github.io/images/logo.png" alt="Home" /></a>
+  
+  
+  <a class="menu-button" href="https://aliqin.github.io/join-us"><span class="word">加入我们</span></a>
+<a class="menu-button" href="https://aliqin.github.io/about"><span class="word">团队生活</span></a>
+<a class="menu-button" href="https://github.com/aliqin/atui" target="_blank"><span class="word">ATUI</span></a>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Google Web开发最佳实践(总纲)</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2014-08-21T00:18:34&#43;08:00">
+            Aug 21, 2014
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>本文翻译自<a href="https://developers.google.com/web/fundamentals/">Google Web Fundamentals:Best practices for modern web development</a> (可能需要<a href="https://code.google.com/p/goagent/wiki/InstallGuide">翻墙</a>)
+由于个人水平有限，翻译中有不足或者错误的地方，敬请指正。
+由于原文的变动，可能会对现有的翻译细节作出调整。
+by 联民 &amp; 若欢</p>
+
+<p></p>
+
+<h1 id="目录">目录</h1>
+
+<ul>
+<li><a href="http://aliqin.github.io/2014/05/20/google-web-get-started/">前言</a></li>
+<li>正文
+
+<ul>
+<li>网站设计法则(未完成)
+
+<ul>
+<li>宽屏网站设计要素</li>
+<li>首页和导航</li>
+<li>优化表单入口</li>
+<li>站内搜索</li>
+</ul></li>
+<li>多设备布局
+
+<ul>
+<li>主页和导航设计法则</li>
+<li><a href="http://aliqin.github.io/2014/05/16/gw-responsive-web-design-basics/">响应式网页设计基础</a></li>
+<li><a href="http://aliqin.github.io/2014/05/16/gw-responsive-web-design-patterns/">响应式网页设计模式</a></li>
+<li><a href="http://aliqin.github.io/2014/05/16/gw-nav-and-action-patterns/">导航和行为模式</a></li>
+</ul></li>
+<li>表单和用户输入(未完成)
+
+<ul>
+<li>创建惊艳的表单</li>
+<li>为你的网站添加触屏</li>
+</ul></li>
+<li>视觉和感受(未完成)
+
+<ul>
+<li>动画</li>
+</ul></li>
+<li>图片、视频和音频
+
+<ul>
+<li>图片</li>
+<li>视频</li>
+</ul></li>
+<li>货币化(未完成)
+
+<ul>
+<li>关键法则</li>
+<li>广告</li>
+</ul></li>
+<li>设备可访问性(未完成)
+
+<ul>
+<li>用户定位</li>
+<li>点击通话</li>
+</ul></li>
+<li>性能优化(未完成)
+
+<ul>
+<li>关键渲染路径</li>
+<li>优化内容展现</li>
+</ul></li>
+</ul></li>
+<li>工具(未完成)
+
+<ul>
+<li>搭建环境
+
+<ul>
+<li>选择好的编辑器</li>
+<li>安装开发者工具</li>
+<li>安装Web Starter Kit</li>
+</ul></li>
+<li>构建你的站点
+
+<ul>
+<li>什么是构建进程</li>
+<li>用Web Starter Kit构建站点</li>
+<li>借助谷歌开发者工具调试网页</li>
+</ul></li>
+<li>测试类型
+
+<ul>
+<li>实时设备测试</li>
+<li>云测试</li>
+<li>使用开发工具模拟</li>
+</ul></li>
+</ul></li>
+</ul>
+    </section>
+
+
+  <footer class="post-footer">
+
+    
+
+
+
+
+<section class="author">
+  <a class="img" href="https://github.com/shenlm203" style="background-image: url(//avatars1.githubusercontent.com/u/927118?v=3&amp;s=96)"></a>
+  <h4><a href="https://github.com/shenlm203">联民</a></h4>
+  <p>山河</p>
+</section>
+
+
+    
+<section class="share">
+  <h4>分享</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Google%20Web%e5%bc%80%e5%8f%91%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5%28%e6%80%bb%e7%ba%b2%29&nbsp;-&nbsp;%e9%98%bf%e9%87%8c%e9%80%9a%e4%bf%a1%e5%89%8d%e7%ab%af%e5%9b%a2%e9%98%9f&amp;url=https%3a%2f%2faliqin.github.io%2f2014-08-21-google-web-table-of-contents%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2faliqin.github.io%2f2014-08-21-google-web-table-of-contents%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2faliqin.github.io%2f2014-08-21-google-web-table-of-contents%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'aliqin';
+var disqus_url = 'https:\/\/aliqin.github.io\/2014-08-21-google-web-table-of-contents\/';
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">阿里通信前端团队</a> Copyright © 2017. All rights reserved.</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    
+    <script type="text/javascript" src="https://aliqin.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
