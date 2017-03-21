@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp server",
     "build": "gulp build",
-    "publish":"npm run build && gulp publish",
+    "deploy":"npm run build && gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

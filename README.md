@@ -52,11 +52,9 @@ draft = false
 这里是文章正文。
 ```
 
-所有本地工作完成后，就可以发布了。我们使用public文件夹下的静态内容作为站点，第一次提交需要将master分支关联到public文件夹下：
+所有本地工作完成后，就可以发布了，以下命令会把public目录发布到master分支
 ```bash
-cd public && git init
-git add remote origin git@github.com:aliqin/aliqin.github.io.git
-git pull origin master
+npm run deploy
 ```
 之后回到根目录执行`hugo`命令生成静态网站并提交：
 ```bash

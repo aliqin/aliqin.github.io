@@ -1,6 +1,7 @@
 .DS_Store
 .idea/
 .vscode/
+npm-debug.log
 node_modules/
 public/
 themes/gohugo-amp

@@ -77,14 +77,14 @@ gulp.task('push', () => {
 gulp.task('build', ['js', 'css'])
 // gulp.task('test', [''])
 
-gulp.task('publish', () => {
+gulp.task('deploy', () => {
   var ghpages = require('gh-pages')
   var path = require('path')
-  ghpages.publish(path.join(__dirname, './'), {
+  ghpages.publish(path.join(__dirname, 'public'), {
     branch: 'master',
     message: '发布blog',
-    add:true,
-    src:'public/**/*',
+    //add:true,
+    src:'**/*',
     logger: function(message) {
       console.log(message)
     }
