@@ -53,7 +53,8 @@ gulp.task('publish', () => {
   var path = require('path')
   ghpages.publish(path.join(__dirname, './'), {
     branch: 'master',
-    message: '发布blog中...',
+    message: '发布blog',
+    add:true,
     src:'public/**/*',
     logger: function(message) {
       console.log(message)
